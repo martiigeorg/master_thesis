@@ -76,10 +76,17 @@ In this thesis, the following contributions are made:
 LaTeX hints are provided in \autoref{chap:latexhints}.
 
 \chapter{Literature Review}
-In this chapter, we present the theoretical background of the basic concepts of the thesis. Moreover, we define and explain different methods and algorithms that are used. 
+In this chapter, we present the theoretical background of the basic concepts of the thesis. Moreover, we define and explain different ....
 
 
 \section{Quality}
+The quality is defined by several International organisations.
+
+German Industry Standard DIN 55350 Part 11 defines, that the quality “ … comprises all characteristics and significant features of a product or an activity which relate to the satisfying of given requirements” \citet{fitzpatrick1996software}.
+
+Another definition of quality is presented in ANSI Standard (ANSI/ASQC A3/1978), describing that the "Quality is the totality of features and characteristics of a product or a service that bears on its ability to satisfy the given needs"  \citet{fitzpatrick1996software}.
+
+ANOTHER DEFITION comes later....
 
 \section{Quality models}
 
@@ -177,9 +184,10 @@ de
 \end{table}
 
 
-\subsection{Quality model ISO 25010? }
+\subsection{Quality model ISO 25010 }
 
 
+textextex
 
 \begin{table}[h!]
     \caption{Sub-characteristics of the Quality model-ISO/IEC 25010}
@@ -295,23 +303,118 @@ de
 \end{table}
 
 \section{Cognitive Load Theory (CLT)}
+- Relevance to Code Comprehension
 
 \section{Theory of Program Comprehension}
-Describe relevant scientific literature related 
+- Top-Down Model: Experienced programmers use existing knowledge to understand the structure and intent of code quickly.
+
+- Bottom-Up Model: Beginners read line-by-line, building their understanding incrementally.
+
+- Integrated Model: A mix of both, depending on experience level and task complexity
 
 
-\section{Studies using Eye Tracking}
-
-
-In this chapter, we present different works about topics, that are similar to the topic of this thesis. More specifically, we present literature, which discusses different approaches that are used in order to 
-
-
-\begin{figure}
+\begin{figure} [h!]
   \centering
   \includegraphics[width=\textwidth]{figures/program_Comprehension_Process.png}
   \caption{The Program Comprehension Process}
   \label{fig:AnhangsChor}
 \end{figure}
+
+\section{Eye Tracking}
+
+•	Definition 
+
+
+•	Background
+
+
+•	Metrics
+
+
+•	Why it’s relevant: Eye-tracking studies assume that where a person looks is what they are thinking about.
+
+
+•	Key ideas:
+
+
+o	Fixations (longer gaze duration) suggest higher cognitive processing effort.
+
+
+o	Saccades (quick eye movements) indicate searching behavior (e.g., students scanning comments before reading the code).
+
+
+o	Areas of Interest (AOI) refer to parts of the stimulus on which eye-tracking metrics are recorded. Examples could be chunks in the code editor, the requirements area of the IDE, or the console output. The AOI is usually defined by the researcher.
+
+
+•	How to apply it:
+
+
+o	Compare eye-tracking heatmaps to see if students focus more on comments before reading the code.
+
+
+o	Measure how indentation influences reading patterns—does better indentation make scanning for logic structures easier?
+
+
+\section{Studies using Eye Tracking}
+
+Several studies analyze programming comprehension, using eye-tracking technology. This chapter reviews key studies, categorizing them based on their focus areas and summarizing their findings.
+
+\subsubsection{Eye-Tracking Methodologies in Software Engineering}
+The paper \citet{obaidellah2018survey} investigates the use of eye-tracking technology in computer programming research. A total of 63 relevant studies published between 1990 and June 2017 are analysed \citet{obaidellah2018survey}. The results indicate that eye-tracking technology has been applied to understand programmers' gaze pattern and cognitive processes. The studies reviewed in this paper focus on five main research fields: program comprehension and code understanding, non-code comprehension studies, debugging, requirements traceability, and collaborative programming \citet{obaidellah2018survey}.  The most frequently studied programming language is Java.  
+For eye-tracking system, Tobii is the most commonly used.  Fixation duration and saccades are identified as primary metrics for analysing gaze patterns, and heatmaps are created for visual representation of the results.
+
+
+\subsubsection{Variable Naming Conventions and Code Readability}
+
+The study \citet{sharif2010eye}investigates whether different variable naming conventions (camel-case and underscore) impact code comprehension and readability.
+The task of the participants was to recognize different variable names, while their eye movements were tracked and analysed from the researches. 
+The findings indicate no significant difference in accuracy between the camel-case and underscore naming conventions \citet{sharif2010eye}. However, underscore identifiers were recognized 20\% faster compared to camel-case identifiers \citet{sharif2010eye}. Moreover, the data from the eye-tracking technology showed that camel-case identifiers led to longer gaze durations, more fixations, and a   higher cognitive load. Furthermore, novice programmers benefited more from the underscore variable naming conventions.   
+Overall, the results indicate that underscore variable naming conventions are easier to process visually and potentially improve code readability.   
+
+
+The eye-tracking study \citet{broberg2019using}investigates how different variable naming conventions impact on code readability.  
+The test subjects analyzed code snippets containing variables in Single Word (SW), Single Letter (SL), Camel Case (MWCC), and Snake Case (MWSC) \citet{broberg2019using}. While explaining the code snippets, their eye movements were tracked. Researchers measured the time participants spent analysing the code and then created heatmaps to visualize their gaze patterns. Furthermore, participants provided feedback on which naming conventions they prefer. The results present no significant differences in readability using different variable naming conventions \citet{broberg2019using}. However, multi-word conventions like Snake Case and Camel Case were easier to read than Single Letter variable naming conventions \citet{broberg2019using}. The heatmaps presented that test subjects spent more time processing single-letter variables, leading to higher cognitive effort. Moreover, most participants personally found Snake Case and Camel Case easier to understand \citet{broberg2019using}. 
+This study presents the role of meaningful variable naming conventions in code and how they improve code readability.   
+
+\subsubsection{Code Transformations and Their Impact on Comprehension}
+The eye-tracking study \citet{silva2023evaluating} investigates how different code transformations affect novice programmers’ code comprehension \citet{silva2023evaluating}. It focuses on Atoms of Confusion, Refactorings, and ifdef Annotations.
+
+The findings show that confusing code snippets lead to difficulties in code comprehension and in increased fixations. Figure X presents the eye-gaze patterns for an obfuscated code snippet using the Conditional Expression atom, while Figure Y illustrates the clarified version of the same snippet \citet{silva2023evaluating}.
+ 
+figure 1,2
+\begin{figure} [h!]
+  \centering
+  \includegraphics[scale=0.6]{figures/a.png}
+  \caption{Obfuscated code snippet \citet{silva2023evaluating}}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.6]{figures/b.png}
+  \caption{Clarified version \citet{silva2023evaluating}}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+
+\subsubsection{Program Comprehension: Iteration vs. Recursion} 
+The study \citet{aroobaunderstanding} investigates how students perceive recursive and iterative programs and analyzes their cognitive processes and visual attention \citet{aroobaunderstanding}. Moreover, the study inspected whether students followed a top-down approach or bottom-up approach.
+The results present that there was no significant difference between recursive and iterative programs in terms of code comprehension \citet{aroobaunderstanding}.  However, visual attention differed between iteration and recursion. 
+
+\subsubsection{Cognitive Load and Code Complexity} 
+
+The eye-tracking paper \citet{abbad2022estimating} investigates how to identify difficult areas of code for programmers.  Participants were given different Java code snippets and mentioned the areas of the code they found difficult \citet{abbad2022estimating}. Researchers compared the eye-tracking data with the parts marked as complicated by the participants. With the collected data, they trained machine learning models to forecast which parts of the code would challenge code comprehension \citet{abbad2022estimating}. The researches achieved more than 86\% accuracy in predicting complicated parts of code snippets. The study highlights its future usage for developing tools that can enhance code review and adaptive e-learning. 
+
+
+
+\subsubsection{Code Structure and Indentation} 
+
+
+The eye-tracking study \citet{bauer2017indentations} investigates how indentation affects comprehension. Participants analyzed Java code snippets with different levels of indentations: 0, 2, 4, and 8-space. The results presented no significant relationship between comprehension and indentation \citet{bauer2017indentations}. However, the most correct answers were given when the participants analyzed code with 4-space indentation . Furthermore, the results indicated that 8-space indentation was rated as the easiest to read level of indentation, but did not improve the accuracy of the correct answers \citet{bauer2017indentations}. Overall, eye-tracking data showed no significant differences in gaze patterns across different indentation levels, and the study highlights the need for further investigation. 
+
+
+
+Another study \citet{yorimoto2024quantitative} investigates how indentation affects code comprehension. Students were given code tasks with different levels of indentation: 0-character, 4-character, and random indentation \citet{yorimoto2024quantitative}. The researchers measured the eye movements and cognitive load of the participants. The results showed increased confusion and cognitive load when students analyzed code with unstructured indentation \citet{yorimoto2024quantitative}. Furthermore, 4-character indentation resulted in more precise but longer focus on code areas. The study mentions that indentation had little impact on small code tasks and highlights that further investigation is needed \citet{yorimoto2024quantitative}.   
 
 
 
