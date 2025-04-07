@@ -82,7 +82,7 @@ In this chapter, we present the theoretical background of the basic concepts of 
 \section{Quality}
 The quality is defined by several International organisations.
 
-German Industry Standard DIN 55350 Part 11 defines, that the quality “ … comprises all characteristics and significant features of a product or an activity which relate to the satisfying of given requirements” \citet{fitzpatrick1996software}.
+German Industry Standard DIN 55350 Part 11 defines, that the quality “ … comprises all characteristics and significant features of a product or an activity which relate to the satisfying of given requirements” \cite{fitzpatrick1996software}.
 
 Another definition of quality is presented in ANSI Standard (ANSI/ASQC A3/1978), describing that the "Quality is the totality of features and characteristics of a product or a service that bears on its ability to satisfy the given needs"  \citet{fitzpatrick1996software}.
 
@@ -415,18 +415,202 @@ The eye-tracking study \citet{bauer2017indentations} investigates how indentatio
 
 
 Another study \citet{yorimoto2024quantitative} investigates how indentation affects code comprehension. Students were given code tasks with different levels of indentation: 0-character, 4-character, and random indentation \citet{yorimoto2024quantitative}. The researchers measured the eye movements and cognitive load of the participants. The results showed increased confusion and cognitive load when students analyzed code with unstructured indentation \citet{yorimoto2024quantitative}. Furthermore, 4-character indentation resulted in more precise but longer focus on code areas. The study mentions that indentation had little impact on small code tasks and highlights that further investigation is needed \citet{yorimoto2024quantitative}.   
+\subsubsection{Code comments} 
 
+This study \citet{bakhuizen2019comments}. investigates how incorrect code comments affect programmers' code comprehension. Participants analyzed code containing missing, incorrect, or correct comments.
+The researchers used eye-tracking technology to measure how often participants read code comments. The results indicate that participants read code comments as frequently as the code \citet{bakhuizen2019comments}. Furthermore, incorrect comments can negatively affect code comprehension, leading to misinterpretations of the code. Moreover, accurate and correct comments are useful when they provide correct information for unknown functions. 
+
+The reviewed key studies present that eye-tracking technologies effectively investigate code comprehension.  Eye-tracking data provide insights into how expert and novice programmers perceive different code structures and styles. There has been made significant progress in investigating the comprehension and readability of code by programmers.  However, there is a lack of deeper researcher on how indentation and comments influence the comprehension. 
+This thesis analyzes how indentation and comments impact computer science students’ perception of code comprehension.  
 
 
 \chapter{Study Design}
 
+
+
 \section{Methodology}
 
+\subsection{Study Approach}
+The study consists of two formats: an eye-tracking study (offline study) and an online study without eye-tracking. 
+
+\subsection{Code Snippet Selection}
+
+The programming language used for the code snippets is Java, since it is a widely used language.  Additionally, most students, which participated in the study, are from LMU University, where Java is a key part of many computer science courses.  The code snippets are collected from programming lectures conducted at LMU University and adapted from the computer science exercises. The main reason why the snippets were selected from lectures is that they provide widely used examples. These examples are suitable for investigating code comprehension. Moreover, the usage of loops and conditionals in the snippets requires different levels of cognitive processing.    
+Each snippet in the study is designed to investigate how different levels of indentations and different commenting formats affect code comprehension.  They represent different variations of levels of indentations and commenting formats.  The following code snippets formats are used in the study:
+
+
+
+\begin{enumerate}
+    \item \textbf{Comment formats:}
+    \begin{itemize}
+        \item \textbf{No comments:} Code snippet without any comments.
+        \item \textbf{Minimal comments:} Code snippet with minimal and essential comments.
+        \item \textbf{Helpful comments:} Code snippet with meaningful comments.
+        \item \textbf{Redundant comments:} Code snippet with unnecessary comments.
+    \end{itemize}
+    
+    \item \textbf{Levels of indentations:}
+    \begin{itemize}
+        \item \textbf{0 spaces indentation (no indentation):} Code snippet without indentation.
+        \item \textbf{4 spaces indentation:} Code snippet with 4 spaces indentation.
+        \item \textbf{Random indentation:} Code snippet with inconsistent indentation.
+    \end{itemize}
+\end{enumerate}
+
+Figure .............  presents an example for one code snippet with minimal comments . All code snippets used in the study are provided in Appendix A.
+
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=0.6]{figures/code_e.png}
+  \caption{Code snippet example }
+  \label{fig:AnhangsChor}
+\end{figure}
+
+\subsection{Research Variables}
+
+
+
+\section{Questionnaire Design}
+
+
+\subsection{First part of Questionnaire}
+The first part of the questionnaire gives general information about the participants. 
+Participants provide details about their field of study, as well as information about their academic background: their programming experience level and experience in Java.
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=0.45]{figures/allgemein.png}
+  \caption{First part of Questionnaire}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+
+\subsection{Main part of Questionnaire}
+
+....d..fv
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=0.45]{figures/main_p.png}
+  \caption{Main part of Questionnaire}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+
+
+\subsection{Final part of the Questionnaire}
+In the last part of the questionnaire, participants give their opinions on code indentation and code comments guidelines. They describe what they take into consideration when defining poorly commented and well-commented code. Moreover, they explain which code indentation style they use.  
+
+
+\begin{figure}  [H]
+  \centering
+  \includegraphics[scale=0.45]{figures/last_part.png}
+  \caption{Final part of the Questionnaire}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+
+ 
 \section{Procedure}
+
+The eye-tracking study (offline study) and the online study without eye-tracking formats are constructed similarly, but have some differences. The detailed procedure for both formats is outlined below.
+
+\subsection{Procedure for the Eye-Tracking Study}
+
+
+
+
+\begin{enumerate}
+    \item \textbf{Introduction:}
+    \begin{itemize}
+        \item At the beginning, participants answered several warm-up questions: “How are you feeling today? Do you have any experience with reading source code? Do you have any experience with eye-tracking studies?”
+        \item Then, participants are informed about the purpose of the study, data collection methods, and their right to withdraw from the study at any time.
+    \end{itemize}
+
+    \item \textbf{Calibration of the Eye-Tracking System:} 
+    Eye-tracker calibration is essential to ensure that the eye-tracking device correctly detects participants’ eyes and eye movements.
+    \begin{itemize}
+        \item Before calibration, participants put on the eye-tracking device and adjust three cameras: one for the screen, one for the right eye, and one for the left eye. It is essential to ensure that both eyes are correctly detected.
+        \item After the adjustment is performed, participants are asked to focus on several specific points on the screen. The system records their gaze.
+        \item In some cases, calibration errors occurred and recalibration was required.
+        \item After the calibration is completed, the eye-tracking system started recording participants’ gaze.
+        \item Participants read all relevant information themselves and then they proceeded to the questionnaire.
+    \end{itemize}
+    
+    \item \textbf{First part of Questionnaire:}  
+    Participants answered several questions providing demographic, background, and programming experience information. When the students filled out these questions, they proceeded to the main part of the Questionnaire - Code Comprehension Task.
+
+    \item \textbf{Main part of Questionnaire - Code Comprehension Task:}
+    \begin{itemize}
+        \item Each participant is shown seven different code snippets. The order of the code snippets was randomized in order to avoid bias.
+        \item The participants read each code snippet, while the eye-tracking device recorded their gaze movements, saccades, fixations, and pupil dilation. After reading each code snippet, students answered five questions. These questions are related to the corresponding code snippet. Moreover, their answers and response times were recorded.
+    \end{itemize}
+
+    \item \textbf{Final part of the Questionnaire:} 
+    The participants answered several questions providing information about their opinions on commenting and indentation in code.
+
+    \item \textbf{End of the study:} 
+    Participants are asked to give feedback on the difficulty level of the code snippets. Furthermore, the students mentioned their opinions on code readability and code comprehension. Additionally, they shared the challenges they faced during the eye-tracking study.
+
+\end{enumerate}
+
+
+\subsection{Procedure for the Online Study without Eye-Tracking}
+
+
+\begin{enumerate}
+    \item \textbf{Introduction}
+    \begin{itemize}
+        \item Then, participants are informed about the purpose of the study, data collection methods, and their right to withdraw from the study at any time.
+        \item Participants read all relevant information themselves and then they proceeded to the questionnaire.
+    \end{itemize}
+    
+    \item \textbf{First part of Questionnaire:}
+    Participants answered several questions providing demographic, background, and programming experience information. When the students filled out these questions, they proceeded to the main part of the Questionnaire - Code Comprehension Task.
+
+    \item \textbf{Main part of Questionnaire - Code Comprehension Task:}
+    \begin{itemize}
+        \item Each participant is shown seven different code snippets. The order of the code snippets was randomized in order to avoid bias.
+        \item The participants read each code snippet. After reading each code snippet, students answered five questions. These questions are related to the corresponding code snippet. Since there was no eye-tracking device, only their answers and response times were recorded.
+    \end{itemize}
+
+    \item \textbf{Final part of the Questionnaire:}
+    The participants answered several questions providing information about their opinions on commenting and indentation in code.
+\end{enumerate}
+
+
+
+
+
 
 \section{Measurements}
 
 \section{Participants}
+
+
+\section{Ethical Considerations}
+
+\begin{enumerate}
+    \item \textbf{Informed Consent}
+    \begin{itemize}
+        \item All participants receive clear information about the purpose of the study.
+        \item The participants have the right to withdraw at any time.
+    \end{itemize}
+    
+    \item \textbf{Data Protection}
+    \begin{itemize}
+        \item Demographic information, such as gender and age, is collected.
+        \item If participants choose to receive compensation from the university, they provide their university email address.
+        \item The rest of the data is anonymized and is stored for a maximum of three years.
+        \item Non-anonymized data is stored for a maximum of three years.
+        \item All collected data is encrypted.
+        \item For eye-tracking participants, video recordings and gaze data are stored.
+        \item For all participants, their questionnaire responses are stored.
+        \item At any time, participants can request deletion of their data.
+        \item No personal data is shared with third parties.
+    \end{itemize}
+\end{enumerate}
 
 \chapter{Results}
 
