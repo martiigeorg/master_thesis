@@ -431,33 +431,86 @@ This thesis analyzes how indentation and comments impact computer science studen
 \section{Methodology}
 
 \subsection{Study Approach}
-The study consists of two formats: an eye-tracking study (offline study) and an online study without eye-tracking. 
+
+The data in this study is gathered using two methods: eye-tracking technology and questionnaire. This approach provides objective and subjective data.
+Eye-tracking technology gives objective data. Using this type of data, it can be tracked which parts of the code are seen and for how long. Furthermore, cognitive load can be measured.
+On the other hand, questionnaire gives subjective data about the participants. The participants report their perceived code comprehension.  
+Previous research has also used both methods to gather data for a deeper code comprehension. (see Section Literature review). The Figure ... presents an overview how the data is gathered. 
 
 
 
-\begin{center}
+\begin{figure} [H]
+  \centering
+  
+  \caption{Study data}
+  \label{fig:AnhangsChor}
+
+
+
 \begin{tikzpicture}[node distance=1cm and 3cm, align=center, font=\footnotesize]
 
 % Define the styles for the boxes
 \tikzstyle{box} = [draw, minimum height=3cm, minimum width=4cm, text width=3.5cm, inner sep=5pt]
 
 % Create the nodes for Eye-Tracking and Questionnaire
-\node (eyeTracking) [box] {Eye-Tracking \\[5mm] $\rightarrow$ Measures attention (visual gaze) \\ $\rightarrow$ Identifies cognitive load};
-\node (questionnaire) [box, right=of eyeTracking] {Questionnaire \\[5mm] $\rightarrow$ Self-reports understanding \\ $\rightarrow$ Subjective measure of difficulty};
+\node (eyeTracking) [box] {Eye-Tracking  data \\[5mm] $\rightarrow$ Measures gaze \\ $\rightarrow$ Measure cognitive load};
+\node (questionnaire) [box, right=of eyeTracking] {Questionnaire data \\[5mm] $\rightarrow$ Subjective data  };
 
 % Create the middle box for "The Study"
-\node (study) [box, below=2cm of $(eyeTracking)!0.5!(questionnaire)$, text width=7cm, align=center] {The Study \\[5mm] $\rightarrow$ Both give a complete view:};
+\node (study) [box, below=2cm of $(eyeTracking)!0.5!(questionnaire)$, text width=7cm, align=center] {The study \\[5mm] $\rightarrow$ Both data give a complete view}; 
 
 % Draw lines from Eye-Tracking and Questionnaire to "The Study"
 \draw[->] (eyeTracking) -- (study);
 \draw[->] (questionnaire) -- (study);
 
 \end{tikzpicture}
-\end{center}
 
-textetx
+\end{figure}
+
  
 
+
+
+
+The study consists of two formats: an eye-tracking study (offline study) and an online study without eye-tracking. The Figure ... presents the structure of the study.
+
+\begin{figure} [H]
+  \centering
+  
+  \caption{Study structure}
+  \label{fig:AnhangsChor}
+
+
+\begin{tikzpicture}[node distance=1.5cm, font=\footnotesize, align=center]
+
+% Create the side-by-side rectangles for Eye-Tracking, Questionnaire, and Questionnaire2
+\node (eyeTracking) [draw, minimum height=2cm, minimum width=3cm, text width=2.5cm, align=center] {Eye-Tracking};
+\node (questionnaire) [draw, minimum height=2cm, minimum width=3cm, text width=2.5cm, align=center, right=1.5cm of eyeTracking] {Questionnaire};
+\node (questionnaire2) [draw, minimum height=2cm, minimum width=3cm, text width=2.5cm, align=center, right=1.5cm of questionnaire] {Questionnaire};
+
+% Create the Offline Study rectangle, below Eye-Tracking and Questionnaire
+\node (offlineStudy) [draw, minimum height=2cm, minimum width=3cm, text width=3cm, align=center, below=1.5cm of eyeTracking] {Offline study};
+
+% Create the Online Study rectangle, below Questionnaire2
+\node (onlineStudy) [draw, minimum height=2cm, minimum width=3cm, text width=3cm, align=center, below=1.5cm of questionnaire2] {Online study};
+
+% Create the center Study rectangle
+\node (study) [draw, minimum height=2cm, minimum width=6cm, text width=6cm, align=center, below=1.5cm of $(onlineStudy)!0.5!(offlineStudy)$] {The study };
+
+% Draw arrows from Eye-Tracking, Questionnaire, and Questionnaire2 to their respective study
+\draw[->] (eyeTracking) -- (offlineStudy);
+\draw[->] (questionnaire) -- (offlineStudy);
+\draw[->] (questionnaire2) -- (onlineStudy);
+
+% Draw arrows from Online Study and Offline Study to the center Study
+\draw[->] (onlineStudy) -- (study);
+\draw[->] (offlineStudy) -- (study);
+
+\end{tikzpicture}
+\end{figure}
+
+The eye-tracking study (offline study) gathers data using eye-tracking technology and a questionnaire. The eye-tracking device gives objective data as output and the questionnaire gives subjective data as output.  By combining both methods, the findings indicate whether questionnaire data aligns with the eye-tracking data.
+The online study without eye-tracking gathers data using only questionnaire. The questionnaire presents the subjective data. By using both formats, the study gives a more comprehensive overview of how computer science students perceive code. 
 
 
 
@@ -489,7 +542,7 @@ Figure .............  presents an example for one code snippet with minimal comm
 
 \begin{figure} [H]
   \centering
-  \includegraphics[scale=0.6]{figures/code_e.png}
+  \includegraphics[scale=1]{figures/codeb.png}
   \caption{Code snippet example }
   \label{fig:AnhangsChor}
 \end{figure}
@@ -499,7 +552,7 @@ The code snippets are collected from programming lectures conducted at LMU Unive
 The selection of the code snippets formats is based on the findings from previous research. It is defined that indentation levels and comment styles influence code readability and comprehension.  (e.g., Section Literature review). Therefore, the snippets in this study are designed to investigate how different levels of indentations and different commenting formats affect code comprehension.  Moreover, the code snippets are simple enough, and no additional knowledge is required. Furthermore, the usage of loops and conditionals in the snippets requires different levels of cognitive processing.    
 
 
-Each snippet is focused on one dimension at a time (levels of indentations or commenting formats). This enables a simple analysis and comparison across the different formats. The study has seven different code snippets, combining three levels of indentation and four types of commenting styles. For the commenting formats, four types are selected.  The role of the snippet with no comments is to investigate whether code can be understood without any additional information.  Minimal comments test whether minimal information is better than none and improves comprehension, or makes it difficult for understanding.
+Each snippet is focused on one dimension at a time (levels of indentations or commenting formats). This enables a simple analysis and comparison across the different formats. The study has seven different code snippets. It combines three levels of indentation and four types of commenting styles. For the commenting formats, four types are selected.  The role of the snippet with no comments is to investigate whether code can be understood without any additional information.  Minimal comments test whether minimal information is better than none and improves comprehension, or makes it difficult for understanding.
 Helpful comments investigate whether meaningful information enhances deeper code comprehension. Redundant comments tend to explore whether unnecessary comments make the code difficult to understand, causing cognitive overload.
 
 
@@ -519,7 +572,8 @@ For the indentation code snippets, the snippets consist of no comments. This ens
 \begin{tabular}{|p{6cm}|p{6cm}|}
 
 \hline
-\multicolumn{2}{|c|}{\textbf{Commenting formats}} \\
+\multicolumn{2}{|c|}{
+\textbf{Commenting formats}} \\
 \hline
 Type & Control Variable \\
 \hline
@@ -539,6 +593,19 @@ Random indentation & No comments \\
 \end{tabular}
 \label{tab:snippet_control}
 \end{table}
+
+
+
+\subsection{Technical setup}
+
+The eye-tracking study (offline study) was conducted at LMU, Munich. As eye-tracking device was used a Pupil Labs Core. This device contains glasses with three cameras. The glasses were connected to a laptop, running Pupil Capture software. This software ensures calibration and recording of eye movements. The laptop was placed on a desk. During the study, participants read the snippets and answered the questionnaire on the same laptop. This setup ensured minimal distractions.  The technical setup is presented in Figure ….
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=0.6]{figures/setup.png}
+  \caption{Technical setup }
+  \label{fig:AnhangsChor}
+\end{figure}
 
 
 
