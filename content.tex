@@ -4,7 +4,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+\pagenumbering{arabic}
 \chapter{Introduction}
 \label{sec:introduction}
 
@@ -382,14 +382,14 @@ The eye-tracking study \citet{silva2023evaluating} investigates how different co
 The findings show that confusing code snippets lead to difficulties in code comprehension and in increased fixations. Figure X presents the eye-gaze patterns for an obfuscated code snippet using the Conditional Expression atom, while Figure Y illustrates the clarified version of the same snippet \citet{silva2023evaluating}.
  
 figure 1,2
-\begin{figure} [h!]
+\begin{figure} [H]
   \centering
   \includegraphics[scale=0.6]{figures/a.png}
   \caption{Obfuscated code snippet \citet{silva2023evaluating}}
   \label{fig:AnhangsChor}
 \end{figure}
 
-\begin{figure}
+\begin{figure} [H]
   \centering
   \includegraphics[scale=0.6]{figures/b.png}
   \caption{Clarified version \citet{silva2023evaluating}}
@@ -433,10 +433,37 @@ This thesis analyzes how indentation and comments impact computer science studen
 \subsection{Study Approach}
 The study consists of two formats: an eye-tracking study (offline study) and an online study without eye-tracking. 
 
+
+
+\begin{center}
+\begin{tikzpicture}[node distance=1cm and 3cm, align=center, font=\footnotesize]
+
+% Define the styles for the boxes
+\tikzstyle{box} = [draw, minimum height=3cm, minimum width=4cm, text width=3.5cm, inner sep=5pt]
+
+% Create the nodes for Eye-Tracking and Questionnaire
+\node (eyeTracking) [box] {Eye-Tracking \\[5mm] $\rightarrow$ Measures attention (visual gaze) \\ $\rightarrow$ Identifies cognitive load};
+\node (questionnaire) [box, right=of eyeTracking] {Questionnaire \\[5mm] $\rightarrow$ Self-reports understanding \\ $\rightarrow$ Subjective measure of difficulty};
+
+% Create the middle box for "The Study"
+\node (study) [box, below=2cm of $(eyeTracking)!0.5!(questionnaire)$, text width=7cm, align=center] {The Study \\[5mm] $\rightarrow$ Both give a complete view:};
+
+% Draw lines from Eye-Tracking and Questionnaire to "The Study"
+\draw[->] (eyeTracking) -- (study);
+\draw[->] (questionnaire) -- (study);
+
+\end{tikzpicture}
+\end{center}
+
+textetx
+ 
+
+
+
+
 \subsection{Code Snippet Selection}
 
-The programming language used for the code snippets is Java, since it is a widely used language.  Additionally, most students, which participated in the study, are from LMU University, where Java is a key part of many computer science courses.  The code snippets are collected from programming lectures conducted at LMU University and adapted from the computer science exercises. The main reason why the snippets were selected from lectures is that they provide widely used examples. These examples are suitable for investigating code comprehension. Moreover, the usage of loops and conditionals in the snippets requires different levels of cognitive processing.    
-Each snippet in the study is designed to investigate how different levels of indentations and different commenting formats affect code comprehension.  They represent different variations of levels of indentations and commenting formats.  The following code snippets formats are used in the study:
+The programming language used for the code snippets is Java, since it is a widely used language.  Additionally, most students, which participated in the study, are from LMU University, where Java is a key part of many computer science courses. The following code snippets formats are used in the study:
 
 
 
@@ -451,8 +478,8 @@ Each snippet in the study is designed to investigate how different levels of ind
     
     \item \textbf{Levels of indentations:}
     \begin{itemize}
-        \item \textbf{0 spaces indentation (no indentation):} Code snippet without indentation.
-        \item \textbf{4 spaces indentation:} Code snippet with 4 spaces indentation.
+        \item \textbf{0-spaces indentation (no indentation):} Code snippet without indentation.
+        \item \textbf{4 spaces indentation:} Code snippet with 4-spaces indentation.
         \item \textbf{Random indentation:} Code snippet with inconsistent indentation.
     \end{itemize}
 \end{enumerate}
@@ -466,6 +493,54 @@ Figure .............  presents an example for one code snippet with minimal comm
   \caption{Code snippet example }
   \label{fig:AnhangsChor}
 \end{figure}
+
+\subsection{Justification of code snippets selection }
+The code snippets are collected from programming lectures conducted at LMU University and adapted from the computer science exercises. The main reason why the snippets were selected from lectures is that they provide widely used examples. These examples are suitable for investigating code comprehension.  
+The selection of the code snippets formats is based on the findings from previous research. It is defined that indentation levels and comment styles influence code readability and comprehension.  (e.g., Section Literature review). Therefore, the snippets in this study are designed to investigate how different levels of indentations and different commenting formats affect code comprehension.  Moreover, the code snippets are simple enough, and no additional knowledge is required. Furthermore, the usage of loops and conditionals in the snippets requires different levels of cognitive processing.    
+
+
+Each snippet is focused on one dimension at a time (levels of indentations or commenting formats). This enables a simple analysis and comparison across the different formats. The study has seven different code snippets, combining three levels of indentation and four types of commenting styles. For the commenting formats, four types are selected.  The role of the snippet with no comments is to investigate whether code can be understood without any additional information.  Minimal comments test whether minimal information is better than none and improves comprehension, or makes it difficult for understanding.
+Helpful comments investigate whether meaningful information enhances deeper code comprehension. Redundant comments tend to explore whether unnecessary comments make the code difficult to understand, causing cognitive overload.
+
+
+For the indentation, three levels were selected. 
+The role of the code snippet with no indentation is to investigate how the absence of indentation influences code readability and whether it causes cognitive overload.
+The 4-space indentation is defined as standard indentation in research and tends to explore whether it enhances deeper code readability.  
+Random indentation tests whether using different indentation across the code makes the snippet difficult to read and causes cognitive overload.
+
+
+For the commenting formats snippets, the snippets have 4-space indentations. This ensures that the focus is only on the comments. This indentation is defined as a "control group", which allows deeper comparison across the different commenting formats. 
+For the indentation code snippets, the snippets consist of no comments. This ensures that the focus is only on the indentation. Here the no comment format is also defined as a "control group", which allows deeper comparison across the different indentation levels. An overview is presented in Table ....
+
+
+\begin{table}[ht]
+\centering
+\caption{Overview of code snippet formats}
+\begin{tabular}{|p{6cm}|p{6cm}|}
+
+\hline
+\multicolumn{2}{|c|}{\textbf{Commenting formats}} \\
+\hline
+Type & Control Variable \\
+\hline
+No Comments & 4-space indentation \\
+Minimal Comments & 4-space indentation \\
+Helpful Comments & 4-space indentation \\
+Redundant Comments & 4-space indentation \\
+\hline
+\multicolumn{2}{|c|}{\textbf{Indentation levels}} \\
+\hline
+Type & Control Variable \\
+\hline
+No indentation & No comments \\
+4-space indentation & No comments \\
+Random indentation & No comments \\
+\hline
+\end{tabular}
+\label{tab:snippet_control}
+\end{table}
+
+
 
 \subsection{Research Variables}
 
@@ -488,7 +563,9 @@ Participants provide details about their field of study, as well as information 
 
 \subsection{Main part of Questionnaire}
 
-....d..fv
+In the main part of the questionnaire are shown seven different code snippets. Their order is randomized to avoid bias. Each code snippet presents a different level of indentation and a different type of comment format.
+Participants answer five questions corresponding to each code snippet. These questions are related to the code snippet’s function, ratings of the code comprehension, code indentation, and code commenting.
+
 
 \begin{figure} [H]
   \centering
@@ -522,30 +599,15 @@ The eye-tracking study (offline study) and the online study without eye-tracking
 
 
 \begin{enumerate}
-    \item \textbf{Introduction:}
-    \begin{itemize}
-        \item At the beginning, participants answered several warm-up questions: “How are you feeling today? Do you have any experience with reading source code? Do you have any experience with eye-tracking studies?”
-        \item Then, participants are informed about the purpose of the study, data collection methods, and their right to withdraw from the study at any time.
-    \end{itemize}
+    \item \textbf{Introduction:} At the beginning, participants answered several warm-up questions: “How are you feeling today? Do you have any experience with reading source code? Do you have any experience with eye-tracking studies?”  Then, participants are informed about the purpose of the study, data collection methods, and their right to withdraw from the study at any time.
 
     \item \textbf{Calibration of the Eye-Tracking System:} 
-    Eye-tracker calibration is essential to ensure that the eye-tracking device correctly detects participants’ eyes and eye movements.
-    \begin{itemize}
-        \item Before calibration, participants put on the eye-tracking device and adjust three cameras: one for the screen, one for the right eye, and one for the left eye. It is essential to ensure that both eyes are correctly detected.
-        \item After the adjustment is performed, participants are asked to focus on several specific points on the screen. The system records their gaze.
-        \item In some cases, calibration errors occurred and recalibration was required.
-        \item After the calibration is completed, the eye-tracking system started recording participants’ gaze.
-        \item Participants read all relevant information themselves and then they proceeded to the questionnaire.
-    \end{itemize}
+    Eye-tracker calibration is essential to ensure that the eye-tracking device correctly detects participants’ eyes and eye movements. Before calibration, participants put on the eye-tracking device and adjust three cameras: one for the screen, one for the right eye, and one for the left eye. It is essential to ensure that both eyes are correctly detected. After the adjustment is performed, participants are asked to focus on several specific points on the screen. The system records their gaze. In some cases, calibration errors occurred and recalibration was required. After the calibration is completed, the eye-tracking system started recording participants’ gaze. Participants read all relevant information themselves and then they proceeded to the questionnaire.
     
     \item \textbf{First part of Questionnaire:}  
     Participants answered several questions providing demographic, background, and programming experience information. When the students filled out these questions, they proceeded to the main part of the Questionnaire - Code Comprehension Task.
 
-    \item \textbf{Main part of Questionnaire - Code Comprehension Task:}
-    \begin{itemize}
-        \item Each participant is shown seven different code snippets. The order of the code snippets was randomized in order to avoid bias.
-        \item The participants read each code snippet, while the eye-tracking device recorded their gaze movements, saccades, fixations, and pupil dilation. After reading each code snippet, students answered five questions. These questions are related to the corresponding code snippet. Moreover, their answers and response times were recorded.
-    \end{itemize}
+    \item \textbf{Main part of Questionnaire - Code Comprehension Task:}  Each participant is shown seven different code snippets. The order of the code snippets was randomized in order to avoid bias. The participants read each code snippet, while the eye-tracking device recorded their gaze movements, saccades, fixations, and pupil dilation. After reading each code snippet, students answered five questions. These questions are related to the corresponding code snippet. Moreover, their answers and response times were recorded.
 
     \item \textbf{Final part of the Questionnaire:} 
     The participants answered several questions providing information about their opinions on commenting and indentation in code.
@@ -560,20 +622,12 @@ The eye-tracking study (offline study) and the online study without eye-tracking
 
 
 \begin{enumerate}
-    \item \textbf{Introduction}
-    \begin{itemize}
-        \item Then, participants are informed about the purpose of the study, data collection methods, and their right to withdraw from the study at any time.
-        \item Participants read all relevant information themselves and then they proceeded to the questionnaire.
-    \end{itemize}
+    \item \textbf{Introduction} Participants are informed about the purpose of the study, data collection methods, and their right to withdraw from the study at any time. Participants read all relevant information themselves and then they proceeded to the questionnaire.
     
     \item \textbf{First part of Questionnaire:}
     Participants answered several questions providing demographic, background, and programming experience information. When the students filled out these questions, they proceeded to the main part of the Questionnaire - Code Comprehension Task.
 
-    \item \textbf{Main part of Questionnaire - Code Comprehension Task:}
-    \begin{itemize}
-        \item Each participant is shown seven different code snippets. The order of the code snippets was randomized in order to avoid bias.
-        \item The participants read each code snippet. After reading each code snippet, students answered five questions. These questions are related to the corresponding code snippet. Since there was no eye-tracking device, only their answers and response times were recorded.
-    \end{itemize}
+    \item \textbf{Main part of Questionnaire - Code Comprehension Task:} Each participant is shown seven different code snippets. The order of the code snippets was randomized in order to avoid bias. The participants read each code snippet. After reading each code snippet, students answered five questions. These questions are related to the corresponding code snippet. Since there was no eye-tracking device, only their answers and response times were recorded.
 
     \item \textbf{Final part of the Questionnaire:}
     The participants answered several questions providing information about their opinions on commenting and indentation in code.
@@ -592,11 +646,7 @@ The eye-tracking study (offline study) and the online study without eye-tracking
 \section{Ethical Considerations}
 
 \begin{enumerate}
-    \item \textbf{Informed Consent}
-    \begin{itemize}
-        \item All participants receive clear information about the purpose of the study.
-        \item The participants have the right to withdraw at any time.
-    \end{itemize}
+    \item \textbf{Informed Consent: }All participants receive clear information about the purpose of the study. The participants have the right to withdraw at any time.
     
     \item \textbf{Data Protection}
     \begin{itemize}
@@ -615,6 +665,20 @@ The eye-tracking study (offline study) and the online study without eye-tracking
 \chapter{Results}
 
 \chapter{Discussion - Interpretation of Results}
+
+\section{Limitations} 
+Both formats of the study have several limitations that may have an impact on the results.
+In the eye-tracking study only .... 10..... computer science students participated.  This small number of participants limited the generalization of the findings.  Moreover, some participants moved their heads too much.  These movements caused an inaccuracy in gaze patterns and calibration errors. Furthermore, several technical issues with eye-tracking device were reported. Sometimes the changes of ambient and screen lighting led to inaccuracy of the records.
+The online study without eye-tracking also has several limitations that may have an impact on the results. 
+Only .....30..... computer science students participated in the study. The small number of participants limited the generalization of the results. 
+Moreover, some participants did not answer all questions. Therefore, only part of their answers were recorded, which led to missing data. 
+Furthermore, the online study was not conducted in a controlled environment. Participants filled out the questionnaire in different environments, which may have an influence on their answers.  
+These limitations highlight that improved technical setup and future research is needed. 
+
+
+\section{Improvements}
+
+Several improvements can be considered. First, a larger number of participants would provide more clear generalization of the findings. Additionally, the use of chin supports in the eye-tracking study may minimize participants’ head movements. It is also important to ensure consistent lighting conditions while conduction the eye-tracking study. Another suggestion is to select a laptop device that is less sensitive to ambient and screen lighting. This suggestion may reduce records errors. By implementing these improvements, future research can enhance clear generalization of the findings. 
 
 \chapter{Conclusion and Outlook}
 \label{sec:conclusion}
