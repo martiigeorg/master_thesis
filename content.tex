@@ -9,29 +9,63 @@
 \label{sec:introduction}
 
 
+\section{Background and Motivation}
 
-\section{Problem statement}
+Programming is an essential part of computer science and it is defined as one of the most difficult process to learn. \cite{andrzejewska2020development} It is considered as a cognitive activity that use various kinds of mental models, in order to understand the semantics and syntax of the programming language \cite{andrzejewska2020development}.
+Furthermore, correctly understandable abstract concepts are also a key part of the programming process \cite{lahtinen2005study}.
+
+There are various studies that investigate expert programmers. These studies define expert as people who use effective strategies \cite{robins2003learning}.   Experts tend to spent more time planning and testing code. In contrast, novices do not have the same skills as experts and are defined as beginner in programming \cite{robins2003learning} Novices tend to spend less time planning and testing code. Moreover, beginners have less knowledge about the sequential nature of execution of programs and have difficulties understanding some code language constructs \cite{robins2003learning}.
+
+
+Recently, many students have an interest in pursuing computer science. Therefore, introductory programming courses (CS1) have gained popularity in the education. \cite{robins2003learning}. In general, programming courses are considered difficult with highest dropout rates \cite{robins2003learning} It is considered that psychological and social factors, which are related to the perception of programming, are among the main difficulties of the programming process \cite{andrzejewska2020development}. Introductory programming courses present only the basic concepts of programming, and their goal is to teach how to write good code. However, code comprehension and quality topic are discussed later in the education process \cite{ inproceedings}.
+
+Code comprehension is defined as a key part of programming concepts and as one of the most time-consuming tasks \cite{javier2021understanding}.
+Recent research discusses how code formatting affects code comprehension and whether correct code structure makes it more understandable \cite{andrzejewska2020development}. It is considered that indentation affects program comprehension. Indentation decreases the time spent on source code, making the code structure easier to perceive \cite{bauer2017indentations}. Furthermore, code comments are also consider to have an impact on code comprehension. Comments describe the functionality of the code, making the code more understandable \cite{bakhuizen2019comments}.
+ 
+Usually, beginners are poor at tracking code, and their code comprehension is affected by how information is presented \cite{robins2003learning}. Some research aims to discover how poorly indented or poorly commented code has an influence on cognitive load and code comprehension.  However, eye-tacking studies on the effects of commenting and indentations on code comprehension among beginners have been rare so far and still remain a gap in computer science education.
+
+  
+This thesis presents an eye-tracking study, investigating the effects of indentation and commenting formats on novices’ perception of code and cognitive load. Eye-tacking technology helps visualize the eye movements of beginners and detect their cognitive load. 
+
+
+\section{Research question}
+
+The central research question in the thesis is: \textbf{RQ1.1:} How do commenting formats and indentation level affect code comprehension among CS1 students? To answer this question, the following sub-questions should be considered:
+
+\begin{itemize}
+    \item \textbf{RQ1.2:} Do well-indented code snippets lead to better comprehension?
+    \item \textbf{RQ1.3:} Does random indentation and redundant comments increase cognitive load?
+    \item \textbf{RQ1.4:} How does the time spent reading code vary between different commenting formats?
+    \item \textbf{RQ1.5:} How does the time spent reading code vary between different levels of indentation?
+\end{itemize}
+
+These questions help to provide insights into the role of code indentation and commenting in code comprehension. 
+To answer them, this thesis presents a study that focuses on the effects of code indentation and commenting on code comprehension among CS1 students.
+The study consists of two formats: an offline study using eye-tracking technology and an online study without eye-tracking. Both formats use the same questionnaire. The questionnaire consists of seven code snippets and several questions related to each snippet. The questionnaire gathers information about the participants, such as their understanding of the snippets, while the eye-tracking technology gathers data, such as participants’ gaze patterns and cognitive load during code reading.  
+
 \section{Thesis organization and contributions}
 
 The thesis is organized as follows:
 \begin{itemize}
 
 \item[] \emph{Chapter 2:} 
-\\We further continue with the theoretical part, such as .
+\\This chapter gives an overview of the theoretical background of code readability and code comprehension. Additionally, the Cognitive Load Theory and the Theory of Program Comprehension are presented to address human understanding. The Cognitive Load Theory discusses how the visual presentation of information  affect mental processes and Theory of Program Comprehension discuss how programmers interpret code. 
+Furthermore, the chapter discusses the eye-tracking approach and eye-tracking studies.  
 
 
 \item[] \emph{Chapter 3:}
-\\This chapter gives an overview of the state of the art of research in 
+\\This chapter presents the design of the study. It describes the technical setup, code snippets selection, and how data was collected. Additionally, details on study conditions and ethical considerations are included.
 
 
 \item[] \emph{Chapter 4:} 
-\\In this chapter, we are moving into the main part of the thesis - the implementation of the described approach. Additionally, the chapter presents the results of the experiments that were made. Furthermore, we evaluate and discuss the results of the experimental part of the approach.
+\\ This chapter presents the findings of the study. The results are based on the data collected from the eye-tracking device and questionnaire. The eye-tracking data is presented using heatmaps and gaze plots.
+
 
 \item[] \emph{Chapter 5:} 
-\\This chapter is devoted to applications  We also discuss possible future work and collaboration with another university group of students.
+\\In this chapter, the results from the study are interpreted. In addition, it is discussed how indentation and comments influenced the code comprehension of participants. Additionally, the limitations and possible improvements are included.
 
 \item[] \emph{Chapter 6:} 
-\\We summarize the finding of  this thesis in this chapter, review the results and discuss possible tasks for future work.
+\\The final chapter summarizes the main findings of the thesis. Furthermore, it also presents directions for future research.
 
 \end{itemize}
 
@@ -39,41 +73,13 @@ The thesis is organized as follows:
 In this thesis, the following contributions are made:
 \begin{enumerate}
 
-\item We propose a similarity search approach 
+\item The thesis presents a replicable study, which combines eye-tracking technology and questionnaire. Eye-tracking data gave information about the gaze patterns and cognitive load of the participants. The questionnaire presented participants’ opinion about code comprehension.
 
-\item  W....
+\item  The conducted study investigates the effects of different levels of indentation and commenting formats on code comprehension among CS1 students. The results of the study are discussed and present overview of which levels of indentation and commenting formats improve code comprehension.
 
-\item  We analyze the results and performance from the experimental part of the ....
+\item The conducted study can be used for developing better coding guidelines for CS1 students.
 
 \end{enumerate}
-
-
-
-
-
-
-
-% First Paragraph
-% CORE MESSAGE OF THIS PARAGRAPH:
-\todo{P1.1. What is the large scope of the problem?}
-\todo{P1.2. What is the specific problem?}
-
-% Second Paragraph
-% CORE MESSAGE OF THIS PARAGRAPH:
-\todo{P2.1. The second paragraph should be about what have others been doing}
-\todo{P2.2. Why is the problem important? Why was this work carried out?}
-
-% Third Paragraph
-% CORE MESSAGE OF THIS PARAGRAPH:
-\todo{P3.1. What have you done?}
-\todo{P3.2. What is new about your work?}
-
-% Fourth paragraph
-% CORE MESSAGE OF THIS PARAGRAPH:
-\todo{P4.1. What did you find out? What are the concrete results?}
-\todo{P4.2. What are the implications? What does this mean for the bigger picture?}
-
-LaTeX hints are provided in \autoref{chap:latexhints}.
 
 \chapter{Literature Review}
 In this chapter, we present the theoretical background of the basic concepts of the thesis. Moreover, we define and explain different ....
@@ -84,7 +90,7 @@ The quality is defined by several International organisations.
 
 German Industry Standard DIN 55350 Part 11 defines, that the quality “ … comprises all characteristics and significant features of a product or an activity which relate to the satisfying of given requirements” \cite{fitzpatrick1996software}.
 
-Another definition of quality is presented in ANSI Standard (ANSI/ASQC A3/1978), describing that the "Quality is the totality of features and characteristics of a product or a service that bears on its ability to satisfy the given needs"  \citet{fitzpatrick1996software}.
+Another definition of quality is presented in ANSI Standard (ANSI/ASQC A3/1978), describing that the "Quality is the totality of features and characteristics of a product or a service that bears on its ability to satisfy the given needs"  \cite{fitzpatrick1996software}.
 
 ANOTHER DEFITION comes later....
 
@@ -98,209 +104,215 @@ de
 de
 de
 
-\begin{table}[h!]
-    \caption{Sub-characteristics of the ISO 9126-1 quality modeL.}
-	\begin{tabularx}{\textwidth}{X | X }
-		%\hline
-	    \textbf{Quality Characteristics} & \textbf{Sub-characteristics}	
-	    \\ \hline
-		\\ %\hline
-		Functionality
-        & Suitability
-        
-        Accuracy
-        
-        Interoperability 
-        
-        Security
-        
-        Compliance			 
-		
-		\\ \hline
-	     \\ %\hline
-		Reliability    
-        
-        &  Maturity 
-        
-        Fault tolerance 
-        
-        Recoverability 
-        
-        Compliance
-		
-		\\ \hline
-	     \\ %\hline
-	    Usability       
-        
-        & Understandability 
-        
-        Learnability 
-        
-        Operability 
-        
-        Compliance
+
+\begin{longtable}{p{0.3\textwidth} | p{0.65\textwidth}}
+    \caption{Sub-characteristics of the ISO 9126-1 quality model.} \label{tab:table1} \\
+    \textbf{Quality Characteristics} & \textbf{Sub-characteristics} \\
+    \hline
+    \endfirsthead
+
+    \multicolumn{2}{c}%
+    {{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+    \textbf{Quality Characteristics} & \textbf{Sub-characteristics} \\
+    \hline
+    \endhead
+
+    \hline \multicolumn{2}{r}{{Continued on next page}} \\
+    \endfoot
+
+    \hline
+    \endlastfoot
+    \\
+    Functionality & 
+    Suitability \newline
+    Accuracy \newline
+    Interoperability \newline
+    Security \newline
+    Compliance \\
+    \\
+    \hline
+    \\
+    Reliability & 
+    Maturity \newline
+    Fault tolerance \newline
+    Recoverability \newline
+    Compliance \\
+    \\
+    \hline
+    \\
+    Usability & 
+    Understandability \newline
+    Learnability \newline
+    Operability \newline
+    Compliance \\
+    \\
+    \hline
+    \\
+    Efficiency & 
+    Time behavior \newline
+    Resource behavior \newline
+    Compliance \\
+    \\
+    \hline
+    \\
+    Maintainability & 
+    Analyzability \newline
+    Changeability \newline
+    Stability \newline
+    Testability \newline
+    Compliance \\
+    \\
+    \hline
+    \\
+    Portability & 
+    Adaptability \newline
+    Installability \newline
+    Co-existence \newline
+    Replaceability \newline
+    Compliance \\
+    \\
     
-	    \\ \hline
-	  \\ %\hline
-	   Efficiency &  Time behavior 
-        
-        Resource behavior 
-        
-        Compliance    
-        \\ %\hline
-	    \\ \hline
-	    \\ %\hline
-	    
-	   Maintainability	
-       
-       & Analyzability 
-        
-        Changeability 
-        
-        Stability 
-        
-        Testability 
-        
-        Compliance
-        
-	    \\ \hline
-	    \\ %\hline
-	    
-	   Portability	
-       
-       & Adaptability
-       
-       Installability 
-       
-       Co-existence
-       
-       Replaceability 
-       
-       Compliance
-        	   
-	\end{tabularx}
-	\label{tab:table1}
-	
-\end{table}
+\end{longtable}
 
 
 \subsection{Quality model ISO 25010 }
 
 
 textextex
+\begin{longtable}{p{0.3\textwidth} | p{0.65\textwidth}}
+    \caption{Sub-characteristics of the Quality model - ISO/IEC 25010} \label{tab:table1} \\
+    \textbf{Quality Characteristics} & \textbf{Sub-characteristics} \\
+    \hline
+    \endfirsthead
 
-\begin{table}[h!]
-    \caption{Sub-characteristics of the Quality model-ISO/IEC 25010}
-	\begin{tabularx}{\textwidth}{X | X }
-		%\hline
-	    \textbf{Quality Characteristics} & \textbf{Sub-characteristics}	
-	    \\ \hline
-		\\ %\hline
-		Functional Suitability
-       
-        & Functional completeness
-        
-        Functional correctness
-        
-        Functional appropriateness		
-        
-        \\ %\hline
-		\\ \hline
-	     \\ %\hline
-		Reliability    
-        
-        &  Maturity 
-        
-        Availability
-        
-        Fault tolerance
-        
-        Recoverability
-        
-		\\ \hline
-	     \\ %\hline
-	    Performance efficiency       
-        
-        & Time behaviour
-        
-        Resource utilization
-        
-        Capacity
-        
-        
-	    \\ \hline
-	  \\ %\hline
-	   Compatibility  
-       
-       &  Co-existence
-       
-       Interoperability   
-       
-     
-	    \\ \hline
-	    \\ %\hline
-	    
-	   Usability	
-       
-       & Appropriateness recognizability
-       
-       Learnability
-       
-       Operability
-       
-       User error protection
-       
-       User interface aesthetics
+    \multicolumn{2}{c}%
+    {{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+    \textbf{Quality Characteristics} & \textbf{Sub-characteristics} \\
+    \hline
+    \endhead
 
-       Accessibility
-       
-      
-	    \\ \hline
-	    \\ %\hline
-	    
-	   Security	
-       
-       & Confidentiality
-       
-       Integrity
-       
-       Non-repudiation
-       
-       Accountability
-       
-       Authenticity
-              
-       
-	    \\ \hline
-	    \\ %\hline
-	    
-	   Maintainability	
-       
-       &  Modularity
-       
-       Reusability
-       
-       Analysability
-       
-       Modifiability
-       
-       Testability
-     
-	    \\ \hline
-	    \\ %\hline
-	    
-	   Portability	
-       
-       & Adaptability
-       
-       Installability
-       
-       Replaceability
-        	   
-	\end{tabularx}
-	\label{tab:table1}
-	
-\end{table}
+    \hline \multicolumn{2}{r}{{Continued on next page}} \\
+    \endfoot
+
+    \hline
+    \endlastfoot
+    \\
+    Functional Suitability & 
+    Functional completeness \newline
+    Functional correctness \newline
+    Functional appropriateness \\
+    \\
+    
+    \hline
+    \\
+    Reliability &
+    Maturity \newline
+    Availability \newline
+    Fault tolerance \newline
+    Recoverability \\
+    \\
+    \hline
+    \\
+    Performance Efficiency &
+    Time behaviour \newline
+    Resource utilization \newline
+    Capacity \\
+    \\
+    \hline
+    \\
+    Compatibility &
+    Co-existence \newline
+    Interoperability \\
+    \\
+    \hline
+    \\
+    Usability &
+    Appropriateness recognizability \newline
+    Learnability \newline
+    Operability \newline
+    User error protection \newline
+    User interface aesthetics \newline
+    Accessibility \\
+    \\
+    \hline
+    \\
+    Security &
+    Confidentiality \newline
+    Integrity \newline
+    Non-repudiation \newline
+    Accountability \newline
+    Authenticity \\
+    \\
+    \hline
+    \\
+    Maintainability &
+    Modularity \newline
+    Reusability \newline
+    Analysability \newline
+    Modifiability \newline
+    Testability \\
+    \\
+    \hline
+    \\
+    Portability &
+    Adaptability \newline
+    Installability \newline
+    Replaceability \\
+    \\
+\end{longtable}
+
+\section{Code readability}
+\section{Code comprehension)}
+\section{Indentation}
+
+indentation 
+
+
+\begin{figure} [H]
+  \centering
+  \includegraphics [scale=0.7]
+  {figures/indentation_ex.png}
+  \caption{Non–indented and Indented Java code snippet \cite{hanenberg2024indentation}.}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+
+
+\section{Commenting}
+
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  base/.style={draw, rounded corners, minimum width=4cm, minimum height=1cm, align=center},
+  line/.style={draw, -latex},
+  node distance=0.6cm
+]
+
+% Subcategories (stacked vertically)
+\node[base] (copyright) {Copyright Comments};
+\node[base, below=of copyright] (header) {Header Comments};
+\node[base, below=of header] (member) {Member Comments};
+\node[base, below=of member] (inline) {Inline Comments};
+\node[base, below=of inline] (section) {Section Comments};
+\node[base, below=of section] (code) {Code Comments};
+\node[base, below=of code] (task) {Task Comments};
+
+% Calculate center node (manually placed to center vertically)
+\node[base, left=4cm of inline] (main) {Comment Classification};
+
+% Connecting lines
+\foreach \node in {copyright, header, member, inline, section, code, task} {
+  \draw[line] (main.east) -- (\node.west);
+}
+
+\end{tikzpicture}
+\caption{Classification of Code Comments}
+\label{fig:comment_classification}
+\end{figure}
+
+
+
 
 \section{Cognitive Load Theory (CLT)}
 - Relevance to Code Comprehension
@@ -313,7 +325,7 @@ textextex
 - Integrated Model: A mix of both, depending on experience level and task complexity
 
 
-\begin{figure} [h!]
+\begin{figure} [H]
   \centering
   \includegraphics[width=\textwidth]{figures/program_Comprehension_Process.png}
   \caption{The Program Comprehension Process}
@@ -384,14 +396,14 @@ The findings show that confusing code snippets lead to difficulties in code comp
 figure 1,2
 \begin{figure} [H]
   \centering
-  \includegraphics[scale=0.6]{figures/a.png}
+  \includegraphics[scale=0.8]{figures/a.png}
   \caption{Obfuscated code snippet \citet{silva2023evaluating}}
   \label{fig:AnhangsChor}
 \end{figure}
 
 \begin{figure} [H]
   \centering
-  \includegraphics[scale=0.6]{figures/b.png}
+  \includegraphics[scale=0.8]{figures/b.png}
   \caption{Clarified version \citet{silva2023evaluating}}
   \label{fig:AnhangsChor}
 \end{figure}
@@ -432,10 +444,10 @@ This thesis analyzes how indentation and comments impact computer science studen
 
 \subsection{Study Approach}
 
-The data in this study is gathered using two methods: eye-tracking technology and questionnaire. This approach provides objective and subjective data.
+The data in this study is gathered using two methods: eye-tracking technology and questionnaire. This approach provides both objective and subjective data, as well as quantitative and qualitative data.
 Eye-tracking technology gives objective data. Using this type of data, it can be tracked which parts of the code are seen and for how long. Furthermore, cognitive load can be measured.
-On the other hand, questionnaire gives subjective data about the participants. The participants report their perceived code comprehension.  
-Previous research has also used both methods to gather data for a deeper code comprehension. (see Section Literature review). The Figure ... presents an overview how the data is gathered. 
+On the other hand, questionnaire can give quantitative data (using Likert scale questions). Moreover, questionnaire can give subjective data about the participants (using open-ended questions). The participants report their perceived code comprehension.  
+Previous research has also used both methods to gather data for a deeper code comprehension. (see Chapter Literature review). The Figure ... presents an overview how the data is gathered. 
 
 
 
@@ -509,8 +521,8 @@ The study consists of two formats: an eye-tracking study (offline study) and an 
 \end{tikzpicture}
 \end{figure}
 
-The eye-tracking study (offline study) gathers data using eye-tracking technology and a questionnaire. The eye-tracking device gives objective data as output and the questionnaire gives subjective data as output.  By combining both methods, the findings indicate whether questionnaire data aligns with the eye-tracking data.
-The online study without eye-tracking gathers data using only questionnaire. The questionnaire presents the subjective data. By using both formats, the study gives a more comprehensive overview of how computer science students perceive code. 
+The eye-tracking study (offline study) gathers data using eye-tracking technology and a questionnaire. The eye-tracking device gives objective quantitative data as output and the questionnaire gives both objective and subjective data, as well as quantitative and qualitative data as output.  By combining both methods, the findings indicate whether questionnaire data aligns with the eye-tracking data.
+The online study without eye-tracking gathers data using only questionnaire. By using both formats, the study gives a more comprehensive overview of how computer science students perceive code. 
 
 
 
@@ -542,14 +554,14 @@ Figure .............  presents an example for one code snippet with minimal comm
 
 \begin{figure} [H]
   \centering
-  \includegraphics[scale=1]{figures/codeb.png}
+  \includegraphics[scale=1.1]{figures/codeb.png}
   \caption{Code snippet example }
   \label{fig:AnhangsChor}
 \end{figure}
 
 \subsection{Justification of code snippets selection }
 The code snippets are collected from programming lectures conducted at LMU University and adapted from the computer science exercises. The main reason why the snippets were selected from lectures is that they provide widely used examples. These examples are suitable for investigating code comprehension.  
-The selection of the code snippets formats is based on the findings from previous research. It is defined that indentation levels and comment styles influence code readability and comprehension.  (e.g., Section Literature review). Therefore, the snippets in this study are designed to investigate how different levels of indentations and different commenting formats affect code comprehension.  Moreover, the code snippets are simple enough, and no additional knowledge is required. Furthermore, the usage of loops and conditionals in the snippets requires different levels of cognitive processing.    
+The selection of the code snippets formats is based on the findings from previous research. It is defined that indentation levels and comment styles influence code readability and comprehension.  (e.g., Chapter Literature review). Therefore, the snippets in this study are designed to investigate how different levels of indentations and different commenting formats affect code comprehension.  Moreover, the code snippets are simple enough, and no additional knowledge is required. Furthermore, the usage of loops and conditionals in the snippets requires different levels of cognitive processing.    
 
 
 Each snippet is focused on one dimension at a time (levels of indentations or commenting formats). This enables a simple analysis and comparison across the different formats. The study has seven different code snippets. It combines three levels of indentation and four types of commenting styles. For the commenting formats, four types are selected.  The role of the snippet with no comments is to investigate whether code can be understood without any additional information.  Minimal comments test whether minimal information is better than none and improves comprehension, or makes it difficult for understanding.
@@ -576,11 +588,11 @@ For the indentation code snippets, the snippets consist of no comments. This ens
 \textbf{Commenting formats}} \\
 \hline
 Type & Control Variable \\
-\hline
-No Comments & 4-space indentation \\
-Minimal Comments & 4-space indentation \\
-Helpful Comments & 4-space indentation \\
-Redundant Comments & 4-space indentation \\
+\hline 
+No comments & 4-space indentation \\
+Minimal comments & 4-space indentation \\
+Helpful comments & 4-space indentation \\
+Redundant comments & 4-space indentation \\
 \hline
 \multicolumn{2}{|c|}{\textbf{Indentation levels}} \\
 \hline
