@@ -270,7 +270,23 @@ This method is applied to define code fragments such as loops and conditions.  I
 
 
 The level of indentation can vary in different programming languages and can be set as a personal preference \cite{bauer2017indentations}. Considering the programming language Java, there are many style guides suggestions for which indentation to use. The most commonly used suggestion is an indentation of four spaces. This level of indentation is proposed by style guides such as Oracle and Google \cite{bauer2017indentations}.
-Several IDEs, such as Visual Studio and IntelliJ, often use formatting tools that automatically apply indentation to the source code \cite{morzeck2023indentation}.
+Several IDEs, such as Visual Studio and IntelliJ, often use formatting tools that automatically apply indentation to the source code \cite{morzeck2023indentation}. Snippets with an indentation  of 2,6,8-spaces are not so often used. Figure .. and Figure present code snippets with Indentation of 4-spaces and 8-spaces.
+
+\begin{figure} [H]
+  \centering
+  \includegraphics [scale=0.7]
+  {figures/4.png}
+  \caption{Code snippet with 4-spaces \cite{bauer2017indentations}.}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+\begin{figure} [H]
+  \centering
+  \includegraphics [scale=0.7]
+  {figures/8.png}
+  \caption{Code snippet with 8-spaces \cite{bauer2017indentations}.}
+  \label{fig:AnhangsChor}
+\end{figure}
 
 
 \begin{figure} [H]
@@ -290,6 +306,47 @@ In the first code snippet, which is indented, some space is added before the mai
 
 
 \section{Commenting}
+A comment is an element of source code, which provides provides information that is relevant to the code \cite{de2011comment}. A comment can consist of names, words, and white spaces.  The goal of a comment is to make the code source code more understandable.  Comments can be defined in different types, regarding their length, their content and their purpose. Comments in source code use natural language, where only a limited part of it is called a sublanguage \cite{de2017investigating}. This sublanguage has specific characteristics. It uses the present tense in imperative or indicative mood. Furthermore, it includes a small set of verbs (is, uses, implements, writes), and personal pronouns are almost never used.
+
+Regarding their length, comments can be defined as line (or also called inline) comments and block comments \cite{de2017investigating}. The inline comments consist of one single line. Figure … presents this type. 
+
+\begin{figure} [H]
+  \centering
+  \includegraphics [scale=0.9]
+  {figures/inline.png}
+  \caption{Inline comment }
+  \cite{de2011comment}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+In Figure ... is presented a block comment. The block comments contain one or more lines. In each programming language, both types can be used. In Figure … are presented both types for Java \cite{de2011comment}. Javadoc is a variation of the block comment, provided by Java (Figure ...).  Javadoc uses a set of tags, which declare information about a class, such as its author and version \cite{de2011comment}.
+
+\begin{figure} [H]
+  \centering
+  \includegraphics [scale=0.9]
+  {figures/multiline.png}
+  \caption{Block comment}
+  \cite{de2011comment}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+\begin{figure} [H]
+  \centering
+  \includegraphics [scale=0.9]
+  {figures/javad.png}
+  \caption{JavaDoc comment}
+  \cite{de2011comment}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+Regarding the content, comments can be divided into several categories \cite{de2011comment}. The Type category consists of two subcategories: Unit and IntRange. Unit comments present the units of a variable, while IntRange comments the range of values \cite{de2011comment}.
+The Interface category includes ErrorReturn comments. This subcategory presents the return values for errors. 
+The Code Relationship category includes the subcategories DataFlow and ControlFlow comments: DataFlow comments present dependencies between functions and ControlFlow comments can include information about unreachable coe \cite{de2011comment}.
+The PastFuture category consists of the subcategories TODO and FIXME comments: these comments indicate that some improvement of the code is needed \cite{de2011comment}.
+The Meta category gives information about the authorship. The rest of the comments are considered as part of the Explanation category.
+
+
+Regarding to their purpose and placement in code, comments can be categorized into seven types.  Figure ….. presents these types: copyright comments, header comments, member comments, inline comments, section comments, task comments, and code comments. 
 
 
 \begin{figure}[H]
@@ -319,10 +376,43 @@ In the first code snippet, which is indented, some space is added before the mai
 
 \end{tikzpicture}
 \caption{Classification of Code Comments}
+\cite{hassan2022code}
 \label{fig:comment_classification}
 \end{figure}
 
+Copyright comments are often displayed at the beginning of a file and present information about its license or copyright \cite{steidl2013quality}. Header comments include information about the functionality of the class: class's creator. In Java, these comments are displayed before the declaration of the class \cite{hassan2022code}. Member comments give an overview to the functionality of a method \cite{steidl2013quality}. Inline comments include information about the implementation within a method \cite{steidl2013quality}. Section comments give an overview to group of methods that relate to the same functional aspect \cite{hassan2022code}. Code comments present commented out code, which is not compiled. This type of comments is used for debugging purposes \cite{steidl2013quality}. Task comments are comments, which contain note for a bug or remark \cite{steidl2013quality}.
 
+
+
+To analyse the quality of code comments, many aspects of comments should be considered. Four criteria can be determined: coherence, completeness, consistency, and usefulness \cite{steidl2013quality}.
+The coherence attribute defines how comments relate to the source code: for instance, member comment should be related to the corresponding method name.
+The completeness attribute defines how all relevant information is documented. 
+The consistency attribute defines how comments follow a consistent format and language. For instance, when comments are written in the same language, it enhances code readability and comprehension \cite{steidl2013quality}.
+The usefulness attribute defines how comments clarify the purpose of the source code. Comments that do not enhance understanding should not be used. 
+
+
+The length of the comments can influence completeness of the comments \cite{steidl2013quality}. Shorter comments present less information than longer comments. Figure … visualizes a very short comment, explaining clear information, while Figure … presents a longer code comment, giving more information about the code snippet. 
+
+
+
+\begin{figure} [H]
+  \centering
+  \includegraphics [scale=0.9]
+  {figures/run1.png}
+  \caption{Example of a short comment}
+  \cite{steidl2013quality}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+
+\begin{figure} [H]
+  \centering
+  \includegraphics [scale=0.9]
+  {figures/long.png}
+  \caption{Example of a long comment}
+  \cite{steidl2013quality}
+  \label{fig:AnhangsChor}
+\end{figure}
 
 
 \section{Cognitive Load Theory (CLT)}
@@ -342,6 +432,9 @@ In the first code snippet, which is indented, some space is added before the mai
   \caption{The Program Comprehension Process}
   \label{fig:AnhangsChor}
 \end{figure}
+
+
+
 
 \section{Eye Tracking}
 
