@@ -20,7 +20,7 @@ There are various studies that investigate expert programmers. These studies def
 Recently, many students have an interest in pursuing computer science. Therefore, introductory programming courses (CS1) have gained popularity in the education. \cite{robins2003learning}. In general, programming courses are considered difficult with highest dropout rates \cite{robins2003learning} It is considered that psychological and social factors, which are related to the perception of programming, are among the main difficulties of the programming process \cite{andrzejewska2020development}. Introductory programming courses present only the basic concepts of programming, and their goal is to teach how to write good code. However, code comprehension and quality topic are discussed later in the education process \cite{ inproceedings}.
 
 Code comprehension is defined as a key part of programming concepts and as one of the most time-consuming tasks \cite{javier2021understanding}.
-Recent research discusses how code formatting affects code comprehension and whether correct code structure makes it more understandable \cite{andrzejewska2020development}. It is considered that indentation affects program comprehension. Indentation decreases the time spent on source code, making the code structure easier to perceive \cite{bauer2017indentations}. Furthermore, code comments are also consider to have an impact on code comprehension. Comments describe the functionality of the code, making the code more understandable \cite{bakhuizen2019comments}.
+Recent research discusses how code formatting affects code comprehension and whether correct code structure makes it more understandable \cite{andrzejewska2020development}. It is considered that indentation affects program comprehension and code readability. Indentation decreases the time spent on source code, making the code structure easier to perceive \cite{bauer2017indentations}. Furthermore, code comments are also consider to have an impact on code comprehension. Comments describe the functionality of the code, making the code more understandable \cite{bakhuizen2019comments}.
  
 Usually, beginners are poor at tracking code, and their code comprehension is affected by how information is presented \cite{robins2003learning}. Some research aims to discover how poorly indented or poorly commented code has an influence on cognitive load and code comprehension.  However, eye-tacking studies on the effects of commenting and indentations on code comprehension among beginners have been rare so far and still remain a gap in computer science education.
 
@@ -75,9 +75,7 @@ In this thesis, the following contributions are made:
 
 \item The thesis presents a replicable study, which combines eye-tracking technology and questionnaire. Eye-tracking data gave information about the gaze patterns and cognitive load of the participants. The questionnaire presented participants’ opinion about code comprehension.
 
-\item  The conducted study investigates the effects of different levels of indentation and commenting formats on code comprehension among CS1 students. The results of the study are discussed and present overview of which levels of indentation and commenting formats improve code comprehension.
-
-\item The conducted study can be used for developing better coding guidelines for CS1 students.
+\item  The conducted study investigates the effects of different levels of indentation and commenting formats on code comprehension among CS1 students. The results of the study are discussed and present overview of which levels of indentation and commenting formats improve code comprehension. The conducted study can be used for developing better coding guidelines for CS1 students.
 
 \end{enumerate}
 
@@ -95,18 +93,17 @@ Another definition of quality is presented in ANSI Standard (ANSI/ASQC A3/1978),
 ANOTHER DEFITION comes later....
 
 \section{Quality models}
+Quality assurance is a key part of software engineering. Standards help to improve efficiency and ensure quality in the processes. In the literature, many software quality standards have been proposed.
+
+
 
 \subsection{Quality model ISO 9126-1}
-text text
-e
 
-de
-de
-de
+ISO/IEC 9126-1 is among the widely used standards, which considers quality in software quality \cite{losavio2004iso}. It defines quality as a set of attributes of a product that impact its ability to fulfil its requirements \cite{losavio2004iso}. The model categorizes quality into six characteristics: functionality, reliability, usability, efficiency, maintainability, and portability. These factors are crucial for the quality of software. Table … presents these characteristics.
 
 
 \begin{longtable}{p{0.3\textwidth} | p{0.65\textwidth}}
-    \caption{Sub-characteristics of the ISO 9126-1 quality model.} \label{tab:table1} \\
+    \caption{Sub-characteristics of the ISO 9126-1 quality model \cite{losavio2004iso}} \label{tab:table1} \\
     \textbf{Quality Characteristics} & \textbf{Sub-characteristics} \\
     \hline
     \endfirsthead
@@ -175,12 +172,21 @@ de
 \end{longtable}
 
 
+Functionality describes what the software does and includes suitability of functions, the accuracy of results, interoperability with other systems, and data security \cite{spinellis2006code}. Usability refers to understandability, learnability, operability, and attractiveness of the product. Understandability measures the ease with which users use the system \cite{dugalic2012iso}. Efficiency concerns the use of time and storage space, and its performance in relation to the given resources \cite{dugalic2012iso}. Reliability describes the software’s stability under specific conditions. This characteristic consists of three elements. Maturity presents the absence of faults, fault tolerance indicates to function of the software despite errors, and recoverability allows data recovery after failures \cite{spinellis2006code}. Portability refers to the adaptability of software to different environments and consists of installability,  coexistence with other software, and replaceability \cite{spinellis2006code}. Maintainability describes how easily the software can be analyzed, modified, and tested \cite{spinellis2006code}. Furthermore, the readability of a program is also considered part of the maintainability of the system \cite{buse2009learning}.  When the code is readable, the costs of maintenance of the software decrease \cite{sedano2016code}.
+
+
+
+
+
 \subsection{Quality model ISO 25010 }
 
 
-textextex
+The ISO/IEC 25010 (ISO/IEC, 2011) standard is derived from ISO/IEC 9126-1 (ISO/IEC, 2001), using a similar naming convention and structure \cite{zapata2013development}. However, this model introduces additional subcharacteristics. The model consists of eight quality characteristics: functional suitability, reliability, performance efficiency, compatibility, usability, security, maintainability and portability.  
+Each characteristic include a set of subcharacteristics, which are similar to the subcharacteristics of ISO/IEC 9126-1 (ISO/IEC, 2001). Nonetheless, some characteristics  have been renamed. For example, understandability is replaced by appropriateness recognisability \cite{zapata2013development}. Table … presents these characteristics of the ISO/IEC 25010 model.
+
+
 \begin{longtable}{p{0.3\textwidth} | p{0.65\textwidth}}
-    \caption{Sub-characteristics of the Quality model - ISO/IEC 25010} \label{tab:table1} \\
+    \caption{Sub-characteristics of the quality model - ISO/IEC 25010 \cite{haoues2017guideline}} \label{tab:table1} \\
     \textbf{Quality Characteristics} & \textbf{Sub-characteristics} \\
     \hline
     \endfirsthead
@@ -261,8 +267,50 @@ textextex
     \\
 \end{longtable}
 
+
+
+In this thesis, the ISO 25010 model is adopted since it is the recent quality standard. Additionally, understandability is considered a part of the maintainability, in alignment with many researchers in the field \cite{xia2017measuring}. 
+
+
+
 \section{Code readability}
-\section{Code comprehension)}
+
+Readability defines how easily a text can be understood. Code readability defines how easily source code can be interpreted by a programmer \cite{bakhuizen2019comments}. 
+ 
+Recently, there have been studies aiming to investigate which factors influence code readability and how to achieve best results. 
+To measure code readability, researchers measure how much time it takes for a test subject to complete a task related to reading source snippet  \cite{bakhuizen2019comments}.   Different factors can affect the readability of code source: for instance, how the code is structured and which code formatting is used  \cite{bakhuizen2019comments}.  One example of code formatting is applying indentation \cite{buse2009learning}. In research, the term readability can be associated with the term understandability \cite{winkler2024investigating}.
+
+
+\section{Code comprehension}
+
+Program comprehension, also called code comprehension or program understanding, is a cognitive process and considers the programmer's ability to understand what a program does \cite{karahasanovic2007comprehension}. Such knowledge helps developers in finding bugs and writing software documentation \cite{xia2017measuring}.
+It is considered, that program comprehension is a time-consuming task in the maintenance of software \cite{8075175}.
+
+To measure code comprehension, several studies measure how much time it takes for a test subject to understand source code and to answer questions regarding its understandability \cite{wagner2021code}. These studies aim to investigate which factors influence code comprehension. For example, it is considered, that comments affect code comprehension \cite{de2011comment}. The goal of code comments is to present more information about the code, which can be relevant for its understandibility.
+
+Readability and comprehensibility are key parts of making code maintainable. 
+If the source code is not understood correctly, it cannot be applied properly and cannot be modified correctly \cite{izu2025introducing}. Therefore, code readability and code comprehension affect the code quality. The relationship between these terms is displayed in Figure … 
+
+
+
+
+
+
+\begin{center}
+\begin{tikzpicture}[node distance=2.5cm, every node/.style={font=\small}]
+  % Circles with 91% overlap, same size
+  \node[draw, circle, minimum size=4cm, align=center] (readability) at (0,0) {Readability};
+  \node[draw, circle, minimum size=4cm, align=center, xshift=3.5cm] (comprehension) {Comprehension}; % 91% overlap
+
+  % Code Quality in a circle, same size, below the overlap area
+  \node[draw, circle, minimum size=4cm, align=center, below=3cm of $(readability.south)!0.5!(comprehension.south)$] (quality) {Code Quality};
+
+  % Arrow from overlap area to Code Quality
+  \draw[->, thick] ($(readability.south)!0.5!(comprehension.south)$) -- (quality.north);
+\end{tikzpicture}
+\end{center}
+
+
 \section{Indentation}
 
 Indentation is an approach used to organize source code. At the beginning of a code line, there is some space \cite{morzeck2023indentation}.
@@ -348,16 +396,15 @@ The Meta category gives information about the authorship. The rest of the commen
 
 Regarding to their purpose and placement in code, comments can be categorized into seven types.  Figure ….. presents these types: copyright comments, header comments, member comments, inline comments, section comments, task comments, and code comments. 
 
-
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}[
-  base/.style={draw, rounded corners, minimum width=4cm, minimum height=1cm, align=center},
+  base/.style={draw, rounded corners, width=4cm, height=1cm, align=center},
   line/.style={draw, -latex},
   node distance=0.6cm
 ]
 
-% Subcategories (stacked vertically)
+% Set all nodes to have the same width and height
 \node[base] (copyright) {Copyright Comments};
 \node[base, below=of copyright] (header) {Header Comments};
 \node[base, below=of header] (member) {Member Comments};
@@ -366,7 +413,7 @@ Regarding to their purpose and placement in code, comments can be categorized in
 \node[base, below=of section] (code) {Code Comments};
 \node[base, below=of code] (task) {Task Comments};
 
-% Calculate center node (manually placed to center vertically)
+% Central node (manually placed to center vertically)
 \node[base, left=4cm of inline] (main) {Comment Classification};
 
 % Connecting lines
@@ -379,6 +426,10 @@ Regarding to their purpose and placement in code, comments can be categorized in
 \cite{hassan2022code}
 \label{fig:comment_classification}
 \end{figure}
+
+
+
+
 
 Copyright comments are often displayed at the beginning of a file and present information about its license or copyright \cite{steidl2013quality}. Header comments include information about the functionality of the class: class's creator. In Java, these comments are displayed before the declaration of the class \cite{hassan2022code}. Member comments give an overview to the functionality of a method \cite{steidl2013quality}. Inline comments include information about the implementation within a method \cite{steidl2013quality}. Section comments give an overview to group of methods that relate to the same functional aspect \cite{hassan2022code}. Code comments present commented out code, which is not compiled. This type of comments is used for debugging purposes \cite{steidl2013quality}. Task comments are comments, which contain note for a bug or remark \cite{steidl2013quality}.
 
@@ -437,38 +488,80 @@ The length of the comments can influence completeness of the comments \cite{stei
 
 
 \section{Eye Tracking}
+Eye-tracking technology provides data on how individuals process visual information  \cite{andrzejewska2020development}.
+An eye-tracking device collects the eye movements of a participant while the participant works on a task. A stimulus is an object that is needed to perform a task. The eye–mind assumption considers that an individual keeps their gaze on a stimulus until they have understood it \cite{sharafi2015systematic}. Areas of Interest (AOI) define the parts of the stimulus on which eyes pay attention \cite{sharafi2015systematic}. If certain AOIs help a person complete a task, they are considered relevant. For instance, a relevant AOI in a class diagram is a particular class that the person needs 
+\cite{sharafi2015systematic}.
 
-•	Definition 
+The main terms in eye-tracking technology are fixation and saccade. 
+Fixation is a state of stable eye movement for a period of time between 200 to 300 ms. \cite{sharafi2015systematic}. This data is encoded with a timestamp and x and y coordinates. 
+In research , the number of fixations and their duration is usually measured. Saccade is a rapid movement of the eyes, jumping form one point to another \cite{andrzejewska2020development}.
+This movement lasts from 30ms to 50ms \cite{obaidellah2018survey}. A scan-path is a set of fixations (of areas of interest), which are in chronological order. Figure … presents a scan-path with A, B, C, and D as areas of interest  \cite{sharafi2015systematic}.
 
-
-•	Background
-
-
-•	Metrics
-
-
-•	Why it’s relevant: Eye-tracking studies assume that where a person looks is what they are thinking about.
-
-
-•	Key ideas:
-
-
-o	Fixations (longer gaze duration) suggest higher cognitive processing effort.
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=1.2]{figures/scanp.png}
+  \caption{Example of scan-path}
+  \label{fig:AnhangsChor}
+\end{figure}
 
 
-o	Saccades (quick eye movements) indicate searching behavior (e.g., students scanning comments before reading the code).
+ 
+There are several eye-tracking metrics used in research. These metrics help researchers evaluate the level of cognitive processing of people \cite{obaidellah2018survey}. The metrics are defined in four categories: metrics based on fixations,
+saccades, pupil size, and scanpath \cite{sharafi2015eye}. Some of the metrics based on fixation are described in Figure …
 
 
-o	Areas of Interest (AOI) refer to parts of the stimulus on which eye-tracking metrics are recorded. Examples could be chunks in the code editor, the requirements area of the IDE, or the console output. The AOI is usually defined by the researcher.
+\begin{table}[H]
+\centering
+\small % You can change this to \footnotesize or \scriptsize
+\caption{Common eye-tracking metrics}
+\label{tab:eye_tracking_metrics}
+\begin{tabular}{p{0.25\textwidth} | p{0.68\textwidth}}
+\textbf{Metric} & \textbf{Description} \\
+\hline
+Fixation Count & The total number of eye fixations on a certain area. A higher fixation count indicates more interest in that area and more effort is spent to complete the task \cite{obaidellah2018survey}. \\
+\hline
+Fixation Duration & One of the most used metrics in eye-tracking technology. It indicates the duration of fixations. A longer fixation duration suggests higher cognitive effort and more attention is required to process the information \cite{junior5005089understanding}. \\
+\hline
+Fixation Rate & The number of fixations per second. A higher fixation rate indicates frequent gaze shifts. A low fixation rate may imply difficulty in processing information or immediate understanding \cite{bauer2017indentations}. \\
+\end{tabular}
+\end{table}
 
 
-•	How to apply it:
 
 
-o	Compare eye-tracking heatmaps to see if students focus more on comments before reading the code.
 
 
-o	Measure how indentation influences reading patterns—does better indentation make scanning for logic structures easier?
+To visualize the eye-tracking data, several techniques are used: heatmap, color-coded attention allocation map, and gaze plot. For example, a heatmap helps to visualize the intensity of fixations. It uses a color spectrum, presenting the gaze patterns of an individual. 
+To indicate the intensity of fixation, colors such as red (highest intensity), orange, green, and blue(lowest intensity) are used \cite{sharafi2015systematic}. Figure … presents a heatmap of code snippet. A gaze plot is used to visualize the scan-path Figure … presents a gaze plot \cite{sharafi2015systematic}. A color-coded attention allocation map maps a color to each word corresponding to the attention level, from light green (lowest attention level) to red (highest level of attention) \cite{sharafi2015systematic}.
+Figure … presents a color-coded attention allocation map
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=1]{figures/hm.png}
+  \caption{Example of heatmap \cite{jbara2017programmers}}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=0.9]{figures/gaze.png}
+  \caption{Example of gaze plot \cite{blignaut2019visualization}}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=1]{figures/collor.png}
+  \caption{Example of color-coded attention allocation map \cite{sharafi2015systematic} } 
+  \label{fig:AnhangsChor}
+\end{figure}
+
+Eye-tracking technology helps to identify the visual patterns of information processing. 
+The finding from eye-tracking studies can contribute to improving the learning process \cite{andrzejewska2020development}.
+
+
 
 
 \section{Studies using Eye Tracking}

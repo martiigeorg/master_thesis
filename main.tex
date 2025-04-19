@@ -1,15 +1,16 @@
 %\RequirePackage{kvoptions-patch}
-\documentclass[a4paper, twoside, bibliography=totoc, headsepline, cleardoublepage=empty, parskip=half, draft=false]{scrbook}
+\documentclass[14pt, a4paper, twoside, bibliography=totoc, headsepline, cleardoublepage=empty, parskip=half, draft=false]{scrbook}
 
 
 \let\ifdeutsch\iffalse
 \let\ifenglish\iftrue
 
 \input{config}
-
+\usepackage{setspace}
+\setstretch{1.15}
 
 \usepackage[
-  title={The Effects of Comments and Indentation on Code Quality Perception: An Eye-Tracking Study of CS1 Students}, % Do not forget to capitalize your title correctly, you may use the following page to help you: https://capitalizemytitle.com/
+  title={ The Effects of Comments and Indentation on Code Quality Perception: An Eye-Tracking Study of CS1 Students}, % Do not forget to capitalize your title correctly, you may use the following page to help you: https://capitalizemytitle.com/
   author={Martina Georgieva},
   orcid=0000-0000-0000-0000, % get your own ORCID via https://orcid.org/
   email={m.georgieva@campus.lmu.de},
@@ -24,6 +25,7 @@
   language=english
 ]{lmu-thesis-cover}
 
+
 \input{acronyms}
 
 %\makeindex
@@ -35,8 +37,11 @@
 \input{commands}
 
 
+
 \Coverpage
+
 \Copyright
+
 %Eigener Seitenstil fuer die Kurzfassung und das Inhaltsverzeichnis
 \deftriplepagestyle{preamble}{}{}{}{}{}{\pagemark}
 %Doku zu deftriplepagestyle: scrguide.pdf
