@@ -80,17 +80,9 @@ In this thesis, the following contributions are made:
 \end{enumerate}
 
 \chapter{Literature Review}
-In this chapter, we present the theoretical background of the basic concepts of the thesis. Moreover, we define and explain different ....
+In this chapter, we present the theoretical background of the basic concepts of the thesis. It begins with an overview of software quality models such as ISO/IEC 9126-1 and its successor ISO/IEC 25010. The next chapters explores the concepts of code readability and code comprehension. Moreover, indentation and commenting are also discussed. These factors are  linked to program comprehension, which is essential in software maintenance. The thesis also introduces Cognitive Load Theory (CLT) and Theory of Program comprehension. Finally,  eye-tracking technology is presented as a method to measure visual attention. Furthermore, several eye-tracking studies are briefly discussed. 
 
 
-\section{Quality}
-The quality is defined by several International organisations.
-
-German Industry Standard DIN 55350 Part 11 defines, that the quality “ … comprises all characteristics and significant features of a product or an activity which relate to the satisfying of given requirements” \cite{fitzpatrick1996software}.
-
-Another definition of quality is presented in ANSI Standard (ANSI/ASQC A3/1978), describing that the "Quality is the totality of features and characteristics of a product or a service that bears on its ability to satisfy the given needs"  \cite{fitzpatrick1996software}.
-
-ANOTHER DEFITION comes later....
 
 \section{Quality models}
 Quality assurance is a key part of software engineering. Standards help to improve efficiency and ensure quality in the processes. In the literature, many software quality standards have been proposed.
@@ -99,7 +91,7 @@ Quality assurance is a key part of software engineering. Standards help to impro
 
 \subsection{Quality model ISO 9126-1}
 
-ISO/IEC 9126-1 is among the widely used standards, which considers quality in software quality \cite{losavio2004iso}. It defines quality as a set of attributes of a product that impact its ability to fulfil its requirements \cite{losavio2004iso}. The model categorizes quality into six characteristics: functionality, reliability, usability, efficiency, maintainability, and portability. These factors are crucial for the quality of software. Table … presents these characteristics.
+ISO/IEC 9126-1 is among the widely used standards, which considers quality in software quality \cite{losavio2004iso}. It defines quality as a set of attributes of a product that impact its ability to fulfil its requirements \cite{losavio2004iso}. The model categorizes quality into six characteristics: functionality, reliability, usability, efficiency, maintainability, and portability. These factors are crucial for the quality of software. Table 2.1 presents these characteristics.
 
 
 \begin{longtable}{p{0.3\textwidth} | p{0.65\textwidth}}
@@ -182,7 +174,7 @@ Functionality describes what the software does and includes suitability of funct
 
 
 The ISO/IEC 25010 (ISO/IEC, 2011) standard is derived from ISO/IEC 9126-1 (ISO/IEC, 2001), using a similar naming convention and structure \cite{zapata2013development}. However, this model introduces additional subcharacteristics. The model consists of eight quality characteristics: functional suitability, reliability, performance efficiency, compatibility, usability, security, maintainability and portability.  
-Each characteristic include a set of subcharacteristics, which are similar to the subcharacteristics of ISO/IEC 9126-1 (ISO/IEC, 2001). Nonetheless, some characteristics  have been renamed. For example, understandability is replaced by appropriateness recognisability \cite{zapata2013development}. Table … presents these characteristics of the ISO/IEC 25010 model.
+Each characteristic include a set of subcharacteristics, which are similar to the subcharacteristics of ISO/IEC 9126-1 (ISO/IEC, 2001). Nonetheless, some characteristics  have been renamed. For example, understandability is replaced by appropriateness recognisability \cite{zapata2013development}. Table 2.2 presents these characteristics of the ISO/IEC 25010 model.
 
 
 \begin{longtable}{p{0.3\textwidth} | p{0.65\textwidth}}
@@ -275,28 +267,23 @@ In this thesis, the ISO 25010 model is adopted since it is the recent quality st
 
 \section{Code readability}
 
-Readability defines how easily a text can be understood. Code readability defines how easily source code can be interpreted by a programmer \cite{bakhuizen2019comments}. 
- 
-Recently, there have been studies aiming to investigate which factors influence code readability and how to achieve best results. 
+Readability defines how easily a text can be understood. Code readability defines how easily source code can be interpreted by a programmer \cite{bakhuizen2019comments}.  Recently, there have been studies aiming to investigate which factors influence code readability and how to achieve best results. 
 To measure code readability, researchers measure how much time it takes for a test subject to complete a task related to reading source snippet  \cite{bakhuizen2019comments}.   Different factors can affect the readability of code source: for instance, how the code is structured and which code formatting is used  \cite{bakhuizen2019comments}.  One example of code formatting is applying indentation \cite{buse2009learning}. In research, the term readability can be associated with the term understandability \cite{winkler2024investigating}.
 
 
 \section{Code comprehension}
 
 Program comprehension, also called code comprehension or program understanding, is a cognitive process and considers the programmer's ability to understand what a program does \cite{karahasanovic2007comprehension}. Such knowledge helps developers in finding bugs and writing software documentation \cite{xia2017measuring}.
-It is considered, that program comprehension is a time-consuming task in the maintenance of software \cite{8075175}.
-
-To measure code comprehension, several studies measure how much time it takes for a test subject to understand source code and to answer questions regarding its understandability \cite{wagner2021code}. These studies aim to investigate which factors influence code comprehension. For example, it is considered, that comments affect code comprehension \cite{de2011comment}. The goal of code comments is to present more information about the code, which can be relevant for its understandibility.
+It is considered, that program comprehension is a time-consuming task in the maintenance of software \cite{8075175}. To measure code comprehension, several studies measure how much time it takes for a test subject to understand source code and to answer questions regarding its understandability \cite{wagner2021code}. These studies aim to investigate which factors influence code comprehension. For example, it is considered, that comments affect code comprehension \cite{de2011comment}. The goal of code comments is to present more information about the code, which can be relevant for its understandibility.
 
 Readability and comprehensibility are key parts of making code maintainable. 
-If the source code is not understood correctly, it cannot be applied properly and cannot be modified correctly \cite{izu2025introducing}. Therefore, code readability and code comprehension affect the code quality. The relationship between these terms is displayed in Figure … 
+If the source code is not understood correctly, it cannot be applied properly and cannot be modified correctly \cite{izu2025introducing}. Therefore, code readability and code comprehension affect the code quality. The relationship between these terms is displayed in Figure 2.1
 
 
 
 
-
-
-\begin{center}
+\begin{figure}[H]
+\centering
 \begin{tikzpicture}[node distance=2.5cm, every node/.style={font=\small}]
   % Circles with 91% overlap, same size
   \node[draw, circle, minimum size=4cm, align=center] (readability) at (0,0) {Readability};
@@ -308,7 +295,10 @@ If the source code is not understood correctly, it cannot be applied properly an
   % Arrow from overlap area to Code Quality
   \draw[->, thick] ($(readability.south)!0.5!(comprehension.south)$) -- (quality.north);
 \end{tikzpicture}
-\end{center}
+\caption{Code readability, comprehension, and code quality}
+\label{fig:readability-comprehension-quality}
+\end{figure}
+
 
 
 \section{Indentation}
@@ -318,11 +308,11 @@ This method is applied to define code fragments such as loops and conditions.  I
 
 
 The level of indentation can vary in different programming languages and can be set as a personal preference \cite{bauer2017indentations}. Considering the programming language Java, there are many style guides suggestions for which indentation to use. The most commonly used suggestion is an indentation of four spaces. This level of indentation is proposed by style guides such as Oracle and Google \cite{bauer2017indentations}.
-Several IDEs, such as Visual Studio and IntelliJ, often use formatting tools that automatically apply indentation to the source code \cite{morzeck2023indentation}. Snippets with an indentation  of 2,6,8-spaces are not so often used. Figure .. and Figure present code snippets with Indentation of 4-spaces and 8-spaces.
+Several IDEs, such as Visual Studio and IntelliJ, often use formatting tools that automatically apply indentation to the source code \cite{morzeck2023indentation}. Snippets with an indentation  of 2,6,8-spaces are not so often used. Figure 2.2 and Figure 2.3 present code snippets with Indentation of 4-spaces and 8-spaces.
 
 \begin{figure} [H]
   \centering
-  \includegraphics [scale=0.7]
+  \includegraphics [scale=0.9]
   {figures/4.png}
   \caption{Code snippet with 4-spaces \cite{bauer2017indentations}.}
   \label{fig:AnhangsChor}
@@ -330,7 +320,7 @@ Several IDEs, such as Visual Studio and IntelliJ, often use formatting tools tha
 
 \begin{figure} [H]
   \centering
-  \includegraphics [scale=0.7]
+  \includegraphics [scale=1]
   {figures/8.png}
   \caption{Code snippet with 8-spaces \cite{bauer2017indentations}.}
   \label{fig:AnhangsChor}
@@ -339,13 +329,13 @@ Several IDEs, such as Visual Studio and IntelliJ, often use formatting tools tha
 
 \begin{figure} [H]
   \centering
-  \includegraphics [scale=0.7]
+  \includegraphics [scale=0.8]
   {figures/indentation_ex.png}
   \caption{Non–indented and indented Java code snippet \cite{hanenberg2024indentation}.}
   \label{fig:AnhangsChor}
 \end{figure}
 
-Figure … presents Java code snippet, which gives an output the words “Hello, world”  \cite{hanenberg2024indentation}.
+Figure 2.4 presents Java code snippet, which gives an output the words “Hello, world”  \cite{hanenberg2024indentation}.
 In the first code snippet, which is indented, some space is added before the main method and the loop.  In the second code snippet, which is not indented, no space is added. The additional space visualizes that particular code lines belong to another fragment. In the non-indented code snippet, it is difficult to detect the code structure. 
  
 
@@ -356,22 +346,22 @@ In the first code snippet, which is indented, some space is added before the mai
 \section{Commenting}
 A comment is an element of source code, which provides provides information that is relevant to the code \cite{de2011comment}. A comment can consist of names, words, and white spaces.  The goal of a comment is to make the code source code more understandable.  Comments can be defined in different types, regarding their length, their content and their purpose. Comments in source code use natural language, where only a limited part of it is called a sublanguage \cite{de2017investigating}. This sublanguage has specific characteristics. It uses the present tense in imperative or indicative mood. Furthermore, it includes a small set of verbs (is, uses, implements, writes), and personal pronouns are almost never used.
 
-Regarding their length, comments can be defined as line (or also called inline) comments and block comments \cite{de2017investigating}. The inline comments consist of one single line. Figure … presents this type. 
+Regarding their length, comments can be defined as line (or also called inline) comments and block comments \cite{de2017investigating}. The inline comments consist of one single line. Figure 2.5 presents this type. 
 
 \begin{figure} [H]
   \centering
-  \includegraphics [scale=0.9]
+  \includegraphics [scale=1]
   {figures/inline.png}
   \caption{Inline comment }
   \cite{de2011comment}
   \label{fig:AnhangsChor}
 \end{figure}
 
-In Figure ... is presented a block comment. The block comments contain one or more lines. In each programming language, both types can be used. In Figure … are presented both types for Java \cite{de2011comment}. Javadoc is a variation of the block comment, provided by Java (Figure ...).  Javadoc uses a set of tags, which declare information about a class, such as its author and version \cite{de2011comment}.
+In Figure 2.6 is presented a block comment. The block comments contain one or more lines. In each programming language, both types can be used. In Figure … are presented both types for Java \cite{de2011comment}. Javadoc is a variation of the block comment, provided by Java (Figure 2.7).  Javadoc uses a set of tags that declare information about a class, such as its author and version \cite{de2011comment}.
 
 \begin{figure} [H]
   \centering
-  \includegraphics [scale=0.9]
+  \includegraphics [scale=1]
   {figures/multiline.png}
   \caption{Block comment}
   \cite{de2011comment}
@@ -394,7 +384,7 @@ The PastFuture category consists of the subcategories TODO and FIXME comments: t
 The Meta category gives information about the authorship. The rest of the comments are considered as part of the Explanation category.
 
 
-Regarding to their purpose and placement in code, comments can be categorized into seven types.  Figure ….. presents these types: copyright comments, header comments, member comments, inline comments, section comments, task comments, and code comments. 
+Regarding to their purpose and placement in code, comments can be categorized into seven types.  Figure 2.8 presents these types: copyright comments, header comments, member comments, inline comments, section comments, task comments, and code comments. 
 
 \begin{figure}[H]
 \centering
@@ -442,9 +432,16 @@ The consistency attribute defines how comments follow a consistent format and la
 The usefulness attribute defines how comments clarify the purpose of the source code. Comments that do not enhance understanding should not be used. 
 
 
-The length of the comments can influence completeness of the comments \cite{steidl2013quality}. Shorter comments present less information than longer comments. Figure … visualizes a very short comment, explaining clear information, while Figure … presents a longer code comment, giving more information about the code snippet. 
+The length of the comments can influence completeness of the comments \cite{steidl2013quality}. Shorter comments present less information than longer comments. Figure 2.9 presents a longer code comment, giving more information about the code snippet, while Figure 2.10 visualizes a very short comment.
 
-
+\begin{figure} [H]
+  \centering
+  \includegraphics [scale=1]
+  {figures/long.png}
+  \caption{Example of a long comment}
+  \cite{steidl2013quality}
+  \label{fig:AnhangsChor}
+\end{figure}
 
 \begin{figure} [H]
   \centering
@@ -456,25 +453,45 @@ The length of the comments can influence completeness of the comments \cite{stei
 \end{figure}
 
 
-\begin{figure} [H]
-  \centering
-  \includegraphics [scale=0.9]
-  {figures/long.png}
-  \caption{Example of a long comment}
-  \cite{steidl2013quality}
-  \label{fig:AnhangsChor}
-\end{figure}
+
 
 
 \section{Cognitive Load Theory (CLT)}
-- Relevance to Code Comprehension
+Cognitive load theory (CLT) is a framework that considers how learning is influenced by the limits of human cognition and investigates the interaction between working memory and long-term memory \cite{duran2022cognitive}. Working memory (WM) is limited, holding information for a short time, while long-term memory is unlimited and holds domain-specific knowledge in schemas  \cite{zavgorodniaia2020measuring}.
+Cognitive load refers to the working memory for processing information. 
+
+There are three types of cognitive load: intrinsic load, extraneous load, and germane load. Intrinsic load results from the complexity of the learning task itself, while extraneous load results from how the information is presented \cite{schnotz2007reconsideration}. Germane cognitive load refers to mental effort used for learning, specifically for building schemas \cite{chen2009cognitive}. According to CLT, the three types of loads are additive. Furthermore, CLT guides the design of methods to reduce extraneous load and increase germane load  \cite{chen2009cognitive}. Table 2.3 presents the types of cognitive load.
+
+
+
+
+
+\begin{table}[ht]
+\centering
+\small % You can use \footnotesize or \scriptsize for even smaller fonts
+\caption{Types of cognitive load}
+\begin{tabular}{p{0.25\textwidth} | p{0.65\textwidth}}
+\hline
+\textbf{Category} & \textbf{Description} \\
+\hline
+\textbf{Intrinsic Load} & The mental effort required to understand the complexity of the tast itself. \\
+\hline
+\textbf{Extraneous Load} & The cognitive effort caused by poor instructional design. \\
+\hline
+\textbf{Germane Load} & The mental effort dedicated to understanding data into long-term memory. \\
+\hline
+\end{tabular}
+\label{tab:cognitive_load}
+\end{table}
+
+
+To measure cognitive load, both subjective and objective measures are used in research
+In subjective measures, the  learner reports on the perceived mental effort, while objective measures use physiological data sources, such as heart rate or eye-tracking technology \cite{duran2022cognitive}. Moreover, objective methods present real-time data.
+
 
 \section{Theory of Program Comprehension}
-- Top-Down Model: Experienced programmers use existing knowledge to understand the structure and intent of code quickly.
 
-- Bottom-Up Model: Beginners read line-by-line, building their understanding incrementally.
-
-- Integrated Model: A mix of both, depending on experience level and task complexity
+The process of program comprehension consists of three elements: knowledge-based, external representations, and the assimilation process \cite{kadar2021program}. It explains how a programmer understands a program and is illustrated in Figure 2.11.
 
 
 \begin{figure} [H]
@@ -487,6 +504,55 @@ The length of the comments can influence completeness of the comments \cite{stei
 
 
 
+Knowledge-based refers to the existing knowledge of a programmer. This includes several components: plans and rules of discourse, domain knowledge, beacons, and schemas. Plans and rules of discourse are recognizable patterns in code \cite{fekete2020comprehensive}. Domain knowledge presents the programmer’s knowledge of the task \cite{kadar2021program}.
+Beacons are features in the code that give an information about the purpose of the code \cite{fekete2020comprehensive}. Schemas are structures that organize knowledge into units \cite{kadar2021program}. External representations are materials such as system documentation, source code, and tools that provide additional support for program comprehension \cite{kadar2021program}. The assimilation process involves understanding by matching program elements (for example documentation) with existing knowledge \cite{von1995program}. 
+
+
+
+There are three approaches of program comprehensions:  top-down, bottom-up and the integrated metamodel. The top-down approach is goal-oriented. In this approach, the programmer begins with a general hypothesis about what the source code does, based on domain knowledge \cite{storey2005theories}. This hypothesis is later broken down into follow-up hypotheses  \cite{fekete2020comprehensive}. The bottom-up approach defines that programmers read individual code statements and group them into higher-level chunks \cite{storey2005theories}. These chunks are combined until the developer fully understands the program.  Programmers who are not familiar with the code often apply the bottom-up approach \cite{kadar2021program}. The integrated metamodel approach combines both top-down and bottom-up approaches \cite{kadar2021program}.  Programmers choose when to use top-down and bottom-up approach.  The three approaches are shown in Figure 2.12.  
+
+
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  every node/.style={font=\small, align=center},
+  box/.style={draw, rounded corners, minimum width=4cm, minimum height=1.2cm, fill=blue!10},
+  arrow/.style={->, thick}
+]
+
+% Top-down approach
+\node at (-4,4.5) {\textbf{Top-down approach}};
+\node[box] (td1) at (-4,3) {Domain knowledge};
+\node[box, below=0.9cm of td1] (td2) {Initial hypothesis};
+\node[box, below=0.9cm of td2] (td3) {Follow-up hypotheses};
+\node[box, below=0.9cm of td3] (td4) {Code mapping};
+
+\draw[arrow] (td1) -- (td2);
+\draw[arrow] (td2) -- (td3);
+\draw[arrow] (td3) -- (td4);
+
+% Bottom-up approach
+\node at (4,4.5) {\textbf{Bottom-up approach}};
+\node[box] (bu1) at (4,3) {Code statements};
+\node[box, below=0.9cm of bu1] (bu2) {Chunking};
+\node[box, below=0.9cm of bu2] (bu3) {Higher-level abstractions};
+\node[box, below=0.9cm of bu3] (bu4) {Program understanding};
+
+\draw[arrow] (bu1) -- (bu2);
+\draw[arrow] (bu2) -- (bu3);
+\draw[arrow] (bu3) -- (bu4);
+
+% Integrated approach - moved well below
+\node at (0,-6.5) {\textbf{Integrated approach}};
+\node[box] (int1) at (0,-8) {Combination of \\ Top-down and Bottom-up};
+
+\end{tikzpicture}
+\caption{Program comprehension approaches}
+\label{fig:comprehension-approaches}
+\end{figure}
+
+
 \section{Eye Tracking}
 Eye-tracking technology provides data on how individuals process visual information  \cite{andrzejewska2020development}.
 An eye-tracking device collects the eye movements of a participant while the participant works on a task. A stimulus is an object that is needed to perform a task. The eye–mind assumption considers that an individual keeps their gaze on a stimulus until they have understood it \cite{sharafi2015systematic}. Areas of Interest (AOI) define the parts of the stimulus on which eyes pay attention \cite{sharafi2015systematic}. If certain AOIs help a person complete a task, they are considered relevant. For instance, a relevant AOI in a class diagram is a particular class that the person needs 
@@ -494,20 +560,20 @@ An eye-tracking device collects the eye movements of a participant while the par
 
 The main terms in eye-tracking technology are fixation and saccade. 
 Fixation is a state of stable eye movement for a period of time between 200 to 300 ms. \cite{sharafi2015systematic}. This data is encoded with a timestamp and x and y coordinates. 
-In research , the number of fixations and their duration is usually measured. Saccade is a rapid movement of the eyes, jumping form one point to another \cite{andrzejewska2020development}.
-This movement lasts from 30ms to 50ms \cite{obaidellah2018survey}. A scan-path is a set of fixations (of areas of interest), which are in chronological order. Figure … presents a scan-path with A, B, C, and D as areas of interest  \cite{sharafi2015systematic}.
+In research, the number of fixations and their duration is usually measured. Saccade is a rapid movement of the eyes, jumping form one point to another \cite{andrzejewska2020development}.
+This movement lasts from 30ms to 50ms \cite{obaidellah2018survey}. A scan-path is a set of fixations (of areas of interest), which are in chronological order. Figure 2.13  presents a scan-path with A, B, C, and D as areas of interest  \cite{sharafi2015systematic}.
 
 \begin{figure} [H]
   \centering
-  \includegraphics[scale=1.2]{figures/scanp.png}
-  \caption{Example of scan-path}
+  \includegraphics[scale=0.7]{figures/scanp.png}
+  \caption{Example of scan-path \cite{sharafi2015systematic}}
   \label{fig:AnhangsChor}
 \end{figure}
 
 
  
 There are several eye-tracking metrics used in research. These metrics help researchers evaluate the level of cognitive processing of people \cite{obaidellah2018survey}. The metrics are defined in four categories: metrics based on fixations,
-saccades, pupil size, and scanpath \cite{sharafi2015eye}. Some of the metrics based on fixation are described in Figure …
+saccades, pupil size, and scanpath \cite{sharafi2015eye}. Some of the metrics based on fixation are described in Table 2.4.
 
 
 \begin{table}[H]
@@ -532,8 +598,8 @@ Fixation Rate & The number of fixations per second. A higher fixation rate indic
 
 
 To visualize the eye-tracking data, several techniques are used: heatmap, color-coded attention allocation map, and gaze plot. For example, a heatmap helps to visualize the intensity of fixations. It uses a color spectrum, presenting the gaze patterns of an individual. 
-To indicate the intensity of fixation, colors such as red (highest intensity), orange, green, and blue(lowest intensity) are used \cite{sharafi2015systematic}. Figure … presents a heatmap of code snippet. A gaze plot is used to visualize the scan-path Figure … presents a gaze plot \cite{sharafi2015systematic}. A color-coded attention allocation map maps a color to each word corresponding to the attention level, from light green (lowest attention level) to red (highest level of attention) \cite{sharafi2015systematic}.
-Figure … presents a color-coded attention allocation map
+To indicate the intensity of fixation, colors such as red (highest intensity), orange, green, and blue(lowest intensity) are used \cite{sharafi2015systematic}. Figure 2.14 presents a heatmap of code snippet. A gaze plot is used to visualize the scan-path Figure 2.15 presents a gaze plot \cite{sharafi2015systematic}. A color-coded attention allocation map maps a color to each word corresponding to the attention level, from light green (lowest attention level) to red (highest level of attention) \cite{sharafi2015systematic}.
+Figure 2.16 presents a color-coded attention allocation map
 
 \begin{figure} [H]
   \centering
@@ -545,7 +611,7 @@ Figure … presents a color-coded attention allocation map
 
 \begin{figure} [H]
   \centering
-  \includegraphics[scale=0.9]{figures/gaze.png}
+  \includegraphics[scale=1]{figures/gaze.png}
   \caption{Example of gaze plot \cite{blignaut2019visualization}}
   \label{fig:AnhangsChor}
 \end{figure}
@@ -588,19 +654,19 @@ This study presents the role of meaningful variable naming conventions in code a
 \subsubsection{Code Transformations and Their Impact on Comprehension}
 The eye-tracking study \citet{silva2023evaluating} investigates how different code transformations affect novice programmers’ code comprehension \citet{silva2023evaluating}. It focuses on Atoms of Confusion, Refactorings, and ifdef Annotations.
 
-The findings show that confusing code snippets lead to difficulties in code comprehension and in increased fixations. Figure X presents the eye-gaze patterns for an obfuscated code snippet using the Conditional Expression atom, while Figure Y illustrates the clarified version of the same snippet \citet{silva2023evaluating}.
+The findings show that confusing code snippets lead to difficulties in code comprehension and in increased fixations. Figure 2.17 presents the eye-gaze patterns for an obfuscated code snippet using the Conditional Expression atom, while Figure 2.18 illustrates the clarified version of the same snippet \citet{silva2023evaluating}.
  
-figure 1,2
+
 \begin{figure} [H]
   \centering
-  \includegraphics[scale=0.8]{figures/a.png}
+  \includegraphics[scale=1]{figures/a.png}
   \caption{Obfuscated code snippet \citet{silva2023evaluating}}
   \label{fig:AnhangsChor}
 \end{figure}
 
 \begin{figure} [H]
   \centering
-  \includegraphics[scale=0.8]{figures/b.png}
+  \includegraphics[scale=1]{figures/b.png}
   \caption{Clarified version \citet{silva2023evaluating}}
   \label{fig:AnhangsChor}
 \end{figure}
@@ -631,6 +697,9 @@ The researchers used eye-tracking technology to measure how often participants r
 
 The reviewed key studies present that eye-tracking technologies effectively investigate code comprehension.  Eye-tracking data provide insights into how expert and novice programmers perceive different code structures and styles. There has been made significant progress in investigating the comprehension and readability of code by programmers.  However, there is a lack of deeper researcher on how indentation and comments influence the comprehension. 
 This thesis analyzes how indentation and comments impact computer science students’ perception of code comprehension.  
+
+
+
 
 
 \chapter{Study Design}
@@ -751,7 +820,7 @@ Figure .............  presents an example for one code snippet with minimal comm
 
 \begin{figure} [H]
   \centering
-  \includegraphics[scale=1.1]{figures/codeb.png}
+  \includegraphics[scale=0.9]{figures/codeb.png}
   \caption{Code snippet example }
   \label{fig:AnhangsChor}
 \end{figure}
