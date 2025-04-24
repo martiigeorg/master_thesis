@@ -987,6 +987,18 @@ The eye-tracking study (offline study) and the online study without eye-tracking
 
 \section{Participants}
 
+textetx
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=0.2]{figures/user.jpg}
+  \caption{Participant conducting the eye-tracking study }
+  \label{fig:AnhangsChor}
+\end{figure}
+
+
+
+
 
 \section{Ethical Considerations}
 
@@ -1009,13 +1021,146 @@ The eye-tracking study (offline study) and the online study without eye-tracking
 
 \chapter{Results}
 
+\section{Participants}
+
+The study involved a total of 31 Bachelor’s students: 11 took part in the eye-tracking study, while the remaining 20 participated in the online study. The majority were between 18 and 25 years old (Figure …).
+Participants varied in their academic progress, with most being in mid to later semesters (Figure …).
+In terms of programming, the majority had at least some coding experience. Most reported having 1 to 2 years of experience (Figure …).
+As for Java knowledge, most students rated their skills as average. Only two participants reported having very good Java skills (Figure …).
+
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=0.9]{figures/age.png}
+  \caption{Age distribution of participants}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=0.9]{figures/p_exp.png}
+  \caption{Programming experience of participants}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=0.9]{figures/semester.png}
+  \caption{Participants' semester}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=0.8]{figures/java_kn.png}
+  \caption{Java knowledge of participants}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+
+\section{Indentation}
+To investigate whether code indentation improves code readability, one-sided Mann-Whitney U tests were conducted. Participants rated the readability of all code snippets on a 5-point Likert scale, where 1 = Unreadable and 5 = Very easy to read. (The question posed to participants was: "How do you assess the indentation of the code?")
+
+A Mann-Whitney U test was conducted to investigate whether 4-space indentation improves code readability compared to no indentation. The hypotheses were defined as: H0 (Null Hypothesis): The perceived readability of the 4-space indented code snippet is less than or equal to that of the unindented code. H1 (Alternative Hypothesis): The perceived readability of the 4-space indented code snippet is greater than that of the unindented code.
+
+
+The test produced a p-value of \(9.172 \times 10^{-8}\), which is below the significance level \(\alpha = 0.05\). Therefore, the null hypothesis (H0) was rejected. This result reveals that students perceived the 4-space indented code snippet as significantly more readable than the unindented version. Figure .... presents the medians for both level of indentation.
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=0.4]{figures/4-0-q5png.png}
+  \caption{4-space indentation median and No indentation median}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+
+Another Mann-Whitney U test was conducted to investigate whether 4-space indentation improves code readability compared to random indentation. The hypotheses were defined as:
+H0 (Null Hypothesis): The perceived readability of the 4-space indented code snippet is less than or equal to that of the randomly indented code. H1 (Alternative Hypothesis): The perceived readability of the 4-space indented code snippet is greater than that of the randomly indented code.
+
+The test produced a p-value of 0.0008, which is below the significance level \(\alpha = 0.05\). Therefore, the null hypothesis (H₀) was rejected. The result reveals that students perceived the 4-space indented code snippet as significantly more readable than the code with random indentation. Figure .... presents the medians for both level of indentation.
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=0.4]{figures/4-r-q5.png}
+  \caption{4-space indentation median and Random indentation median}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+
+Another Mann-Whitney U test was conducted to investigate whether random indentation improves the readability of code compared to code with no indentation. The hypotheses were defined as: H0 (Null Hypothesis): The perceived readability of the code snippet with random indentation is less than or equal to that of the code snippet with no indentation.
+H1 (Alternative Hypothesis): The perceived readability of the code snippet with random indentation is greater than that of the code snippet with no indentation.
+
+The test yielded a p-value of 0.02145, which is less than the significance level \(\alpha = 0.05\). Therefore, the null hypothesis (H₀) was rejected. The result reveals that students perceived the code with random indentation  as significantly more readable than code with no indentation. Figure .... presents the medians for both level of indentation.
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=0.4]{figures/r-0-q5.png}
+  \caption{ Random indentation median and No indentation median}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+
+Another Mann-Whitney U test was conducted to investigate whether random indentation improves the understandability of code compared to code with no indentation. Participants rated the understandability of all code snippets using a 5-point Likert scale, where the 1 =  Very incomprehensible and 5 = Very understandable.  The hypotheses were defined as: H0 (Null Hypothesis): The perceived understandability of the code snippet with no indentation is equal to that of the randomly indented code snippet. H1 (Alternative Hypothesis): The perceived understandability of the code snippet with no indentation is not equal to that of the randomly indented code snippet.
+
+The test produced a p-value of 0.1292, which is greater than the significance level \(\alpha = 0.05\). Therefore, the null hypothesis (H0) cannot be rejected. It is suggests that the difference between both levels of indentation is not statistically significant. Figure .... presents the medians for both level of indentation.
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=0.4]{figures/0-r-q3.png}
+  \caption{ Perceived understandability: No indentation median and Random indentation median}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+
+
+When participants were asked how they handle code indentation, several answers were selected. Figure …. shows that most participants use Tab key. Only a few students use automatic tools.  
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=0.9]{figures/inM.png}
+  \caption{Methods for code indentation}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+
+
+\section{Comments}
+
+
+To investigate whether code indentation improves code understandability, one-sided Mann-Whitney U tests were conducted. Participants rated the understandability of all code snippets using a 5-point Likert scale, where 1 = Confusing and 5 = Helpful (corresponding question: "How do you assess the commenting of the code?").
+
+A test was conducted to investigate whether code snippet with helpful comments improves code understandability compared to code with no comments. The hypotheses were defined as:
+H0(Null Hypothesis): The perceived understandability of the code snippet with helpful comments is less than or equal to that of the code with no comments. H1 (Alternative Hypothesis): The perceived understandability of the code snippet with helpful comments is greater than that of the code with no comments.
+
+The test produced a p-value of 3.285e-10, which is below the significance level $\alpha = 0.05$. Therefore, the null hypothesis (H0) was rejected. This result reveals that participants perceived the code snippet with helpful comments as significantly more understandable than the code with no comments. Figure .... presents the medians for both comments formats.
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=0.4]{figures/h-0-q4.png}
+  \caption{ Perceived understandability: Helpful comments median and No comments median}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+
+
+
+
+
+
+
+When participants were asked what characterizes well-commented code for them, their responses indicated common opinions. They think comments should explain what the code does. Moreover, the comments should provide the purpose and not to repeat the obvious. Participants generally agree on what makes code badly commented. They think it is problematic when comments are missing. Another issue is over-commenting, where every single line is explained.
+When participants were asked how often they follow their own guidelines when writing code comments, most participants answered they do so sometimes. Figure …. shows the results.
+
+
+
 \chapter{Discussion - Interpretation of Results}
 
 \section{Limitations} 
 Both formats of the study have several limitations that may have an impact on the results.
-In the eye-tracking study only .... 10..... computer science students participated.  This small number of participants limited the generalization of the findings.  Moreover, some participants moved their heads too much.  These movements caused an inaccuracy in gaze patterns and calibration errors. Furthermore, several technical issues with eye-tracking device were reported. Sometimes the changes of ambient and screen lighting led to inaccuracy of the records.
+In the eye-tracking study only 11 computer science students participated.  This small number of participants limited the generalization of the findings.  Moreover, some participants moved their heads too much.  These movements caused an inaccuracy in gaze patterns and calibration errors. Furthermore, several technical issues with eye-tracking device were reported. Sometimes the changes of ambient and screen lighting led to inaccuracy of the records.
 The online study without eye-tracking also has several limitations that may have an impact on the results. 
-Only .....30..... computer science students participated in the study. The small number of participants limited the generalization of the results. 
+Only 27 computer science students participated in the study. The small number of participants limited the generalization of the results. 
 Moreover, some participants did not answer all questions. Therefore, only part of their answers were recorded, which led to missing data. 
 Furthermore, the online study was not conducted in a controlled environment. Participants filled out the questionnaire in different environments, which may have an influence on their answers.  
 These limitations highlight that improved technical setup and future research is needed. 
