@@ -880,7 +880,7 @@ The eye-tracking study (offline study) was conducted at LMU, Munich. As eye-trac
 
 \begin{figure} [H]
   \centering
-  \includegraphics[scale=0.6]{figures/setup.png}
+  \includegraphics[scale=0.25]{figures/setup.png}
   \caption{Technical setup }
   \label{fig:AnhangsChor}
 \end{figure}
@@ -920,6 +920,8 @@ Comment quality score & This variable variable was derived from Question 4: "How
 Indentation quality score & This variable variable was derived from Question 5: "How do you assess the indentation of the code?" Participants rate the indentation of the code on  a Likert scale , where 1 = "Unreadable" and 5 = "Very easy to read". \\
 \hline
 Response time per code snippet & This variable measures how long (in minutes) each participant took to view a code snippet and answer its corresponding five questions.  \\
+\hline
+Confidence rating & This variable variable was derived from Question 2: “How confident are you in your answer to the first question?” (the first question is related to the function of the corresponding code snippet).  Participants rate their code confidence on a Likert scale, where 1 = "Not confident" and  5 = "Very confident".\\
 \hline
 \end{tabular}
 \caption{Description of variables used in the study}
@@ -1155,6 +1157,15 @@ The test produced a p-value of 0.1292, which is greater than the significance le
 \end{figure}
 
 
+
+
+\subsection{Confidence rating}
+
+Another Mann-Whitney U test was conducted to investigate whether random indentation improves the code confidence rating compared to code with no indentation. The analysis was based on the Confidence rating, a dependent variable derived from participant responses. The hypotheses were defined as: H0 (Null Hypothesis): The Confidence rating for the code snippet with no indentation is equal to that of the randomly indented code snippet. H1 (Alternative Hypothesis): The Confidence rating for the code snippet with no indentation is not equal to that of the randomly indented code snippet.
+The test produced a p-value of 0.6091, which is greater than the significance level α = 0.05. Therefore, the null hypothesis (H0) cannot be rejected. This result reveals that the difference in Confidence rating between the randomly indented and unindented code snippets was not statistically significant.  
+
+
+
 \subsection{Indentation methods}
 When participants were asked how they handle code indentation, several answers were selected. Figure …. shows that most participants use Tab key. Only a few students use automatic tools.  
 
@@ -1243,6 +1254,22 @@ The test indicates a p-value of 0.006669, which is below the significance level 
   \caption{Comprehension score:  Redundant comments median and Minimal comments median}
   \label{fig:AnhangsChor}
 \end{figure}
+
+
+\subsection{Confidence rating}
+A U test was performed to investigate whether code snippet with helpful comments enhance code confidence compared to code with no comments. The analysis was based on the Confidence rating. The hypotheses were defined as:  H0 (Null Hypothesis): The Confidence rating for the code snippet with helpful comments is less than or equal to that of the code with no comments.  H1 (Alternative Hypothesis): The Confidence rating for the code snippet with helpful comments is greater than that of the code with no comments. The test produced a p-value of  0.000259, which is below the significance level $\alpha = 0.05$. Therefore, the null hypothesis (H0) was rejected.  This result reveals that the Confidence rating  for the code with helpful comments was significantly higher than that for the code with no comments. 
+
+
+
+A test was conducted to investigate whether code snippet with helpful comments improves code confidence compared to code with minimal comments. The analysis was based on the Confidence rating. The hypotheses were defined as:  H0 (Null Hypothesis): The Confidence rating for the code snippet with helpful comments is less than or equal to that of the code with minimal comments.  H1 (Alternative Hypothesis): The Confidence rating for the code snippet with helpful comments is greater than that of the code with minimal comments. The test produced a p-value of  0.000114, which is below the significance level $\alpha = 0.05$. Therefore, the null hypothesis (H0) was rejected.  This result reveals that the Confidence rating  for the code with helpful comments was significantly higher than that for the code with minimal comments.  
+
+
+To investigate whether code snippet with redundant comments improves code confidence compared to code with minimal comments, a U test was performed. The analysis was based on the Confidence rating. The hypotheses were defined as:  H0 (Null Hypothesis): The Confidence rating for the code snippet with redundant comments is less than or equal to that of the code with minimal comments.  H1 (Alternative Hypothesis): The Confidence rating for the code snippet with redundant comments is greater than that of the code with minimal comments.      
+The test produced a p-value of  0.00604, which is below the significance level $\alpha = 0.05$. Therefore, the null hypothesis (H0) was rejected.  This result suggests that the Confidence rating  for the code with redundant comments was significantly higher than that for the code with minimal comments.   
+
+
+A U test was performed to investigate whether code snippet with redundant comments improves code confidence compared to code without comments. The analysis was based on the Confidence rating. The hypotheses were defined as:  H0 (Null Hypothesis): The Confidence rating for the code snippet with redundant comments is less than or equal to that of the code without comments.  H1 (Alternative Hypothesis): The Confidence rating for the code snippet with redundant comments is greater than that of the code without comments.      
+The test produced a p-value of  0.01059, which is below the significance level $\alpha = 0.05$. Therefore, the null hypothesis (H0) was rejected.  This result suggests that the Confidence rating  for the code with redundant comments was significantly higher than that for the code without comments.   
 
 
 
