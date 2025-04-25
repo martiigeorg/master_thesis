@@ -34,9 +34,9 @@ The central research question in the thesis is: \textbf{RQ1.1:} How do commentin
 
 \begin{itemize}
     \item \textbf{RQ1.2:} Do well-indented code snippets lead to better comprehension?
-    \item \textbf{RQ1.3:} Does random indentation and redundant comments increase cognitive load?
-    \item \textbf{RQ1.4:} How does the time spent reading code vary between different commenting formats?
-    \item \textbf{RQ1.5:} How does the time spent reading code vary between different levels of indentation?
+    \item \textbf{RQ1.3:} Do well-commented code snippets lead to better comprehension?
+    \item \textbf{RQ1.4:} Does random indentation and redundant comments increase cognitive load?
+
 \end{itemize}
 
 These questions help to provide insights into the role of code indentation and commenting in code comprehension. 
@@ -1091,19 +1091,19 @@ As for Java knowledge, most students rated their skills as average. Only two par
 
 
 \section{Code snippets}
-how many are answered...
+Not all participants answered every question in the study. The questions related to code snippets 1, 2, and 6 were answered by 29 people;  to code snippets 3, 4, and 5 by 28 people, and to code snippet 7 by 27 people.  However, the overall response remains sufficiently balanced.
 
 \section{Indentation}
-To investigate whether code indentation improves code readability, one-sided Mann-Whitney U tests were conducted. 
 
-
+The dependent variables, such as Comprehension score, Comment quality score, and Indentation quality score, are ordinal, but do not assume equal intervals between the points.
+Since the Mann-Whitney U test is suitable for this type of variables, it is used mainly in this thesis \cite{MacFarland2016}.
 
 \subsection{Indentation quality score}
 
 
 Mann-Whitney U test was conducted to investigate whether 4-space indentation improves code readability compared to no indentation. The analysis was based on the Indentation quality score. The hypotheses were defined as:  H0 (Null Hypothesis): The Indentation quality score for the 4-space indented code snippet is less than or equal to that of the unindented code. H1(Alternative Hypothesis): The Indentation quality score for the 4-space indented code snippet is greater than that of the unindented code.
 
-Figure .... presents the medians for both level of indentation. The test produced a p-value of \(9.172 \times 10^{-8}\), which is below the significance level \(\alpha = 0.05\). Therefore, the null hypothesis (H0) was rejected. This result indicates that the Indentation quality score for the 4-space indented code was significantly higher than that for the unindented code. 
+Figure .... presents the medians for both levels of indentation. The test presented a p-value of \(9.172 \times 10^{-8}\), which is below the significance level \(\alpha = 0.05\). Therefore, the null hypothesis (H0) was rejected. This result indicates that the Indentation quality score for the 4-space indented code was significantly higher than that for the unindented code. 
 
 \begin{figure} [H]
   \centering
@@ -1116,8 +1116,8 @@ Figure .... presents the medians for both level of indentation. The test produce
 Another Mann-Whitney U test was conducted to investigate whether 4-space indentation improves code readability compared to random indentation. The analysis was based on the Indentation quality score. The hypotheses were defined as:  H0 (Null Hypothesis): The Indentation quality score for the 4-space indented code snippet is less than or equal to that of the randomly indented code. H1 (Alternative Hypothesis): The Indentation quality score for the 4-space indented code snippet is greater than that of the randomly indented code.
 
 
-Figure .... presents the medians for both level of indentation. 
-The test produced a p-value of 0.0008, which is below the significance level \(\alpha = 0.05\). Therefore, the null hypothesis (H₀) was rejected. The result reveals that the Indentation quality score for the 4-space indented code was significantly higher than for the randomly indented code.
+Figure .... displays the medians for both levels of indentation. 
+The test produced a p-value of 0.0008, which is below the significance level \(\alpha = 0.05\). Therefore, the null hypothesis (H₀) was rejected. The result presented that the Indentation quality score for the 4-space indented code was significantly higher than for the randomly indented code.
 
 \begin{figure} [H]
   \centering
@@ -1127,10 +1127,10 @@ The test produced a p-value of 0.0008, which is below the significance level \(\
 \end{figure}
 
 
-Another Mann-Whitney U test was conducted to investigate whether random indentation improves the readability of code compared to code with no indentation. The analysis was based on the Indentation quality score. The hypotheses were defined as:  H0 (Null Hypothesis): The Indentation quality score for the randomly indented code snippet is less than or equal to that of the code snippet with no indentation.  H1(Alternative Hypothesis): The Indentation quality score for the randomly indented code snippet is greater than that of the code snippet with no indentation.
+Another  U test was performed to investigate whether random indentation improves the readability of code compared to code with no indentation. The analysis was based on the Indentation quality score. The hypotheses were defined as:  H0 (Null Hypothesis): The Indentation quality score for the randomly indented code snippet is less than or equal to that of the code snippet with no indentation.  H1(Alternative Hypothesis): The Indentation quality score for the randomly indented code snippet is greater than that of the code snippet with no indentation.
 
-Figure .... presents the medians for both level of indentation. 
-The test produced a p-value of  0.02145, which is less than the significance level \(\alpha = 0.05\). Therefore, the null hypothesis (H₀) was rejected. The result reveals that the Indentation quality score for the randomly indented code was significantly higher than that of the unindented code.
+Figure .... visualizes the medians for both levels of indentation. 
+The test presented a p-value of  0.02145, which is less than the significance level \(\alpha = 0.05\). Therefore, the null hypothesis (H₀) was rejected. The result reveals that the Indentation quality score for the randomly indented code was significantly higher than that of the unindented code.
 
 \begin{figure} [H]
   \centering
@@ -1141,10 +1141,10 @@ The test produced a p-value of  0.02145, which is less than the significance lev
 
 
 \subsection{Comprehension score}
-Another Mann-Whitney U test was conducted to investigate whether random indentation improves the comprehension  of code compared to code with no indentation. The analysis was based on the Comprehension score. The hypotheses were defined as: H0 (Null Hypothesis): The Comprehension score for the code snippet with no indentation is equal to that of the randomly indented code snippet. H1 (Alternative Hypothesis): The Comprehension score for the code snippet with no indentation is not equal to that of the randomly indented code snippet.
+Another Mann-Whitney U test was conducted to investigate whether random indentation enhance the comprehension  of code compared to code with no indentation. The analysis was based on the Comprehension score. The hypotheses were defined as: H0 (Null Hypothesis): The Comprehension score for the code snippet with no indentation is equal to that of the randomly indented code snippet. H1 (Alternative Hypothesis): The Comprehension score for the code snippet with no indentation is not equal to that of the randomly indented code snippet.
 
-Figure .... presents the medians for both level of indentation.
-The test produced a p-value of 0.1292, which is greater than the significance level \(\alpha = 0.05\). Therefore, the null hypothesis (H0) cannot be rejected. This result reveals that the difference in Comprehension score between the randomly indented and unindented code snippets was not statistically significant.
+Figure .... displays the medians for both levels of indentation.
+The test produced a p-value of 0.1292, which is greater than the significance level \(\alpha = 0.05\). Therefore, the null hypothesis (H0) cannot be rejected. This result indicates that the difference in Comprehension score between the randomly indented and unindented code snippets was not statistically significant.
 
 
 \begin{figure} [H]
@@ -1155,7 +1155,7 @@ The test produced a p-value of 0.1292, which is greater than the significance le
 \end{figure}
 
 
-
+\subsection{Indentation methods}
 When participants were asked how they handle code indentation, several answers were selected. Figure …. shows that most participants use Tab key. Only a few students use automatic tools.  
 
 \begin{figure} [H]
@@ -1174,9 +1174,9 @@ To investigate whether code indentation improves code understandability, one-sid
 
 \subsection{Comment quality score}
 
-To investigate whether helpful comments improve the comment quality of the code compared to no comments, a Mann-Whitney U test was conducted.  The analysis was based on the Comment quality score. The hypotheses were defined as: H0 (Null Hypothesis): The Comment quality score for the code snippet with helpful comments is less than or equal to that of the code with no comments.  H1 (Alternative Hypothesis): The Comment quality score for the code snippet with helpful comments is greater than that of the code with no comments.
+To explore whether helpful comments improve the comment quality of the code compared to no comments, a Mann-Whitney U test was conducted.  The analysis was based on the Comment quality score. The hypotheses were defined as: H0 (Null Hypothesis): The Comment quality score for the code snippet with helpful comments is less than or equal to that of the code with no comments.  H1 (Alternative Hypothesis): The Comment quality score for the code snippet with helpful comments is greater than that of the code with no comments.
 
-Figure .... presents the medians for both comments formats.
+Figure .... shows the medians for both comment formats.
 The test produced a p-value of 3.285e-10, which is below the significance level $\alpha = 0.05$. Therefore, the null hypothesis (H0) was rejected. This result reveals that the Comment quality score for the code with helpful comments was significantly higher than that for the code with no comments.
 
 \begin{figure} [H]
@@ -1187,13 +1187,13 @@ The test produced a p-value of 3.285e-10, which is below the significance level 
 \end{figure}
 
 
-A Mann-Whitney U test was conducted to investigate whether helpful comments improve the comment quality of the code compared to minimal comments. The analysis was based on the Comment quality score. The hypotheses were defined as: H0 (Null Hypothesis): The Comment quality score for the code snippet with helpful comments is less than or equal to that of the code with minimal comments.  H1 (Alternative Hypothesis): The Comment quality score for the code snippet with helpful comments is greater than that of the code with minimal comments. The test produced a p-value of 0.02415, which is below the significance level $\alpha = 0.05$. Therefore, the null hypothesis (H0) was rejected. This result reveals that the Comment quality score for the code with helpful comments was significantly higher than that for the code with minimal comments.
+A Mann-Whitney U test was performed to investigate whether helpful comments improve the comment quality of the code compared to minimal comments. The analysis was based on the Comment quality score. The hypotheses were defined as: H0 (Null Hypothesis): The Comment quality score for the code snippet with helpful comments is less than or equal to that of the code with minimal comments.  H1 (Alternative Hypothesis): The Comment quality score for the code snippet with helpful comments is greater than that of the code with minimal comments. The test resulted in a p-value of 0.02415, which is below the significance level $\alpha = 0.05$. Therefore, the null hypothesis (H0) was rejected. This result reveals that the Comment quality score for the code with helpful comments was significantly higher than that for the code with minimal comments.
 
 
 
 
 
-To investigate whether helpful comments improve the comment quality of the code compared to redundant comments, a Mann-Whitney U test was conducted.  The analysis was based on the Comment quality score. The hypotheses were defined as: H0 (Null Hypothesis): The Comment quality score for the code snippet with helpful comments is less than or equal to that of the code with redundant comments.  H1 (Alternative Hypothesis): The Comment quality score for the code snippet with helpful comments is greater than that of the code with redundant comments. The test produced a p-value of 0.02155,, which is below the significance level $\alpha = 0.05$. Therefore, the null hypothesis (H0) was rejected. This result reveals that the Comment quality score for the code with helpful comments was significantly higher than that for the code with redundant comments. 
+To explore whether helpful comments enhance the comment quality of the code compared to redundant comments, a  U test was conducted.  The analysis was based on the Comment quality score. The hypotheses were defined as: H0 (Null Hypothesis): The Comment quality score for the code snippet with helpful comments is less than or equal to that of the code with redundant comments.  H1 (Alternative Hypothesis): The Comment quality score for the code snippet with helpful comments is greater than that of the code with redundant comments. The test produced a p-value of 0.02155,, which is below the significance level $\alpha = 0.05$. Therefore, the null hypothesis (H0) was rejected. This result reveals that the Comment quality score for the code with helpful comments was significantly higher than that for the code with redundant comments. 
 
 
 
@@ -1201,11 +1201,11 @@ A Mann-Whitney U test was conducted to investigate whether minimal comments have
 
 
 \subsection{Comprehension score}
-A test was conducted to investigate whether code snippet with helpful comments improves code comprehension compared to code with no comments. H0 (Null Hypothesis): The Comprehension score for the code snippet with helpful comments is less than or equal to that of the code with no comments.  H1 (Alternative Hypothesis): The Comprehension score for the code snippet with helpful comments is greater than that of the code with no comments.
+A U test was conducted to explore whether code snippet with helpful comments improves code comprehension compared to code with no comments. The analysis was based on the Comprehension score. The hypotheses were defined as: H0 (Null Hypothesis): The Comprehension score for the code snippet with helpful comments is less than or equal to that of the code with no comments.  H1 (Alternative Hypothesis): The Comprehension score for the code snippet with helpful comments is greater than that of the code with no comments.
 
 
 Figure .... presents the medians for both comments formats.
-The test produced a p-value of 0.00006, which is below the significance level $\alpha = 0.05$. Therefore, the null hypothesis (H0) was rejected.  This result reveals that the Comprehension score for the code with helpful comments was significantly higher than that for the code with no comments. 
+The test produced a p-value of  0.0000345, which is below the significance level $\alpha = 0.05$. Therefore, the null hypothesis (H0) was rejected.  This result reveals that the Comprehension score for the code with helpful comments was significantly higher than that for the code with no comments. 
 
 
 \begin{figure} [H]
@@ -1218,10 +1218,10 @@ The test produced a p-value of 0.00006, which is below the significance level $\
 
 
 
-A test was conducted to investigate whether code snippet with helpful comments improves code comprehension compared to code with minimal comments. H0 (Null Hypothesis): The Comprehension score for the code snippet with helpful comments is less than or equal to that of the code with minimal comments.  H1 (Alternative Hypothesis): The Comprehension score for the code snippet with helpful comments is greater than that of the code with minimal comments.
+A U test was performed to investigate whether code snippet with helpful comments improves code comprehension compared to code with minimal comments. The analysis was based on the Comprehension score. The hypotheses were defined as: H0 (Null Hypothesis): The Comprehension score for the code snippet with helpful comments is less than or equal to that of the code with minimal comments.  H1 (Alternative Hypothesis): The Comprehension score for the code snippet with helpful comments is greater than that of the code with minimal comments.
 
-Figure .... presents the medians for both comments formats.
-The test indicates a p-value of 0.00037, which is below the significance level $\alpha = 0.05$. Therefore, the null hypothesis (H0) was rejected.  This test reveals that the Comprehension score for the code with helpful comments was significantly higher than that for the code with minimal comments. 
+Figure .... displays the medians for both comments formats.
+The test indicates a p-value of 0.00018, which is below the significance level $\alpha = 0.05$. Therefore, the null hypothesis (H0) was rejected.  This test reveals that the Comprehension score for the code with helpful comments was significantly higher than that for the code with minimal comments. 
 
 \begin{figure} [H]
   \centering
@@ -1231,6 +1231,22 @@ The test indicates a p-value of 0.00037, which is below the significance level $
 \end{figure}
 
 
+A test was conducted to investigate whether code snippet with redundant comments enhance code comprehension compared to code with minimal comments. The analysis was based on the Comprehension score. The hypotheses were defined as: H0 (Null Hypothesis): The Comprehension score for the code snippet with redundant comments is less than or equal to that of the code with minimal comments.  H1 (Alternative Hypothesis): The Comprehension score for the code snippet with redundant comments is greater than that of the code with minimal comments. 
+
+
+Figure .... displays the medians for both comments formats.
+The test indicates a p-value of 0.006669, which is below the significance level $\alpha = 0.05$. Therefore, the null hypothesis (H0) cannot be rejected.  This test reveals that the Comprehension score for the code with redundant comments was significantly higher than that for the code with minimal comments. 
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=0.4]{figures/red-min-q3.png}
+  \caption{Comprehension score:  Redundant comments median and Minimal comments median}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+
+
+\subsection{Well-commented code vs. badly-commented code }
 
 When participants were asked what characterizes well-commented code for them, their responses indicated common opinions. They think comments should explain what the code does. Moreover, the comments should provide the purpose and not to repeat the obvious. Participants generally agree on what makes code badly commented. They think it is problematic when comments are missing. Another issue is over-commenting, where every single line is explained.
 When participants were asked how often they follow their own guidelines when writing code comments, most participants answered they do so sometimes. Figure …. shows the results.
@@ -1249,7 +1265,7 @@ When participants were asked how often they follow their own guidelines when wri
 Both formats of the study have several limitations that may have an impact on the results.
 In the eye-tracking study only 11 computer science students participated.  This small number of participants limited the generalization of the findings.  Moreover, some participants moved their heads too much.  These movements caused an inaccuracy in gaze patterns and calibration errors. Furthermore, several technical issues with eye-tracking device were reported. Sometimes the changes of ambient and screen lighting led to inaccuracy of the records.
 The online study without eye-tracking also has several limitations that may have an impact on the results. 
-Only 27 computer science students participated in the study. The small number of participants limited the generalization of the results. 
+Only 20 computer science students participated in the study. The small number of participants limited the generalization of the results. 
 Moreover, some participants did not answer all questions. Therefore, only part of their answers were recorded, which led to missing data. 
 Furthermore, the online study was not conducted in a controlled environment. Participants filled out the questionnaire in different environments, which may have an influence on their answers.  
 These limitations highlight that improved technical setup and future research is needed. 
