@@ -1071,14 +1071,14 @@ As for Java knowledge, most students rated their skills as average. Only two par
 
 \begin{figure} [H]
   \centering
-  \includegraphics[scale=0.9]{figures/p_exp.png}
+  \includegraphics[scale=1.1]{figures/p_exp.png}
   \caption{Programming experience of participants}
   \label{fig:AnhangsChor}
 \end{figure}
 
 \begin{figure} [H]
   \centering
-  \includegraphics[scale=0.9]{figures/semester.png}
+  \includegraphics[scale=1.1]{figures/semester.png}
   \caption{Participants' semester}
   \label{fig:AnhangsChor}
 \end{figure}
@@ -1086,7 +1086,7 @@ As for Java knowledge, most students rated their skills as average. Only two par
 
 \begin{figure} [H]
   \centering
-  \includegraphics[scale=0.8]{figures/java_kn.png}
+  \includegraphics[scale=1]{figures/java_kn.png}
   \caption{Java knowledge of participants}
   \label{fig:AnhangsChor}
 \end{figure}
@@ -1280,10 +1280,79 @@ When participants were asked how often they follow their own guidelines when wri
 
 \begin{figure} [H]
   \centering
-  \includegraphics[scale=1.1]{figures/comAt.png}
+  \includegraphics[scale=1.2]{figures/comAt.png}
   \caption{Paying attention to writing comments }
   \label{fig:AnhangsChor}
 \end{figure}
+
+\section{Eye-tracking results}
+Due to the incomplete and small dataset, as well as missing data caused by head movements, a qualitative approach was applied to analyze gaze patterns: reading order and attention focus were analyzed using scanpath and heatmap.  
+
+
+
+\subsection{Effects of indentation levels on gaze behavior}
+
+In the code snippet without indentation, participants tended to look at keywords such as “if” or “for” and often returned to previous lines. Moreover, they showed longer fixation durations.  Figure … presents a scanpath from participant A who had spent a lot of time looking at the code and had returned to previous lines. In the code snippet with 4-space indentation, participants tended to follow a clear reading path. Moreover, they showed shorter fixation durations.  Figure … presents a scanpath from participant B who looked at the code lines from the top to bottom without returning to previous lines. 
+In the code snippet with random indentation, participants often had a large amount of fixation duration.  Moreover, they often read the code with many jumps between lines and with inconsistent gaze directions. For instance, the Figure  … presents a scanpath from participant C that has followed a “zig-zag” pattern — shifting his eyes inconsistently from left to right and back again.  
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=0.6]{figures/0-ind-rechner.png}
+  \caption{Scanpath of participant for code snippet without indentation }
+  \label{fig:AnhangsChor}
+\end{figure}
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=0.6]{figures/4-ind.png}
+  \caption{Scanpath of participant for code snippet with 4-space indentation}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=0.6]{figures/r-ind.png}
+  \caption{Scanpath of  participant for code snippet with random indentation}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+
+
+\subsection{Effects of commenting formats on gaze behavior}
+
+In the code snippet with helpful comments, participants often looked at the comments before reading the code itself.  Figure … presents a scanpath from participant whose attention at the beginning is more on the comments. In the code snippet with minimal comments, participants often tended to follow a clear reading path.  Furthermore, they often did not spend much time on the comments. Figure …  presents a gaze plot of participant, indicating a short fixation duration on comments. In the code snippet with redundant comments, participants often tended not to spend much time on the comments. Figure …  shows a gaze plot of participant, whose attention  is more on the code itself and not on the comments. Regarding the order of reading, some participants followed a clear reading path while others read the code in a more inconsistent order.  In the code snippet without comments, participants often tended to spend more time on code lines. Figure …  presents a gaze plot of participant, indicating a long fixation duration on code lines.    Regarding the order of reading, the majority of participants followed an unclear reading path.
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=0.6]{figures/h-com.png}
+  \caption{Scanpath of participant for code snippet with helpful comments }
+  \label{fig:AnhangsChor}
+\end{figure}
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=0.6]{figures/min-com.png}
+  \caption{Fixation duration of participant for code snippet with minimal comments}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=0.6]{figures/redun-com.png}
+  \caption{Scanpath of  participant for code snippet with redundant comments}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=0.6]{figures/0-com.png}
+  \caption{Fixation duration of  participant for code snippet without comments}
+  \label{fig:AnhangsChor}
+\end{figure}
+
 
 
 \chapter{Discussion - Interpretation of Results}
