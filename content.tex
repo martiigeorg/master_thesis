@@ -708,9 +708,7 @@ This thesis analyzes how indentation and comments impact computer science studen
 
 \section{Methodology}
 
-\subsection{Study Approach}
-
-The data in this study is gathered using two methods: eye-tracking technology and questionnaire. This approach provides both objective and subjective data, as well as quantitative and qualitative data.
+\subsection{Study Approach} The data in this study is gathered using two methods: eye-tracking technology and questionnaire. This approach provides both objective and subjective data, as well as quantitative and qualitative data.
 Eye-tracking technology gives objective data. Using this type of data, it can be tracked which parts of the code are seen and for how long. Furthermore, cognitive load can be measured.
 On the other hand, questionnaire can give quantitative data (using Likert scale questions). Moreover, questionnaire can give subjective data about the participants (using open-ended questions). The participants report their perceived code comprehension.  
 Previous research has also used both methods to gather data for a deeper code comprehension. (see Chapter Literature review). The Figure ... presents an overview how the data is gathered. 
@@ -731,7 +729,7 @@ Previous research has also used both methods to gather data for a deeper code co
 \tikzstyle{box} = [draw, minimum height=3cm, minimum width=4cm, text width=3.5cm, inner sep=5pt]
 
 % Create the nodes for Eye-Tracking and Questionnaire
-\node (eyeTracking) [box] {Eye-Tracking  data \\[5mm] $\rightarrow$ Measures gaze \\ $\rightarrow$ Measure cognitive load};
+\node (eyeTracking) [box] {Eye-Tracking  data \\[5mm] $\rightarrow$ Measures gaze \\ $\rightarrow$ Measures cognitive load};
 \node (questionnaire) [box, right=of eyeTracking] {Questionnaire data \\[5mm] $\rightarrow$ Subjective data  };
 
 % Create the middle box for "The Study"
@@ -750,7 +748,8 @@ Previous research has also used both methods to gather data for a deeper code co
 
 
 
-The study consists of two formats: an eye-tracking study (offline study) and an online study without eye-tracking. The Figure ... presents the structure of the study.
+The study is conducted in German. It is used a within-subjects design, ensuring that each participant is exposed to all conditions.
+The study consists of two formats: an eye-tracking study (offline study) and an online study without eye-tracking. The Figure ... presents the structure of the study. 
 
 \begin{figure} [H]
   \centering
@@ -787,7 +786,7 @@ The study consists of two formats: an eye-tracking study (offline study) and an 
 \end{tikzpicture}
 \end{figure}
 
-The eye-tracking study (offline study) gathers data using eye-tracking technology and a questionnaire. The eye-tracking device gives objective quantitative data as output and the questionnaire gives both objective and subjective data, as well as quantitative and qualitative data as output.  By combining both methods, the findings indicate whether questionnaire data aligns with the eye-tracking data.
+The eye-tracking study (offline study) gathers data using eye-tracking technology and a questionnaire. The eye-tracking device gives objective qualitative data as output and the questionnaire gives both objective and subjective data, as well as quantitative and qualitative data as output.  By combining both methods, the findings indicate whether questionnaire data aligns with the eye-tracking data.
 The online study without eye-tracking gathers data using only questionnaire. By using both formats, the study gives a more comprehensive overview of how computer science students perceive code. 
 
 
@@ -846,6 +845,7 @@ For the indentation code snippets, the snippets consist of no comments. This ens
 
 \begin{table}[ht]
 \centering
+\small
 \caption{Overview of code snippet formats}
 \begin{tabular}{|p{6cm}|p{6cm}|}
 
@@ -880,7 +880,7 @@ The eye-tracking study (offline study) was conducted at LMU, Munich. As eye-trac
 
 \begin{figure} [H]
   \centering
-  \includegraphics[scale=0.25]{figures/setup.png}
+  \includegraphics[scale=0.3]{figures/setup.png}
   \caption{Technical setup }
   \label{fig:AnhangsChor}
 \end{figure}
@@ -888,86 +888,88 @@ The eye-tracking study (offline study) was conducted at LMU, Munich. As eye-trac
 
 
 \subsection{Research Variables}
-To evaluate the study, two types of variables are used - independent variables and dependent variables.
-
-\subsubsection{Independent variables}
-
-The independent variables in the study are variables that are manipulated. In the study there are used two independent variables - Commenting format and Indentation level.
+To evaluate the study, two types of variables are used - independent variables and dependent variables. The independent variables in the study are variables that are manipulated. In the study there are used two independent variables - Commenting format and Indentation level.
 
 \begin{enumerate}
-     \item Commenting format: The key role of this independent variable is to investigate how commenting format influences code comprehension. This variable consists of four different types: None (no comments are included in the code), Minimal (these comments include only essential information), Helpful (these comments provide meaningful explanations), Redundant (These comments explain obvious parts of the code). 
+     \item Commenting format: The key role of this independent variable is to investigate how commenting format influences code comprehension. This variable consists of four different types: None (no comments are included in the code), Minimal (these comments include only essential information), Helpful (these comments provide meaningful explanations), Redundant (these comments explain obvious parts of the code). 
 
     \item Indentation level: The key role of this independent variable is to investigate how indentation influences code comprehension and readability. This variable consists of four different types: No indentation (The code has no indentation), 4-spaces indentation (the code has four spaces indentation), Random indentation (the code has inconsistent indentation). 
 \end{enumerate}
 
-\subsubsection{Dependent variables}
 
-The independent variables influence the dependent variables. The dependent variables are measured and the outcomes help to investigate how the independent variables influence code comprehension, commenting format, indentation level and cognitive load.  In this thesis are used the following dependent variables: Comprehension score, Comment quality score, Indentation quality score, Response time per code snippet..... An overview is
+The independent variables influence the dependent variables. The dependent variables are measured and the outcomes help to investigate how the independent variables influence code comprehension, commenting format, indentation level and cognitive load.  In this thesis are defined the following dependent variables: Comprehension score, Comment quality score, Indentation quality score, Confidence rating and  Response time per code snippet. An overview is
 presented in Table ... 
 
 
-\begin{table}[ht]
-\centering
-\small
-\begin{tabular}{|p{4cm}|p{10cm}|}
+
+\begin{longtable}{|p{5.5cm}|p{8.5cm}|}  % Using longtable instead of tabular
+\caption{Description of variables} \label{tab:variables} \\
+
 \hline
 \textbf{Variable} & \textbf{Description} \\
 \hline
+\endfirsthead  % Header for the first page
+
+\hline
+\textbf{Variable} & \textbf{Description} \\
+\hline
+\endhead  % Header for subsequent pages
+
+\hline
 Comprehension score & This variable was derived from Question 3: "How understandable is the code for you?" Participants rate the code on a Likert scale, where 1 = "Not understandable" and  5 = "Very understandable".  \\
 \hline
-Comment quality score & This variable variable was derived from Question 4: "How do you assess the commenting of the code?" Participants rate the code on a Likert scale, where 1 = "Confusing" and 5  = "Very helpful". \\
+Comment quality score & This variable was derived from Question 4: "How do you assess the commenting of the code?" Participants rate the code on a Likert scale, where 1 = "Confusing" and 5  = "Very helpful". \\
 \hline
-Indentation quality score & This variable variable was derived from Question 5: "How do you assess the indentation of the code?" Participants rate the indentation of the code on  a Likert scale , where 1 = "Unreadable" and 5 = "Very easy to read". \\
+Indentation quality score & This variable was derived from Question 5: "How do you assess the indentation of the code?" Participants rate the indentation of the code on a Likert scale, where 1 = "Unreadable" and 5 = "Very easy to read". \\
 \hline
 Response time per code snippet & This variable measures how long (in minutes) each participant took to view a code snippet and answer its corresponding five questions.  \\
 \hline
-Confidence rating & This variable variable was derived from Question 2: “How confident are you in your answer to the first question?” (the first question is related to the function of the corresponding code snippet).  Participants rate their code confidence on a Likert scale, where 1 = "Not confident" and  5 = "Very confident".\\
+Confidence rating & This variable was derived from Question 2: “How confident are you in your answer to the first question?” (the first question is related to the function of the corresponding code snippet).  Participants rate their code confidence on a Likert scale, where 1 = "Not confident" and  5 = "Very confident".\\
 \hline
-\end{tabular}
-\caption{Description of variables used in the study}
-\label{tab:variables}
-\end{table}
 
-
+\end{longtable}
 
 \section{Questionnaire Design}
 
 
-\subsection{First part of Questionnaire}
-The first part of the questionnaire gives general information about the participants. 
-Participants provide details about their field of study, as well as information about their academic background: their programming experience level and experience in Java.
+\subsection{First part of questionnaire}
+
 
 \begin{figure} [H]
   \centering
   \includegraphics[scale=0.45]{figures/allgemein.png}
-  \caption{First part of Questionnaire}
+  \caption{First part of questionnaire}
   \label{fig:AnhangsChor}
 \end{figure}
+
+Figure ... shows the design of the first part of questionnaire. The first part of the questionnaire gives general information about the participants. 
+Participants provide details about their field of study, as well as information about their academic background: their programming experience level and experience in Java. 
+
 
 
 \subsection{Main part of Questionnaire}
 
 In the main part of the questionnaire are shown seven different code snippets. Their order is randomized to avoid bias. Each code snippet presents a different level of indentation and a different type of comment format.
-Participants answer five questions corresponding to each code snippet. These questions are related to the code snippet’s function, ratings of the code comprehension, code indentation, and code commenting.
+Participants answer five questions corresponding to each code snippet. These questions are related to the code snippet’s function, ratings of the code comprehension, code indentation, and code commenting. Figure ... shows the design of the main part of questionnaire.
 
 
 \begin{figure} [H]
   \centering
   \includegraphics[scale=0.45]{figures/main_p.png}
-  \caption{Main part of Questionnaire}
+  \caption{Main part of questionnaire}
   \label{fig:AnhangsChor}
 \end{figure}
 
 
 
 \subsection{Final part of the Questionnaire}
-In the last part of the questionnaire, participants give their opinions on code indentation and code comments guidelines. They describe what they take into consideration when defining poorly commented and well-commented code. Moreover, they explain which code indentation style they use.  
+In the last part of the questionnaire, participants give their opinions on code indentation and code comments guidelines. They describe what they take into consideration when defining poorly commented and well-commented code. Moreover, they explain which code indentation style they use.  Figure ... shows the design of the last part of questionnaire.
 
 
 \begin{figure}  [H]
   \centering
   \includegraphics[scale=0.45]{figures/last_part.png}
-  \caption{Final part of the Questionnaire}
+  \caption{Final part of the questionnaire}
   \label{fig:AnhangsChor}
 \end{figure}
 
@@ -1021,16 +1023,11 @@ The eye-tracking study (offline study) and the online study without eye-tracking
 
 \begin{figure} [H]
   \centering
-  \includegraphics[scale=0.2]{figures/user.jpg}
+  \includegraphics[scale=0.1]{figures/user.jpg}
   \caption{Participant conducting the eye-tracking study }
   \label{fig:AnhangsChor}
 \end{figure}
 
-
-
-
-
-\section{Measurements}
 
 
 \section{Ethical Considerations}
@@ -1040,15 +1037,8 @@ The eye-tracking study (offline study) and the online study without eye-tracking
     
     \item \textbf{Data Protection}
     \begin{itemize}
-        \item Demographic information, such as gender and age, is collected.
-        \item If participants choose to receive compensation from the university, they provide their university email address.
-        \item The rest of the data is anonymized and is stored for a maximum of three years.
-        \item Non-anonymized data is stored for a maximum of three years.
-        \item All collected data is encrypted.
-        \item For eye-tracking participants, video recordings and gaze data are stored.
-        \item For all participants, their questionnaire responses are stored.
-        \item At any time, participants can request deletion of their data.
-        \item No personal data is shared with third parties.
+        \item Demographic information, such as gender and age, is collected. If participants choose to receive compensation from the university, they provide their university email address. The rest of the data is anonymized and is stored for a maximum of three years. Non-anonymized data is stored for a maximum of three years.
+        \item All collected data is encrypted. For eye-tracking participants, video recordings and gaze data are stored. For all participants, their questionnaire responses are stored. At any time, participants can request deletion of their data. No personal data is shared with third parties.
     \end{itemize}
 \end{enumerate}
 
@@ -1071,7 +1061,7 @@ As for Java knowledge, most students rated their skills as average. Only two par
 
 \begin{figure} [H]
   \centering
-  \includegraphics[scale=1.1]{figures/p_exp.png}
+  \includegraphics[scale=1]{figures/p_exp.png}
   \caption{Programming experience of participants}
   \label{fig:AnhangsChor}
 \end{figure}
@@ -1162,7 +1152,28 @@ The test produced a p-value of 0.1292, which is greater than the significance le
 \subsection{Confidence rating}
 
 Another Mann-Whitney U test was conducted to investigate whether random indentation improves the code confidence rating compared to code with no indentation. The analysis was based on the Confidence rating, a dependent variable derived from participant responses. The hypotheses were defined as: H0 (Null Hypothesis): The Confidence rating for the code snippet with no indentation is equal to that of the randomly indented code snippet. H1 (Alternative Hypothesis): The Confidence rating for the code snippet with no indentation is not equal to that of the randomly indented code snippet.
-The test produced a p-value of 0.6091, which is greater than the significance level α = 0.05. Therefore, the null hypothesis (H0) cannot be rejected. This result reveals that the difference in Confidence rating between the randomly indented and unindented code snippets was not statistically significant.  
+The test produced a p-value of 0.6091, which is greater than the significance level \(\alpha = 0.05\). Therefore, the null hypothesis (H0) cannot be rejected. This result reveals that the difference in Confidence rating between the randomly indented and unindented code snippets was not statistically significant.  Table 4.1 presents an overview of all hypotheses related to the different levels of indentations. 
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{|p{5cm}|p{6cm}|p{2.5cm}|}
+\hline
+\textbf{Variable} & \textbf{Hypothesis (H0)} & \textbf{H0 Rejected?} \\
+\hline
+Indentation quality score & 4-space $\leq$ No indentation & Rejected \\
+\hline
+Indentation quality score & 4-space $\leq$ Random indentation & Rejected \\
+\hline
+Indentation quality score & Random $\leq$ No indentation & Rejected \\
+\hline
+Comprehension score & Random = No indentation & Not Rejected \\
+\hline
+Confidence rating & Random = No indentation & Not Rejected \\
+\hline
+\end{tabular}
+\caption{Hypotheses related to indentation levels}
+\end{table}
 
 
 
@@ -1246,7 +1257,7 @@ A test was conducted to investigate whether code snippet with redundant comments
 
 
 Figure .... displays the medians for both comments formats.
-The test indicates a p-value of 0.006669, which is below the significance level $\alpha = 0.05$. Therefore, the null hypothesis (H0) cannot be rejected.  This test reveals that the Comprehension score for the code with redundant comments was significantly higher than that for the code with minimal comments. 
+The test indicates a p-value of 0.006669, which is below the significance level $\alpha = 0.05$. Therefore, the null hypothesis (H0) can be rejected.  This test reveals that the Comprehension score for the code with redundant comments was significantly higher than that for the code with minimal comments. 
 
 \begin{figure} [H]
   \centering
@@ -1269,7 +1280,41 @@ The test produced a p-value of  0.00604, which is below the significance level $
 
 
 A U test was performed to investigate whether code snippet with redundant comments improves code confidence compared to code without comments. The analysis was based on the Confidence rating. The hypotheses were defined as:  H0 (Null Hypothesis): The Confidence rating for the code snippet with redundant comments is less than or equal to that of the code without comments.  H1 (Alternative Hypothesis): The Confidence rating for the code snippet with redundant comments is greater than that of the code without comments.      
-The test produced a p-value of  0.01059, which is below the significance level $\alpha = 0.05$. Therefore, the null hypothesis (H0) was rejected.  This result suggests that the Confidence rating  for the code with redundant comments was significantly higher than that for the code without comments.   
+The test produced a p-value of  0.01059, which is below the significance level $\alpha = 0.05$. Therefore, the null hypothesis (H0) was rejected.  This result suggests that the Confidence rating  for the code with redundant comments was significantly higher than that for the code without comments.   Figure ... presents an overview of all hypotheses related to the comment formats.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{|p{4cm}|p{6cm}|p{2.5cm}|}
+\hline
+\textbf{Variable} & \textbf{Hypothesis (H0)} & \textbf{H0 Rejected?} \\
+\hline
+Comment quality score & Helpful $\leq$ No comments & Rejected \\
+\hline
+Comment quality score& Helpful $\leq$ Minimal comments & Rejected \\
+\hline
+Comment quality score & Helpful $\leq$ Redundant comments & Rejected \\
+\hline
+Comment quality score & Minimal = Redundant comments & Not Rejected \\
+\hline
+Comprehension score & Helpful $\leq$ No comments & Rejected \\
+\hline
+Comprehension score & Helpful $\leq$ Minimal comments & Rejected \\
+\hline
+Comprehension score & Redundant $\leq$ Minimal comments & Rejected \\
+\hline
+Confidence rating & Helpful $\leq$ No comments & Rejected \\
+\hline
+Confidence rating & Helpful $\leq$ Minimal comments & Rejected \\
+\hline
+Confidence rating & Redundant $\leq$ Minimal comments & Rejected \\
+\hline
+Confidence rating & Redundant $\leq$ No comments & Rejected \\
+\hline
+\end{tabular}
+\caption{Hypotheses related to comments formats}
+\end{table}
+
 
 
 
@@ -1291,9 +1336,9 @@ Due to the incomplete and small dataset, as well as missing data caused by head 
 
 
 \subsection{Effects of indentation levels on gaze behavior}
+In all three code snippets with different levels of indentation, a single AOI category was defined: keywords, including terms such as “if” and “else”. In the code snippet without indentation, participants tended to look at these keywords and often returned to previous lines. Moreover, they showed long fixation durations.  Figure … presents a scanpath from one participant who had spent a lot of time looking at the code and had returned to previous lines. In the code snippet with 4-space indentation, participants tended to follow a clear reading path. Moreover, fixation durations on keywords were notably shorter. Figure … presents a scanpath for one participant who looked at the code lines from the top to bottom without returning to previous lines. In the code snippet with random indentation, participants often had a large amount of fixation duration on the keywords.  Moreover, they often read the code with many jumps between lines and with inconsistent gaze directions. For instance, the Figure  … presents a scanpath for one participant that has followed a “zig-zag” pattern — shifting his eyes inconsistently from left to right and back again.   
 
-In the code snippet without indentation, participants tended to look at keywords such as “if” or “for” and often returned to previous lines. Moreover, they showed longer fixation durations.  Figure … presents a scanpath from participant A who had spent a lot of time looking at the code and had returned to previous lines. In the code snippet with 4-space indentation, participants tended to follow a clear reading path. Moreover, they showed shorter fixation durations.  Figure … presents a scanpath from participant B who looked at the code lines from the top to bottom without returning to previous lines. 
-In the code snippet with random indentation, participants often had a large amount of fixation duration.  Moreover, they often read the code with many jumps between lines and with inconsistent gaze directions. For instance, the Figure  … presents a scanpath from participant C that has followed a “zig-zag” pattern — shifting his eyes inconsistently from left to right and back again.  
+
 
 \begin{figure} [H]
   \centering
@@ -1321,7 +1366,7 @@ In the code snippet with random indentation, participants often had a large amou
 
 \subsection{Effects of commenting formats on gaze behavior}
 
-In the code snippet with helpful comments, participants often looked at the comments before reading the code itself.  Figure … presents a scanpath from participant whose attention at the beginning is more on the comments. In the code snippet with minimal comments, participants often tended to follow a clear reading path.  Furthermore, they often did not spend much time on the comments. Figure …  presents a gaze plot of participant, indicating a short fixation duration on comments. In the code snippet with redundant comments, participants often tended not to spend much time on the comments. Figure …  shows a gaze plot of participant, whose attention  is more on the code itself and not on the comments. Regarding the order of reading, some participants followed a clear reading path while others read the code in a more inconsistent order.  In the code snippet without comments, participants often tended to spend more time on code lines. Figure …  presents a gaze plot of participant, indicating a long fixation duration on code lines.    Regarding the order of reading, the majority of participants followed an unclear reading path.
+In all four code snippets with different commenting formats, a single AOI category was defined: Comments. This AOI was used to investigate participants’ visual engagement with different types of comments. In the code snippet with helpful comments, participants often looked at the comments before reading the code itself.  Figure … presents a scanpath from participant whose attention at the beginning is more on the comments. In the code snippet with minimal comments, participants often tended to follow a clear reading path.  Furthermore, they often did not spend much time on the comments. Figure …  presents a gaze plot of participant, indicating a short fixation duration on comments. In the code snippet with redundant comments, participants often tended not to spend much time on the comments. Figure …  shows a gaze plot of participant, whose attention  is more on the code itself and not on the comments. Regarding the order of reading, some participants followed a clear reading path while others read the code in a more inconsistent order.  In the code snippet with no comments, the comment AOI was absent and participants often tended to spend more time on code lines. Figure …  presents a gaze plot of participant, indicating a long fixation duration on code lines.    Regarding the order of reading, the majority of participants followed an unclear reading path.
 
 \begin{figure} [H]
   \centering
@@ -1356,6 +1401,12 @@ In the code snippet with helpful comments, participants often looked at the comm
 
 
 \chapter{Discussion - Interpretation of Results}
+
+
+
+
+
+
 
 \section{Limitations} 
 Both formats of the study have several limitations that may have an impact on the results.
