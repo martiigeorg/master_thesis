@@ -1046,10 +1046,10 @@ The eye-tracking study (offline study) and the online study without eye-tracking
 
 \section{Participants}
 
-The study involved a total of 31 Bachelor’s students: 11 took part in the eye-tracking study, while the remaining 20 participated in the online study. The majority were between 18 and 25 years old (Figure …).
-Participants varied in their academic progress, with most being in mid to later semesters (Figure …).
-In terms of programming, the majority had at least some coding experience. Most reported having 1 to 2 years of experience (Figure …).
-As for Java knowledge, most students rated their skills as average. Only two participants reported having very good Java skills (Figure …).
+The study involved a total of 31 Bachelor’s students: 11 took part in the eye-tracking study, while the remaining 20 participated in the online study. The majority were between 18 and 25 years old (Figure 4.1).
+Participants varied in their academic progress, with most being in mid to later semesters (Figure 4.2).
+In terms of programming, the majority had at least some coding experience. Most reported having 1 to 2 years of experience (Figure 4.3).
+As for Java knowledge, most students rated their skills as average. Only two participants reported having very good Java skills (Figure 4.4).
 
 
 \begin{figure} [H]
@@ -1059,17 +1059,18 @@ As for Java knowledge, most students rated their skills as average. Only two par
   \label{fig:AnhangsChor}
 \end{figure}
 
-\begin{figure} [H]
-  \centering
-  \includegraphics[scale=1]{figures/p_exp.png}
-  \caption{Programming experience of participants}
-  \label{fig:AnhangsChor}
-\end{figure}
 
 \begin{figure} [H]
   \centering
   \includegraphics[scale=1.1]{figures/semester.png}
   \caption{Participants' semester}
+  \label{fig:AnhangsChor}
+\end{figure}
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=1]{figures/p_exp.png}
+  \caption{Programming experience of participants}
   \label{fig:AnhangsChor}
 \end{figure}
 
@@ -1085,17 +1086,19 @@ As for Java knowledge, most students rated their skills as average. Only two par
 \section{Code snippets}
 Not all participants answered every question in the study. The questions related to code snippets 1, 2, and 6 were answered by 29 people;  to code snippets 3, 4, and 5 by 28 people, and to code snippet 7 by 27 people.  However, the overall response remains sufficiently balanced.
 
-\section{Indentation}
+\section{Statistical analysis}
 
-The dependent variables, such as Comprehension score, Comment quality score, and Indentation quality score, are ordinal, but do not assume equal intervals between the points.
-Since the Mann-Whitney U test is suitable for this type of variables, it is used mainly in this thesis \cite{MacFarland2016}.
+Regarding the answers for the first question of questionnaire for each code snippet, some participants gave briefly answers, while others gave more detailed ones. The difference in length could have affected the response time. Therefore, the variable Response time per code snippet was not included in the analysis. The dependent variables, such as Comprehension score, Comment quality score, and Indentation quality score, are ordinal, but do not assume equal intervals between the points.
+Since the Mann-Whitney U test is suitable for this type of variables, it is used mainly in this thesis \cite{MacFarland2016}. 
+
+\section{Indentation}
 
 \subsection{Indentation quality score}
 
 
 Mann-Whitney U test was conducted to investigate whether 4-space indentation improves code readability compared to no indentation. The analysis was based on the Indentation quality score. The hypotheses were defined as:  H0 (Null Hypothesis): The Indentation quality score for the 4-space indented code snippet is less than or equal to that of the unindented code. H1(Alternative Hypothesis): The Indentation quality score for the 4-space indented code snippet is greater than that of the unindented code.
 
-Figure .... presents the medians for both levels of indentation. The test presented a p-value of \(9.172 \times 10^{-8}\), which is below the significance level \(\alpha = 0.05\). Therefore, the null hypothesis (H0) was rejected. This result indicates that the Indentation quality score for the 4-space indented code was significantly higher than that for the unindented code. 
+Figure 4.5 presents the medians for both levels of indentation. The test presented a p-value of \(9.172 \times 10^{-8}\), which is below the significance level \(\alpha = 0.05\). Therefore, the null hypothesis (H0) was rejected. This result indicates that the Indentation quality score for the 4-space indented code was significantly higher than that for the unindented code. 
 
 \begin{figure} [H]
   \centering
@@ -1108,7 +1111,7 @@ Figure .... presents the medians for both levels of indentation. The test presen
 Another Mann-Whitney U test was conducted to investigate whether 4-space indentation improves code readability compared to random indentation. The analysis was based on the Indentation quality score. The hypotheses were defined as:  H0 (Null Hypothesis): The Indentation quality score for the 4-space indented code snippet is less than or equal to that of the randomly indented code. H1 (Alternative Hypothesis): The Indentation quality score for the 4-space indented code snippet is greater than that of the randomly indented code.
 
 
-Figure .... displays the medians for both levels of indentation. 
+Figure 4.6 displays the medians for both levels of indentation. 
 The test produced a p-value of 0.0008, which is below the significance level \(\alpha = 0.05\). Therefore, the null hypothesis (H₀) was rejected. The result presented that the Indentation quality score for the 4-space indented code was significantly higher than for the randomly indented code.
 
 \begin{figure} [H]
@@ -1121,7 +1124,7 @@ The test produced a p-value of 0.0008, which is below the significance level \(\
 
 Another  U test was performed to investigate whether random indentation improves the readability of code compared to code with no indentation. The analysis was based on the Indentation quality score. The hypotheses were defined as:  H0 (Null Hypothesis): The Indentation quality score for the randomly indented code snippet is less than or equal to that of the code snippet with no indentation.  H1(Alternative Hypothesis): The Indentation quality score for the randomly indented code snippet is greater than that of the code snippet with no indentation.
 
-Figure .... visualizes the medians for both levels of indentation. 
+Figure 4.7 visualizes the medians for both levels of indentation. 
 The test presented a p-value of  0.02145, which is less than the significance level \(\alpha = 0.05\). Therefore, the null hypothesis (H₀) was rejected. The result reveals that the Indentation quality score for the randomly indented code was significantly higher than that of the unindented code.
 
 \begin{figure} [H]
@@ -1135,7 +1138,7 @@ The test presented a p-value of  0.02145, which is less than the significance le
 \subsection{Comprehension score}
 Another Mann-Whitney U test was conducted to investigate whether random indentation enhance the comprehension  of code compared to code with no indentation. The analysis was based on the Comprehension score. The hypotheses were defined as: H0 (Null Hypothesis): The Comprehension score for the code snippet with no indentation is equal to that of the randomly indented code snippet. H1 (Alternative Hypothesis): The Comprehension score for the code snippet with no indentation is not equal to that of the randomly indented code snippet.
 
-Figure .... displays the medians for both levels of indentation.
+Figure 4.8 displays the medians for both levels of indentation.
 The test produced a p-value of 0.1292, which is greater than the significance level \(\alpha = 0.05\). Therefore, the null hypothesis (H0) cannot be rejected. This result indicates that the difference in Comprehension score between the randomly indented and unindented code snippets was not statistically significant.
 
 
@@ -1153,36 +1156,34 @@ The test produced a p-value of 0.1292, which is greater than the significance le
 
 Another Mann-Whitney U test was conducted to investigate whether random indentation improves the code confidence rating compared to code with no indentation. The analysis was based on the Confidence rating, a dependent variable derived from participant responses. The hypotheses were defined as: H0 (Null Hypothesis): The Confidence rating for the code snippet with no indentation is equal to that of the randomly indented code snippet. H1 (Alternative Hypothesis): The Confidence rating for the code snippet with no indentation is not equal to that of the randomly indented code snippet.
 The test produced a p-value of 0.6091, which is greater than the significance level \(\alpha = 0.05\). Therefore, the null hypothesis (H0) cannot be rejected. This result reveals that the difference in Confidence rating between the randomly indented and unindented code snippets was not statistically significant.  Table 4.1 presents an overview of all hypotheses related to the different levels of indentations. 
-
 \begin{table}[ht]
 \centering
 \small
 \begin{tabular}{|p{5cm}|p{6cm}|p{2.5cm}|}
 \hline
-\textbf{Variable} & \textbf{Hypothesis (H0)} & \textbf{H0 Rejected?} \\
+\rule{0pt}{1.2em}\textbf{Variable} & \textbf{Hypothesis (H0)} & \textbf{H0 Rejected?} \\[0.5em]
 \hline
-Indentation quality score & 4-space $\leq$ No indentation & Rejected \\
+\rule{0pt}{1.2em}Indentation quality score & 4-space $\leq$ No indentation & Rejected \\[0.5em]
 \hline
-Indentation quality score & 4-space $\leq$ Random indentation & Rejected \\
+\rule{0pt}{1.2em}Indentation quality score & 4-space $\leq$ Random indentation & Rejected \\[0.5em]
 \hline
-Indentation quality score & Random $\leq$ No indentation & Rejected \\
+\rule{0pt}{1.2em}Indentation quality score & Random $\leq$ No indentation & Rejected \\[0.5em]
 \hline
-Comprehension score & Random = No indentation & Not Rejected \\
+\rule{0pt}{1.2em}Comprehension score & Random = No indentation & Not Rejected \\[0.5em]
 \hline
-Confidence rating & Random = No indentation & Not Rejected \\
+\rule{0pt}{1.2em}Confidence rating & Random = No indentation & Not Rejected \\[0.5em]
 \hline
 \end{tabular}
 \caption{Hypotheses related to indentation levels}
 \end{table}
 
 
-
 \subsection{Indentation methods}
-When participants were asked how they handle code indentation, several answers were selected. Figure …. shows that most participants use Tab key. Only a few students use automatic tools.  
+When participants were asked how they handle code indentation, several answers were selected. Figure 4.9 shows that most participants use Tab key. Only a few students use automatic tools.  
 
 \begin{figure} [H]
   \centering
-  \includegraphics[scale=0.9]{figures/inM.png}
+  \includegraphics[scale=0.7]{figures/inM.png}
   \caption{Methods for code indentation}
   \label{fig:AnhangsChor}
 \end{figure}
@@ -1191,14 +1192,11 @@ When participants were asked how they handle code indentation, several answers w
 
 \section{Comments}
 
-
-To investigate whether code indentation improves code understandability, one-sided Mann-Whitney U tests were conducted. 
-
 \subsection{Comment quality score}
 
 To explore whether helpful comments improve the comment quality of the code compared to no comments, a Mann-Whitney U test was conducted.  The analysis was based on the Comment quality score. The hypotheses were defined as: H0 (Null Hypothesis): The Comment quality score for the code snippet with helpful comments is less than or equal to that of the code with no comments.  H1 (Alternative Hypothesis): The Comment quality score for the code snippet with helpful comments is greater than that of the code with no comments.
 
-Figure .... shows the medians for both comment formats.
+Figure 4.10 shows the medians for both comment formats.
 The test produced a p-value of 3.285e-10, which is below the significance level $\alpha = 0.05$. Therefore, the null hypothesis (H0) was rejected. This result reveals that the Comment quality score for the code with helpful comments was significantly higher than that for the code with no comments.
 
 \begin{figure} [H]
@@ -1226,7 +1224,7 @@ A Mann-Whitney U test was conducted to investigate whether minimal comments have
 A U test was conducted to explore whether code snippet with helpful comments improves code comprehension compared to code with no comments. The analysis was based on the Comprehension score. The hypotheses were defined as: H0 (Null Hypothesis): The Comprehension score for the code snippet with helpful comments is less than or equal to that of the code with no comments.  H1 (Alternative Hypothesis): The Comprehension score for the code snippet with helpful comments is greater than that of the code with no comments.
 
 
-Figure .... presents the medians for both comments formats.
+Figure 4.11 presents the medians for both comments formats.
 The test produced a p-value of  0.0000345, which is below the significance level $\alpha = 0.05$. Therefore, the null hypothesis (H0) was rejected.  This result reveals that the Comprehension score for the code with helpful comments was significantly higher than that for the code with no comments. 
 
 
@@ -1242,7 +1240,7 @@ The test produced a p-value of  0.0000345, which is below the significance level
 
 A U test was performed to investigate whether code snippet with helpful comments improves code comprehension compared to code with minimal comments. The analysis was based on the Comprehension score. The hypotheses were defined as: H0 (Null Hypothesis): The Comprehension score for the code snippet with helpful comments is less than or equal to that of the code with minimal comments.  H1 (Alternative Hypothesis): The Comprehension score for the code snippet with helpful comments is greater than that of the code with minimal comments.
 
-Figure .... displays the medians for both comments formats.
+Figure 4.12 displays the medians for both comments formats.
 The test indicates a p-value of 0.00018, which is below the significance level $\alpha = 0.05$. Therefore, the null hypothesis (H0) was rejected.  This test reveals that the Comprehension score for the code with helpful comments was significantly higher than that for the code with minimal comments. 
 
 \begin{figure} [H]
@@ -1256,7 +1254,7 @@ The test indicates a p-value of 0.00018, which is below the significance level $
 A test was conducted to investigate whether code snippet with redundant comments enhance code comprehension compared to code with minimal comments. The analysis was based on the Comprehension score. The hypotheses were defined as: H0 (Null Hypothesis): The Comprehension score for the code snippet with redundant comments is less than or equal to that of the code with minimal comments.  H1 (Alternative Hypothesis): The Comprehension score for the code snippet with redundant comments is greater than that of the code with minimal comments. 
 
 
-Figure .... displays the medians for both comments formats.
+Figure 4.13 displays the medians for both comments formats.
 The test indicates a p-value of 0.006669, which is below the significance level $\alpha = 0.05$. Therefore, the null hypothesis (H0) can be rejected.  This test reveals that the Comprehension score for the code with redundant comments was significantly higher than that for the code with minimal comments. 
 
 \begin{figure} [H]
@@ -1280,36 +1278,36 @@ The test produced a p-value of  0.00604, which is below the significance level $
 
 
 A U test was performed to investigate whether code snippet with redundant comments improves code confidence compared to code without comments. The analysis was based on the Confidence rating. The hypotheses were defined as:  H0 (Null Hypothesis): The Confidence rating for the code snippet with redundant comments is less than or equal to that of the code without comments.  H1 (Alternative Hypothesis): The Confidence rating for the code snippet with redundant comments is greater than that of the code without comments.      
-The test produced a p-value of  0.01059, which is below the significance level $\alpha = 0.05$. Therefore, the null hypothesis (H0) was rejected.  This result suggests that the Confidence rating  for the code with redundant comments was significantly higher than that for the code without comments.   Figure ... presents an overview of all hypotheses related to the comment formats.
+The test produced a p-value of  0.01059, which is below the significance level $\alpha = 0.05$. Therefore, the null hypothesis (H0) was rejected.  This result suggests that the Confidence rating  for the code with redundant comments was significantly higher than that for the code without comments.   Table 4.2 presents an overview of all hypotheses related to the comment formats.
 
 \begin{table}[ht]
 \centering
 \small
 \begin{tabular}{|p{4cm}|p{6cm}|p{2.5cm}|}
 \hline
-\textbf{Variable} & \textbf{Hypothesis (H0)} & \textbf{H0 Rejected?} \\
+\rule{0pt}{1.2em}\textbf{Variable} & \textbf{Hypothesis (H0)} & \textbf{H0 Rejected?} \\[0.5em]
 \hline
-Comment quality score & Helpful $\leq$ No comments & Rejected \\
+\rule{0pt}{1.2em}Comment quality score & Helpful $\leq$ No comments & Rejected \\[0.5em]
 \hline
-Comment quality score& Helpful $\leq$ Minimal comments & Rejected \\
+\rule{0pt}{1.2em}Comment quality score & Helpful $\leq$ Minimal comments & Rejected \\[0.5em]
 \hline
-Comment quality score & Helpful $\leq$ Redundant comments & Rejected \\
+\rule{0pt}{1.2em}Comment quality score & Helpful $\leq$ Redundant comments & Rejected \\[0.5em]
 \hline
-Comment quality score & Minimal = Redundant comments & Not Rejected \\
+\rule{0pt}{1.2em}Comment quality score & Minimal = Redundant comments & Not Rejected \\[0.5em]
 \hline
-Comprehension score & Helpful $\leq$ No comments & Rejected \\
+\rule{0pt}{1.2em}Comprehension score & Helpful $\leq$ No comments & Rejected \\[0.5em]
 \hline
-Comprehension score & Helpful $\leq$ Minimal comments & Rejected \\
+\rule{0pt}{1.2em}Comprehension score & Helpful $\leq$ Minimal comments & Rejected \\[0.5em]
 \hline
-Comprehension score & Redundant $\leq$ Minimal comments & Rejected \\
+\rule{0pt}{1.2em}Comprehension score & Redundant $\leq$ Minimal comments & Rejected \\[0.5em]
 \hline
-Confidence rating & Helpful $\leq$ No comments & Rejected \\
+\rule{0pt}{1.2em}Confidence rating & Helpful $\leq$ No comments & Rejected \\[0.5em]
 \hline
-Confidence rating & Helpful $\leq$ Minimal comments & Rejected \\
+\rule{0pt}{1.2em}Confidence rating & Helpful $\leq$ Minimal comments & Rejected \\[0.5em]
 \hline
-Confidence rating & Redundant $\leq$ Minimal comments & Rejected \\
+\rule{0pt}{1.2em}Confidence rating & Redundant $\leq$ Minimal comments & Rejected \\[0.5em]
 \hline
-Confidence rating & Redundant $\leq$ No comments & Rejected \\
+\rule{0pt}{1.2em}Confidence rating & Redundant $\leq$ No comments & Rejected \\[0.5em]
 \hline
 \end{tabular}
 \caption{Hypotheses related to comments formats}
@@ -1317,27 +1315,27 @@ Confidence rating & Redundant $\leq$ No comments & Rejected \\
 
 
 
-
 \subsection{Well-commented code vs. badly-commented code }
 
 When participants were asked what characterizes well-commented code for them, their responses indicated common opinions. They think comments should explain what the code does. Moreover, the comments should provide the purpose and not to repeat the obvious. Participants generally agree on what makes code badly commented. They think it is problematic when comments are missing. Another issue is over-commenting, where every single line is explained.
-When participants were asked how often they follow their own guidelines when writing code comments, most participants answered they do so sometimes. Figure …. shows the results.
+When participants were asked how often they follow their own guidelines when writing code comments, most participants answered they do so sometimes. Figure 4.14 shows the results.
 
 \begin{figure} [H]
   \centering
-  \includegraphics[scale=1.2]{figures/comAt.png}
+  \includegraphics[scale=0.8]{figures/comAt.png}
   \caption{Paying attention to writing comments }
   \label{fig:AnhangsChor}
 \end{figure}
 
 \section{Eye-tracking results}
-Due to the incomplete and small dataset, as well as missing data caused by head movements, a qualitative approach was applied to analyze gaze patterns: reading order and attention focus were analyzed using scanpath and heatmap.  
-
+One common issue in the eye-tracking study was missing data caused by head movements or calibration errors. As a result, several gaze recordings were excluded from the analysis. Only eight recordings were considered. However, some of these did not provide clear results. Therefore,only five recordings were fully analyzed. 
+Due to the incomplete and small dataset, a qualitative approach was applied to analyze gaze patterns: reading order and attention focus were analyzed using scanpath and heatmap.  
+ 
 
 
 \subsection{Effects of indentation levels on gaze behavior}
-In all three code snippets with different levels of indentation, a single AOI category was defined: keywords, including terms such as “if” and “else”. In the code snippet without indentation, participants tended to look at these keywords and often returned to previous lines. Moreover, they showed long fixation durations.  Figure … presents a scanpath from one participant who had spent a lot of time looking at the code and had returned to previous lines. In the code snippet with 4-space indentation, participants tended to follow a clear reading path. Moreover, fixation durations on keywords were notably shorter. Figure … presents a scanpath for one participant who looked at the code lines from the top to bottom without returning to previous lines. In the code snippet with random indentation, participants often had a large amount of fixation duration on the keywords.  Moreover, they often read the code with many jumps between lines and with inconsistent gaze directions. For instance, the Figure  … presents a scanpath for one participant that has followed a “zig-zag” pattern — shifting his eyes inconsistently from left to right and back again.   
-
+In all three code snippets with different levels of indentation, a single AOI category was defined: keywords, including terms such as “if” and “else”. In the code snippet without indentation, participants tended to look at these keywords and often returned to previous lines. Moreover, they showed long fixation durations.  Figure 4.15 presents a scanpath from one participant who had spent a lot of time looking at the code and had returned to previous lines. In the code snippet with 4-space indentation, participants tended to follow a clear reading path. Moreover, fixation durations on keywords were notably shorter. Figure 4.16 presents a scanpath for one participant who looked at the code lines from the top to bottom without returning to previous lines.  
+In the code snippet with random indentation, participants often had a large amount of fixation duration on the keywords.  Moreover, they often read the code with many jumps between lines and with inconsistent gaze directions. For instance, the Figure 4.17 presents a scanpath for one participant that has followed a “zig-zag” pattern — shifting his eyes inconsistently from left to right and back again.  
 
 
 \begin{figure} [H]
@@ -1346,6 +1344,7 @@ In all three code snippets with different levels of indentation, a single AOI ca
   \caption{Scanpath of participant for code snippet without indentation }
   \label{fig:AnhangsChor}
 \end{figure}
+ 
 
 \begin{figure} [H]
   \centering
@@ -1366,7 +1365,7 @@ In all three code snippets with different levels of indentation, a single AOI ca
 
 \subsection{Effects of commenting formats on gaze behavior}
 
-In all four code snippets with different commenting formats, a single AOI category was defined: Comments. This AOI was used to investigate participants’ visual engagement with different types of comments. In the code snippet with helpful comments, participants often looked at the comments before reading the code itself.  Figure … presents a scanpath from participant whose attention at the beginning is more on the comments. In the code snippet with minimal comments, participants often tended to follow a clear reading path.  Furthermore, they often did not spend much time on the comments. Figure …  presents a gaze plot of participant, indicating a short fixation duration on comments. In the code snippet with redundant comments, participants often tended not to spend much time on the comments. Figure …  shows a gaze plot of participant, whose attention  is more on the code itself and not on the comments. Regarding the order of reading, some participants followed a clear reading path while others read the code in a more inconsistent order.  In the code snippet with no comments, the comment AOI was absent and participants often tended to spend more time on code lines. Figure …  presents a gaze plot of participant, indicating a long fixation duration on code lines.    Regarding the order of reading, the majority of participants followed an unclear reading path.
+In all four code snippets with different commenting formats, a single AOI category was defined: Comments. This AOI was used to investigate participants’ visual engagement with different types of comments. In the code snippet with helpful comments, participants often looked at the comments before reading the code itself.  Figure 4.18 presents a scanpath from participant whose attention at the beginning is more on the comments. In the code snippet with minimal comments, participants often tended to follow a clear reading path.  Furthermore, they often did not spend much time on the comments. Figure 4.19  presents a gaze plot of participant, indicating a short fixation duration on comments. 
 
 \begin{figure} [H]
   \centering
@@ -1381,7 +1380,6 @@ In all four code snippets with different commenting formats, a single AOI catego
   \caption{Fixation duration of participant for code snippet with minimal comments}
   \label{fig:AnhangsChor}
 \end{figure}
-
 
 \begin{figure} [H]
   \centering
@@ -1399,12 +1397,31 @@ In all four code snippets with different commenting formats, a single AOI catego
 \end{figure}
 
 
-
-\chapter{Discussion - Interpretation of Results}
-
+In the code snippet with redundant comments, participants often tended not to spend much time on the comments or even ignored them. Figure 4.20  shows a gaze plot of participant, whose attention  is more on the code itself and not on the comments. Regarding the order of reading, some participants followed a clear reading path while others read the code in a more inconsistent order.  In the code snippet with no comments, the comment AOI was absent and participants often tended to spend more time on code lines. Figure 4.21 presents a gaze plot of participant, indicating a long fixation duration on code lines.    Regarding the order of reading, the majority of participants followed an unclear reading path.
 
 
 
+\chapter{Discussion - interpretation of results}
+
+
+
+\section{Effects of indentation} 
+The results present that indentation significantly affects code readability. The 4-space indentation code snippet was rated significantly better than the randomly indented snippet and the not indented snippet. This level of indentation is considered to provide a more organized structure, making the code easier to read. This is an indication that consistency in formatting is crucial for code readability.   Moreover, when participants focus more on code logic rather than structure, the mental effort required to understand the code is decreased. 
+
+
+In terms of readability, the random indentation snippet was rated significantly better than the not indented snippet, suggesting that some visual separation, even if not ideal, is better than none at all.  Regarding comprehension, there was no significant difference between the random indented snippet and the not indented snippet. The random indentation was considered to improve code readability in comparison to code readability of the not indented snippet, but it did not significantly impact code comprehension.  This indicates that participants were still able to understand the code correctly, but might have used greater cognitive load. Regarding confidence level, there was no significant difference between the random indented snippet and the not indented snippet. This indicates that the random indented snippet did not significantly impacted confidence level in compare to confidence level of the not indented snippet. 
+
+
+\section{Effects of comments} 
+\section{Eye-tracking insights} 
+
+Although the eye-tracking data was limited, the findings present consistent gaze patterns and behaviour. In the not indented snippet, gaze movements were chaotic with long fixations. This suggests that the brain of the participants must work harder to understand the structure of the code, which may be an indication of increased intrinsic and extraneous cognitive load. Moreover, it was observed that participants used more of a bottom-up strategy, reading the code line by line, which could also increase intrinsic load.
+The 4-space indentation snippet showed shorter fixations, which could be an indication of lower cognitive load. It also showed that the participants followed a top-down approach to understand the code. Furthermore, the findings indicate that participants were confident about the code structure and where the blocks began or ended, resulting in decreased intrinsic cognitive load.      
+In the random indented snippet, gaze movements were also defined as chaotic with long fixation duration. This behaviour suggests that the participants were confused about the structure of the code. Since there is inconsistent visual hierarchy, participants must mentally construct the snippet’s logic, which may also be an indication of increased intrinsic and extraneous cognitive load.    
+
+The snippet with helpful comments showed that the participants paid attention to comments first.   The participants did not need to guess the purpose of the code. This behaviour may have led to lower cognitive load.  The results also indicated a smoother reading order, where the participants followed a top-down approach.
+The snippet without comments showed longer fixations and a less cler reading order.  Participants spent more time on the code itself, carefully processing each line using a bottom-up approach. This absence of guidance, especially for unfamiliar code, can lead to increased cognitive load required to understand it.  The snippet without comments further highlights the importance of including comments in the code. The snippet with minimal comments showed a clearer reading order compared to the snippet without comments. However, the participants did not spend much time on these comments, indicating that they were not informative enough about the purpose of the code, and the participants did not needed to focus on them longer. 
+The snippet with redundant comments showed mixed gaze behaviour.  Some participants ignored these comments, likely because they gave no new information. If participants read these comments, they might be forced to process unnecessary information, potentially leading to increased extraneous cognitive load.  However, some participants still followed a clear reading order. This indicates that redundant comments can affect code comprehension both positively and negatively.  
 
 
 
