@@ -35,7 +35,6 @@ The central research question in the thesis is: \textbf{RQ1.1:} How do commentin
 \begin{itemize}
     \item \textbf{RQ1.2:} Do well-indented code snippets lead to better comprehension?
     \item \textbf{RQ1.3:} Do well-commented code snippets lead to better comprehension?
-    \item \textbf{RQ1.4:} Does random indentation and redundant comments increase cognitive load?
 
 \end{itemize}
 
@@ -58,7 +57,7 @@ Furthermore, the chapter discusses the eye-tracking approach and eye-tracking st
 
 
 \item[] \emph{Chapter 4:} 
-\\ This chapter presents the findings of the study. The results are based on the data collected from the eye-tracking device and questionnaire. The eye-tracking data is presented using heatmaps and gaze plots.
+\\ This chapter presents the findings of the study. The results are based on the data collected from the eye-tracking device and questionnaire. The eye-tracking data is presented using gaze plots.
 
 
 \item[] \emph{Chapter 5:} 
@@ -412,7 +411,7 @@ Regarding to their purpose and placement in code, comments can be categorized in
 }
 
 \end{tikzpicture}
-\caption{Classification of Code Comments}
+\caption{Classification of code comments}
 \cite{hassan2022code}
 \label{fig:comment_classification}
 \end{figure}
@@ -464,25 +463,24 @@ There are three types of cognitive load: intrinsic load, extraneous load, and ge
 
 
 
-
-
 \begin{table}[ht]
 \centering
 \small % You can use \footnotesize or \scriptsize for even smaller fonts
 \caption{Types of cognitive load}
 \begin{tabular}{p{0.25\textwidth} | p{0.65\textwidth}}
 \hline
-\textbf{Category} & \textbf{Description} \\
+\rule{0pt}{1.2em}\textbf{Category} & \textbf{Description} \\[0.5em]
 \hline
-\textbf{Intrinsic Load} & The mental effort required to understand the complexity of the tast itself. \\
+\rule{0pt}{1.2em}\textbf{Intrinsic Load} & The mental effort required to understand the complexity of the task itself. \\[0.5em]
 \hline
-\textbf{Extraneous Load} & The cognitive effort caused by poor instructional design. \\
+\rule{0pt}{1.2em}\textbf{Extraneous Load} & The cognitive effort caused by poor instructional design. \\[0.5em]
 \hline
-\textbf{Germane Load} & The mental effort dedicated to understanding data into long-term memory. \\
+\rule{0pt}{1.2em}\textbf{Germane Load} & The mental effort dedicated to understanding data into long-term memory. \\[0.5em]
 \hline
 \end{tabular}
 \label{tab:cognitive_load}
 \end{table}
+
 
 
 To measure cognitive load, both subjective and objective measures are used in research
@@ -497,7 +495,7 @@ The process of program comprehension consists of three elements: knowledge-based
 \begin{figure} [H]
   \centering
   \includegraphics[width=\textwidth]{figures/program_Comprehension_Process.png}
-  \caption{The Program Comprehension Process}
+  \caption{The Program comprehension process}
   \label{fig:AnhangsChor}
 \end{figure}
 
@@ -553,7 +551,7 @@ There are three approaches of program comprehensions:  top-down, bottom-up and t
 \end{figure}
 
 
-\section{Eye Tracking}
+\section{Eye-tracking}
 Eye-tracking technology provides data on how individuals process visual information  \cite{andrzejewska2020development}.
 An eye-tracking device collects the eye movements of a participant while the participant works on a task. A stimulus is an object that is needed to perform a task. The eye–mind assumption considers that an individual keeps their gaze on a stimulus until they have understood it \cite{sharafi2015systematic}. Areas of Interest (AOI) define the parts of the stimulus on which eyes pay attention \cite{sharafi2015systematic}. If certain AOIs help a person complete a task, they are considered relevant. For instance, a relevant AOI in a class diagram is a particular class that the person needs 
 \cite{sharafi2015systematic}.
@@ -565,7 +563,7 @@ This movement lasts from 30ms to 50ms \cite{obaidellah2018survey}. A scan-path i
 
 \begin{figure} [H]
   \centering
-  \includegraphics[scale=0.7]{figures/scanp.png}
+  \includegraphics[scale=1]{figures/scanp.png}
   \caption{Example of scan-path \cite{sharafi2015systematic}}
   \label{fig:AnhangsChor}
 \end{figure}
@@ -575,20 +573,21 @@ This movement lasts from 30ms to 50ms \cite{obaidellah2018survey}. A scan-path i
 There are several eye-tracking metrics used in research. These metrics help researchers evaluate the level of cognitive processing of people \cite{obaidellah2018survey}. The metrics are defined in four categories: metrics based on fixations,
 saccades, pupil size, and scanpath \cite{sharafi2015eye}. Some of the metrics based on fixation are described in Table 2.4.
 
-
 \begin{table}[H]
 \centering
 \small % You can change this to \footnotesize or \scriptsize
 \caption{Common eye-tracking metrics}
 \label{tab:eye_tracking_metrics}
-\begin{tabular}{p{0.25\textwidth} | p{0.68\textwidth}}
-\textbf{Metric} & \textbf{Description} \\
+\begin{tabular}{p{0.23\textwidth} | p{0.70\textwidth}}
 \hline
-Fixation Count & The total number of eye fixations on a certain area. A higher fixation count indicates more interest in that area and more effort is spent to complete the task \cite{obaidellah2018survey}. \\
+\rule{0pt}{1.2em}\textbf{Metric} & \textbf{Description} \\[0.5em]
 \hline
-Fixation Duration & One of the most used metrics in eye-tracking technology. It indicates the duration of fixations. A longer fixation duration suggests higher cognitive effort and more attention is required to process the information \cite{junior5005089understanding}. \\
+\rule{0pt}{1.2em}Fixation Count & The total number of eye fixations on a certain area. A higher fixation count indicates more interest in that area and more effort is spent to complete the task \cite{obaidellah2018survey}. \\[0.5em]
 \hline
-Fixation Rate & The number of fixations per second. A higher fixation rate indicates frequent gaze shifts. A low fixation rate may imply difficulty in processing information or immediate understanding \cite{bauer2017indentations}. \\
+\rule{0pt}{1.2em}Fixation Duration & One of the most used metrics in eye-tracking technology. It indicates the duration of fixations. A longer fixation duration suggests higher cognitive effort and more attention is required to process the information \cite{junior5005089understanding}. \\[0.5em]
+\hline
+\rule{0pt}{1.2em}Fixation Rate & The number of fixations per second. A higher fixation rate indicates frequent gaze shifts. A low fixation rate may imply difficulty in processing information or immediate understanding \cite{bauer2017indentations}. \\[0.5em]
+\hline
 \end{tabular}
 \end{table}
 
@@ -599,11 +598,10 @@ Fixation Rate & The number of fixations per second. A higher fixation rate indic
 
 To visualize the eye-tracking data, several techniques are used: heatmap, color-coded attention allocation map, and gaze plot. For example, a heatmap helps to visualize the intensity of fixations. It uses a color spectrum, presenting the gaze patterns of an individual. 
 To indicate the intensity of fixation, colors such as red (highest intensity), orange, green, and blue(lowest intensity) are used \cite{sharafi2015systematic}. Figure 2.14 presents a heatmap of code snippet. A gaze plot is used to visualize the scan-path Figure 2.15 presents a gaze plot \cite{sharafi2015systematic}. A color-coded attention allocation map maps a color to each word corresponding to the attention level, from light green (lowest attention level) to red (highest level of attention) \cite{sharafi2015systematic}.
-Figure 2.16 presents a color-coded attention allocation map
 
 \begin{figure} [H]
   \centering
-  \includegraphics[scale=1]{figures/hm.png}
+  \includegraphics[scale=1.2]{figures/hm.png}
   \caption{Example of heatmap \cite{jbara2017programmers}}
   \label{fig:AnhangsChor}
 \end{figure}
@@ -616,30 +614,22 @@ Figure 2.16 presents a color-coded attention allocation map
   \label{fig:AnhangsChor}
 \end{figure}
 
-
-\begin{figure} [H]
-  \centering
-  \includegraphics[scale=1]{figures/collor.png}
-  \caption{Example of color-coded attention allocation map \cite{sharafi2015systematic} } 
-  \label{fig:AnhangsChor}
-\end{figure}
-
 Eye-tracking technology helps to identify the visual patterns of information processing. 
 The finding from eye-tracking studies can contribute to improving the learning process \cite{andrzejewska2020development}.
 
 
 
 
-\section{Studies using Eye Tracking}
+\section{Studies using eye-tracking}
 
 Several studies analyze programming comprehension, using eye-tracking technology. This chapter reviews key studies, categorizing them based on their focus areas and summarizing their findings.
 
-\subsubsection{Eye-Tracking Methodologies in Software Engineering}
+\subsubsection{Eye-tracking methodologies in software engineering}
 The paper \citet{obaidellah2018survey} investigates the use of eye-tracking technology in computer programming research. A total of 63 relevant studies published between 1990 and June 2017 are analysed \citet{obaidellah2018survey}. The results indicate that eye-tracking technology has been applied to understand programmers' gaze pattern and cognitive processes. The studies reviewed in this paper focus on five main research fields: program comprehension and code understanding, non-code comprehension studies, debugging, requirements traceability, and collaborative programming \citet{obaidellah2018survey}.  The most frequently studied programming language is Java.  
 For eye-tracking system, Tobii is the most commonly used.  Fixation duration and saccades are identified as primary metrics for analysing gaze patterns, and heatmaps are created for visual representation of the results.
 
 
-\subsubsection{Variable Naming Conventions and Code Readability}
+\subsubsection{Variable naming conventions and code readability}
 
 The study \citet{sharif2010eye}investigates whether different variable naming conventions (camel-case and underscore) impact code comprehension and readability.
 The task of the participants was to recognize different variable names, while their eye movements were tracked and analysed from the researches. 
@@ -651,10 +641,10 @@ The eye-tracking study \citet{broberg2019using}investigates how different variab
 The test subjects analyzed code snippets containing variables in Single Word (SW), Single Letter (SL), Camel Case (MWCC), and Snake Case (MWSC) \citet{broberg2019using}. While explaining the code snippets, their eye movements were tracked. Researchers measured the time participants spent analysing the code and then created heatmaps to visualize their gaze patterns. Furthermore, participants provided feedback on which naming conventions they prefer. The results present no significant differences in readability using different variable naming conventions \citet{broberg2019using}. However, multi-word conventions like Snake Case and Camel Case were easier to read than Single Letter variable naming conventions \citet{broberg2019using}. The heatmaps presented that test subjects spent more time processing single-letter variables, leading to higher cognitive effort. Moreover, most participants personally found Snake Case and Camel Case easier to understand \citet{broberg2019using}. 
 This study presents the role of meaningful variable naming conventions in code and how they improve code readability.   
 
-\subsubsection{Code Transformations and Their Impact on Comprehension}
-The eye-tracking study \citet{silva2023evaluating} investigates how different code transformations affect novice programmers’ code comprehension \citet{silva2023evaluating}. It focuses on Atoms of Confusion, Refactorings, and ifdef Annotations.
+\subsubsection{Code transformations and their impact on comprehension}
+The eye-tracking study \citet{silva2023evaluating} investigates how different code transformations affect novice programmers’ code comprehension \citet{silva2023evaluating}. It focuses on Atoms of Confusion, Refactorings, and ifdef Annotations. 
 
-The findings show that confusing code snippets lead to difficulties in code comprehension and in increased fixations. Figure 2.17 presents the eye-gaze patterns for an obfuscated code snippet using the Conditional Expression atom, while Figure 2.18 illustrates the clarified version of the same snippet \citet{silva2023evaluating}.
+The findings show that confusing code snippets lead to difficulties in code comprehension and in increased fixations. Figure 2.17 presents the eye-gaze patterns for an obfuscated code snippet using the Conditional Expression atom, while Figure 2.18 illustrates the clarified version of the same snippet \citet{silva2023evaluating}. 
  
 
 \begin{figure} [H]
@@ -672,31 +662,30 @@ The findings show that confusing code snippets lead to difficulties in code comp
 \end{figure}
 
 
-\subsubsection{Program Comprehension: Iteration vs. Recursion} 
+\subsubsection{Program comprehension: iteration vs. recursion} 
 The study \citet{aroobaunderstanding} investigates how students perceive recursive and iterative programs and analyzes their cognitive processes and visual attention \citet{aroobaunderstanding}. Moreover, the study inspected whether students followed a top-down approach or bottom-up approach.
 The results present that there was no significant difference between recursive and iterative programs in terms of code comprehension \citet{aroobaunderstanding}.  However, visual attention differed between iteration and recursion. 
 
-\subsubsection{Cognitive Load and Code Complexity} 
+\subsubsection{Cognitive load and code complexity} 
 
 The eye-tracking paper \citet{abbad2022estimating} investigates how to identify difficult areas of code for programmers.  Participants were given different Java code snippets and mentioned the areas of the code they found difficult \citet{abbad2022estimating}. Researchers compared the eye-tracking data with the parts marked as complicated by the participants. With the collected data, they trained machine learning models to forecast which parts of the code would challenge code comprehension \citet{abbad2022estimating}. The researches achieved more than 86\% accuracy in predicting complicated parts of code snippets. The study highlights its future usage for developing tools that can enhance code review and adaptive e-learning. 
 
 
 
-\subsubsection{Code Structure and Indentation} 
+\subsubsection{Code structure and indentation} 
 
 
-The eye-tracking study \citet{bauer2017indentations} investigates how indentation affects comprehension. Participants analyzed Java code snippets with different levels of indentations: 0, 2, 4, and 8-space. The results presented no significant relationship between comprehension and indentation \citet{bauer2017indentations}. However, the most correct answers were given when the participants analyzed code with 4-space indentation . Furthermore, the results indicated that 8-space indentation was rated as the easiest to read level of indentation, but did not improve the accuracy of the correct answers \citet{bauer2017indentations}. Overall, eye-tracking data showed no significant differences in gaze patterns across different indentation levels, and the study highlights the need for further investigation. 
+The eye-tracking study by \citet{bauer2017indentations} investigates how indentation affects comprehension. Participants analyzed Java code snippets with different levels of indentations: 0, 2, 4, and 8-space. The study is relevant to this thesis, as one of the research questions is how code with different  indentation levels impacts comprehension. This study is relevant to this thesis, as one of the research questions is how code with different indentation impacts comprehension. The results from the study by \citet{bauer2017indentations} presented no significant relationship between comprehension and indentation \citet{bauer2017indentations}. However, the most correct answers were given when the participants analyzed code with 4-space indentation . Furthermore, the results indicated that 8-space indentation was rated as the easiest to read level of indentation, but did not improve the accuracy of the correct answers \citet{bauer2017indentations}. Overall, eye-tracking data showed no significant differences in gaze patterns across different indentation levels, and the study highlights the need for further investigation. 
 
 
 
 Another study \citet{yorimoto2024quantitative} investigates how indentation affects code comprehension. Students were given code tasks with different levels of indentation: 0-character, 4-character, and random indentation \citet{yorimoto2024quantitative}. The researchers measured the eye movements and cognitive load of the participants. The results showed increased confusion and cognitive load when students analyzed code with unstructured indentation \citet{yorimoto2024quantitative}. Furthermore, 4-character indentation resulted in more precise but longer focus on code areas. The study mentions that indentation had little impact on small code tasks and highlights that further investigation is needed \citet{yorimoto2024quantitative}.   
 \subsubsection{Code comments} 
 
-This study \citet{bakhuizen2019comments}. investigates how incorrect code comments affect programmers' code comprehension. Participants analyzed code containing missing, incorrect, or correct comments.
+The study by  \citet{bakhuizen2019comments}. investigates how incorrect code comments affect programmers' code comprehension. The study is relevant to this thesis, as one of the research questions is how code with different  commenting formats impacts comprehension and cognitive load.  Participants in the study by  \citet{bakhuizen2019comments} analyzed code containing missing, incorrect, or correct comments.
 The researchers used eye-tracking technology to measure how often participants read code comments. The results indicate that participants read code comments as frequently as the code \citet{bakhuizen2019comments}. Furthermore, incorrect comments can negatively affect code comprehension, leading to misinterpretations of the code. Moreover, accurate and correct comments are useful when they provide correct information for unknown functions. 
 
-The reviewed key studies present that eye-tracking technologies effectively investigate code comprehension.  Eye-tracking data provide insights into how expert and novice programmers perceive different code structures and styles. There has been made significant progress in investigating the comprehension and readability of code by programmers.  However, there is a lack of deeper researcher on how indentation and comments influence the comprehension. 
-This thesis analyzes how indentation and comments impact computer science students’ perception of code comprehension.  
+The reviewed key studies present that eye-tracking technologies effectively investigate code comprehension.  Eye-tracking data provide insights into how expert and novice programmers perceive different code structures and styles. There has been made significant progress in investigating the comprehension and readability of code by programmers.  However, there is a lack of deeper researcher on how indentation and comments influence the comprehension.  Previous research investigates indentation and comments separately, but in this thesis, they are inspected together. Moreover, the use of both eye-tracking data and subjective data offers more comprehensive insights. Many studies focus on experienced programmers, while this thesis focuses on CS1 students. 
 
 
 
@@ -708,10 +697,10 @@ This thesis analyzes how indentation and comments impact computer science studen
 
 \section{Methodology}
 
-\subsection{Study Approach} The data in this study is gathered using two methods: eye-tracking technology and questionnaire. This approach provides both objective and subjective data, as well as quantitative and qualitative data.
+\subsection{Study approach} The data in this study is gathered using two methods: eye-tracking technology and questionnaire. This approach provides both objective and subjective data, as well as quantitative and qualitative data.
 Eye-tracking technology gives objective data. Using this type of data, it can be tracked which parts of the code are seen and for how long. Furthermore, cognitive load can be measured.
 On the other hand, questionnaire can give quantitative data (using Likert scale questions). Moreover, questionnaire can give subjective data about the participants (using open-ended questions). The participants report their perceived code comprehension.  
-Previous research has also used both methods to gather data for a deeper code comprehension. (see Chapter Literature review). The Figure ... presents an overview how the data is gathered. 
+Previous research has also used both methods to gather data for a deeper code comprehension. (see Chapter Literature review). The Figure 3.1 presents an overview how the data is gathered. 
 
 
 
@@ -749,30 +738,28 @@ Previous research has also used both methods to gather data for a deeper code co
 
 
 The study is conducted in German. It is used a within-subjects design, ensuring that each participant is exposed to all conditions.
-The study consists of two formats: an eye-tracking study (offline study) and an online study without eye-tracking. The Figure ... presents the structure of the study. 
-
-\begin{figure} [H]
+The study consists of two formats: an eye-tracking study (offline study) and an online study without eye-tracking. The Figure 3.2 presents the structure of the study. 
+\begin{figure}[H]
   \centering
   
   \caption{Study structure}
   \label{fig:AnhangsChor}
 
-
 \begin{tikzpicture}[node distance=1.5cm, font=\footnotesize, align=center]
 
 % Create the side-by-side rectangles for Eye-Tracking, Questionnaire, and Questionnaire2
-\node (eyeTracking) [draw, minimum height=2cm, minimum width=3cm, text width=2.5cm, align=center] {Eye-Tracking};
-\node (questionnaire) [draw, minimum height=2cm, minimum width=3cm, text width=2.5cm, align=center, right=1.5cm of eyeTracking] {Questionnaire};
-\node (questionnaire2) [draw, minimum height=2cm, minimum width=3cm, text width=2.5cm, align=center, right=1.5cm of questionnaire] {Questionnaire};
+\node (eyeTracking) [draw, minimum height=2.2cm, minimum width=3.5cm, text width=3cm, align=center] {Eye-Tracking};
+\node (questionnaire) [draw, minimum height=2.2cm, minimum width=3.5cm, text width=3cm, align=center, right=1.8cm of eyeTracking] {Questionnaire};
+\node (questionnaire2) [draw, minimum height=2.2cm, minimum width=3.5cm, text width=3cm, align=center, right=1.8cm of questionnaire] {Questionnaire};
 
 % Create the Offline Study rectangle, below Eye-Tracking and Questionnaire
-\node (offlineStudy) [draw, minimum height=2cm, minimum width=3cm, text width=3cm, align=center, below=1.5cm of eyeTracking] {Offline study};
+\node (offlineStudy) [draw, minimum height=2.2cm, minimum width=3.5cm, text width=3.2cm, align=center, below=1.8cm of eyeTracking] {Offline study};
 
 % Create the Online Study rectangle, below Questionnaire2
-\node (onlineStudy) [draw, minimum height=2cm, minimum width=3cm, text width=3cm, align=center, below=1.5cm of questionnaire2] {Online study};
+\node (onlineStudy) [draw, minimum height=2.2cm, minimum width=3.5cm, text width=3.2cm, align=center, below=1.8cm of questionnaire2] {Online study};
 
 % Create the center Study rectangle
-\node (study) [draw, minimum height=2cm, minimum width=6cm, text width=6cm, align=center, below=1.5cm of $(onlineStudy)!0.5!(offlineStudy)$] {The study };
+\node (study) [draw, minimum height=2.2cm, minimum width=6.5cm, text width=6.5cm, align=center, below=1.8cm of $(onlineStudy)!0.5!(offlineStudy)$] {The study};
 
 % Draw arrows from Eye-Tracking, Questionnaire, and Questionnaire2 to their respective study
 \draw[->] (eyeTracking) -- (offlineStudy);
@@ -791,7 +778,7 @@ The online study without eye-tracking gathers data using only questionnaire. By 
 
 
 
-\subsection{Code Snippet Selection}
+\subsection{Code snippet selection}
 
 The programming language used for the code snippets is Java, since it is a widely used language.  Additionally, most students, which participated in the study, are from LMU University, where Java is a key part of many computer science courses. The following code snippets formats are used in the study:
 
@@ -814,12 +801,12 @@ The programming language used for the code snippets is Java, since it is a widel
     \end{itemize}
 \end{enumerate}
 
-Figure .............  presents an example for one code snippet with minimal comments . All code snippets used in the study are provided in Appendix A.
+Figure 3.3  presents an example for one code snippet with minimal comments . All code snippets used in the study are provided in Appendix A.
 
 
 \begin{figure} [H]
   \centering
-  \includegraphics[scale=0.9]{figures/codeb.png}
+  \includegraphics[scale=0.8]{figures/codeb.png}
   \caption{Code snippet example }
   \label{fig:AnhangsChor}
 \end{figure}
@@ -840,33 +827,35 @@ Random indentation tests whether using different indentation across the code mak
 
 
 For the commenting formats snippets, the snippets have 4-space indentations. This ensures that the focus is only on the comments. This indentation is defined as a "control group", which allows deeper comparison across the different commenting formats. 
-For the indentation code snippets, the snippets consist of no comments. This ensures that the focus is only on the indentation. Here the no comment format is also defined as a "control group", which allows deeper comparison across the different indentation levels. An overview is presented in Table ....
-
+For the indentation code snippets, the snippets consist of no comments. This ensures that the focus is only on the indentation. Here the no comment format is also defined as a "control group", which allows deeper comparison across the different indentation levels. An overview is presented in Table 3.1.
 
 \begin{table}[ht]
 \centering
 \small
 \caption{Overview of code snippet formats}
 \begin{tabular}{|p{6cm}|p{6cm}|}
-
 \hline
-\multicolumn{2}{|c|}{
-\textbf{Commenting formats}} \\
+\multicolumn{2}{|c|}{\rule{0pt}{1.2em}\textbf{Commenting formats}} \\[0.5em]
 \hline
-Type & Control Variable \\
+\rule{0pt}{1.2em}\textbf{Type} & \textbf{Control Variable} \\[0.5em]
 \hline 
-No comments & 4-space indentation \\
-Minimal comments & 4-space indentation \\
-Helpful comments & 4-space indentation \\
-Redundant comments & 4-space indentation \\
+\rule{0pt}{1.2em}No comments & 4-space indentation \\[0.5em]
 \hline
-\multicolumn{2}{|c|}{\textbf{Indentation levels}} \\
+\rule{0pt}{1.2em}Minimal comments & 4-space indentation \\[0.5em]
 \hline
-Type & Control Variable \\
+\rule{0pt}{1.2em}Helpful comments & 4-space indentation \\[0.5em]
 \hline
-No indentation & No comments \\
-4-space indentation & No comments \\
-Random indentation & No comments \\
+\rule{0pt}{1.2em}Redundant comments & 4-space indentation \\[0.5em]
+\hline
+\multicolumn{2}{|c|}{\rule{0pt}{1.2em}\textbf{Indentation levels}} \\[0.5em]
+\hline
+\rule{0pt}{1.2em}\textbf{Type} & \textbf{Control Variable} \\[0.5em]
+\hline
+\rule{0pt}{1.2em}No indentation & No comments \\[0.5em]
+\hline
+\rule{0pt}{1.2em}4-space indentation & No comments \\[0.5em]
+\hline
+\rule{0pt}{1.2em}Random indentation & No comments \\[0.5em]
 \hline
 \end{tabular}
 \label{tab:snippet_control}
@@ -875,19 +864,19 @@ Random indentation & No comments \\
 
 
 \subsection{Technical setup}
-
-The eye-tracking study (offline study) was conducted at LMU, Munich. As eye-tracking device was used a Pupil Labs Core. This device contains glasses with three cameras. The glasses were connected to a laptop, running Pupil Capture software. This software ensures calibration and recording of eye movements. The laptop was placed on a desk. During the study, participants read the snippets and answered the questionnaire on the same laptop. This setup ensured minimal distractions.  The technical setup is presented in Figure ….
+ The technical setup is presented in Figure 3.4. 
 
 \begin{figure} [H]
   \centering
-  \includegraphics[scale=0.3]{figures/setup.png}
+  \includegraphics[scale=0.25]{figures/setup.png}
   \caption{Technical setup }
   \label{fig:AnhangsChor}
 \end{figure}
 
+The eye-tracking study (offline study) was conducted at LMU, Munich. As eye-tracking device was used a Pupil Labs Core. This device contains glasses with three cameras. The glasses were connected to a laptop, running Pupil Capture software. This software ensures calibration and recording of eye movements. The laptop was placed on a desk. During the study, participants read the snippets and answered the questionnaire on the same laptop. This setup ensured minimal distractions. 
 
 
-\subsection{Research Variables}
+\subsection{Research variables}
 To evaluate the study, two types of variables are used - independent variables and dependent variables. The independent variables in the study are variables that are manipulated. In the study there are used two independent variables - Commenting format and Indentation level.
 
 \begin{enumerate}
@@ -897,39 +886,47 @@ To evaluate the study, two types of variables are used - independent variables a
 \end{enumerate}
 
 
-The independent variables influence the dependent variables. The dependent variables are measured and the outcomes help to investigate how the independent variables influence code comprehension, commenting format, indentation level and cognitive load.  In this thesis are defined the following dependent variables: Comprehension score, Comment quality score, Indentation quality score, Confidence rating and  Response time per code snippet. An overview is
-presented in Table ... 
+The independent variables influence the dependent variables. The dependent variables are measured and the outcomes help to investigate how the independent variables influence code comprehension, commenting format, indentation level and cognitive load.  In this thesis are defined the following dependent variables: Comprehension score, Comment quality score, Indentation quality score, Confidence rating and  Response time per code snippet. An overview is presented in Table 3.2.
 
 
-
-\begin{longtable}{|p{5.5cm}|p{8.5cm}|}  % Using longtable instead of tabular
+\begin{longtable}{|p{5.5cm}|p{8.5cm}|}
 \caption{Description of variables} \label{tab:variables} \\
 
 \hline
 \textbf{Variable} & \textbf{Description} \\
 \hline
-\endfirsthead  % Header for the first page
+\endfirsthead
 
 \hline
 \textbf{Variable} & \textbf{Description} \\
 \hline
-\endhead  % Header for subsequent pages
+\endhead
 
 \hline
-Comprehension score & This variable was derived from Question 3: "How understandable is the code for you?" Participants rate the code on a Likert scale, where 1 = "Not understandable" and  5 = "Very understandable".  \\
+\parbox[t]{5.5cm}{\vspace{0.3em}Comprehension score\vspace{0.5em}} &
+\parbox[t]{8.5cm}{\vspace{0.3em}This variable was derived from Question 3: "How understandable is the code for you?" Participants rate the code on a Likert scale, where 1 = "Not understandable" and 5 = "Very understandable".\vspace{0.5em}} \\
 \hline
-Comment quality score & This variable was derived from Question 4: "How do you assess the commenting of the code?" Participants rate the code on a Likert scale, where 1 = "Confusing" and 5  = "Very helpful". \\
+
+\parbox[t]{5.5cm}{\vspace{0.3em}Comment quality score\vspace{0.5em}} &
+\parbox[t]{8.5cm}{\vspace{0.3em}This variable was derived from Question 4: "How do you assess the commenting of the code?" Participants rate the code on a Likert scale, where 1 = "Confusing" and 5 = "Very helpful".\vspace{0.5em}} \\
 \hline
-Indentation quality score & This variable was derived from Question 5: "How do you assess the indentation of the code?" Participants rate the indentation of the code on a Likert scale, where 1 = "Unreadable" and 5 = "Very easy to read". \\
+
+\parbox[t]{5.5cm}{\vspace{0.3em}Indentation quality score\vspace{0.5em}} &
+\parbox[t]{8.5cm}{\vspace{0.3em}This variable was derived from Question 5: "How do you assess the indentation of the code?" Participants rate the indentation of the code on a Likert scale, where 1 = "Unreadable" and 5 = "Very easy to read".\vspace{0.5em}} \\
 \hline
-Response time per code snippet & This variable measures how long (in minutes) each participant took to view a code snippet and answer its corresponding five questions.  \\
+
+\parbox[t]{5.5cm}{\vspace{0.3em}Response time per code snippet\vspace{0.5em}} &
+\parbox[t]{8.5cm}{\vspace{0.3em}This variable measures how long (in minutes) each participant took to view a code snippet and answer its corresponding five questions.\vspace{0.5em}} \\
 \hline
-Confidence rating & This variable was derived from Question 2: “How confident are you in your answer to the first question?” (the first question is related to the function of the corresponding code snippet).  Participants rate their code confidence on a Likert scale, where 1 = "Not confident" and  5 = "Very confident".\\
+
+\parbox[t]{5.5cm}{\vspace{0.3em}Confidence rating\vspace{0.5em}} &
+\parbox[t]{8.5cm}{\vspace{0.3em}This variable was derived from Question 2: “How confident are you in your answer to the first question?” (the first question is related to the function of the corresponding code snippet). Participants rate their code confidence on a Likert scale, where 1 = "Not confident" and 5 = "Very confident".\vspace{0.5em}} \\
 \hline
 
 \end{longtable}
 
-\section{Questionnaire Design}
+
+\section{Questionnaire design}
 
 
 \subsection{First part of questionnaire}
@@ -942,15 +939,16 @@ Confidence rating & This variable was derived from Question 2: “How confident 
   \label{fig:AnhangsChor}
 \end{figure}
 
-Figure ... shows the design of the first part of questionnaire. The first part of the questionnaire gives general information about the participants. 
+The questionnaire was implemented using Python 3.12.3.  The  design uses a green color, reflecting the official color of LMU, Munich. 
+Figure 3.5 shows the design of the first part of questionnaire. The first part of the questionnaire gives general information about the participants. 
 Participants provide details about their field of study, as well as information about their academic background: their programming experience level and experience in Java. 
 
 
 
-\subsection{Main part of Questionnaire}
+\subsection{Main part of questionnaire}
 
 In the main part of the questionnaire are shown seven different code snippets. Their order is randomized to avoid bias. Each code snippet presents a different level of indentation and a different type of comment format.
-Participants answer five questions corresponding to each code snippet. These questions are related to the code snippet’s function, ratings of the code comprehension, code indentation, and code commenting. Figure ... shows the design of the main part of questionnaire.
+Participants answer five questions corresponding to each code snippet. These questions are related to the code snippet’s function, ratings of the code comprehension, code indentation, and code commenting. Figure 3.6 shows the design of the main part of questionnaire.
 
 
 \begin{figure} [H]
@@ -962,8 +960,8 @@ Participants answer five questions corresponding to each code snippet. These que
 
 
 
-\subsection{Final part of the Questionnaire}
-In the last part of the questionnaire, participants give their opinions on code indentation and code comments guidelines. They describe what they take into consideration when defining poorly commented and well-commented code. Moreover, they explain which code indentation style they use.  Figure ... shows the design of the last part of questionnaire.
+\subsection{Final part of the questionnaire}
+In the last part of the questionnaire, participants give their opinions on code indentation and code comments guidelines. They describe what they take into consideration when defining poorly commented and well-commented code. Moreover, they explain which code indentation style they use.  Figure 3.7 shows the design of the last part of questionnaire.
 
 
 \begin{figure}  [H]
@@ -979,8 +977,9 @@ In the last part of the questionnaire, participants give their opinions on code 
 
 The eye-tracking study (offline study) and the online study without eye-tracking formats are constructed similarly, but have some differences. The detailed procedure for both formats is outlined below.
 
-\subsection{Procedure for the Eye-Tracking Study}
+\subsection{Procedure for the eye-tracking study}
 
+Before conducting the eye-tracking study, a pilot study with one participant was performed. The purpose of this pilot study was to ensure that the questionnaire was clear and that the eye tracking setting worked properly. Based on the result, small improvements were made.
 
 
 
@@ -999,13 +998,23 @@ The eye-tracking study (offline study) and the online study without eye-tracking
     The participants answered several questions providing information about their opinions on commenting and indentation in code.
 
     \item \textbf{End of the study:} 
-    Participants are asked to give feedback on the difficulty level of the code snippets. Furthermore, the students mentioned their opinions on code readability and code comprehension. Additionally, they shared the challenges they faced during the eye-tracking study.
+    Participants are asked to give feedback on the difficulty level of the code snippets. Furthermore, the students mentioned their opinions on code readability and code comprehension. Additionally, they shared the challenges they faced during the eye-tracking study. Figure 3.8 shows a participant conducting the eye-tracking study.
+
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=0.2]{figures/user.jpg}
+  \caption{Participant conducting the eye-tracking study }
+  \label{fig:AnhangsChor}
+\end{figure}
+
+
 
 \end{enumerate}
 
 
 
-\subsection{Procedure for the Online Study without Eye-Tracking}
+\subsection{Procedure for the online study without eye-tracking}
 
 
 \begin{enumerate}
@@ -1021,16 +1030,9 @@ The eye-tracking study (offline study) and the online study without eye-tracking
 \end{enumerate}
 
 
-\begin{figure} [H]
-  \centering
-  \includegraphics[scale=0.1]{figures/user.jpg}
-  \caption{Participant conducting the eye-tracking study }
-  \label{fig:AnhangsChor}
-\end{figure}
 
 
-
-\section{Ethical Considerations}
+\section{Ethical considerations}
 
 \begin{enumerate}
     \item \textbf{Informed Consent: }All participants receive clear information about the purpose of the study. The participants have the right to withdraw at any time.
@@ -1439,5 +1441,10 @@ These limitations highlight that improved technical setup and future research is
 
 Several improvements can be considered. First, a larger number of participants would provide more clear generalization of the findings. Additionally, the use of chin supports in the eye-tracking study may minimize participants’ head movements. It is also important to ensure consistent lighting conditions while conduction the eye-tracking study. Another suggestion is to select a laptop device that is less sensitive to ambient and screen lighting. This suggestion may reduce records errors. By implementing these improvements, future research can enhance clear generalization of the findings. 
 
-\chapter{Conclusion and Outlook}
+\chapter{Conclusion and outlook}
 \label{sec:conclusion}
+
+This thesis investigated the effects of indentation and comments on code comprehension. The results indicated that 4-space indentation significantly enhanced code readability and offered a clear reading structure. When the code was properly structured, participants tend to read it in a top-down approach. Code with random or no indentation limited the code comprehension, led to more erratic eye movements and increased fixation durations, which may be an indication of higher cognitive load.  Similarly, helpful comments significantly enhanced code comprehension and outperformed minimal, redundant, or missing comments.  They guided attention and helped students. In contrast, when there were no comments in the snippet, participants relied on the code itself, which may have increased their cognitive effort.
+ 
+Despite the valuable insights gained in this thesis, further research is needed. There are several directions for future work.  Future studies should include a larger number of participants to improve the findings´ generalization. Additionally, more complex programming task, for example debugging, could be investigated to provide deeper overview of code comprehension. Another possibility is to combine eye-tracking data with other physiological measures to provide deeper insights into cognitive load during code reading. Sometimes minimal comments were more effective than redundant ones, in other cases, the opposite—this behaviour suggests that the relationship between comment formats and code comprehension is more complex and needs further research.  Moreover, this thesis can be used for computer science education. For example, it can be used for developing tools that focus on improving code comprehension. These tools can be applied in early programming courses. Most CS programs do not pay enough attention to code quality issues in the first year. Therefore, it would be important to teach novices to write functionally correct code as well as high-quality code.   
+
