@@ -167,12 +167,20 @@ The results presented that 4-space intended code significantly improved code rea
 
 All links were last followed on \today{}.
 
-\input{appendix}
+
+\cleardoublepage
 \appendix
-\input{latexhints/latexhints-english}
+
+% Disable headers and footers for the appendix
+\pagestyle{plain}  % No headers, no footers
+
+\input{appendix}
 
 
+%
 
+\clearpage
+\cleardoublepage
 \pagestyle{empty}
 \renewcommand*{\chapterpagestyle}{empty}
 \Affirmation
