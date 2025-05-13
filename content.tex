@@ -25,7 +25,7 @@ Recent research discusses how code formatting affects code comprehension and whe
 Usually, beginners are poor at tracking code, and their code comprehension is affected by how information is presented \cite{robins2003learning}. Some research aims to discover how poorly indented or poorly commented code has an influence on cognitive load and code comprehension.  However, eye-tacking studies on the effects of commenting and indentations on code comprehension among beginners have been rare so far and still remain a gap in computer science education.
 
   
-This thesis presents an eye-tracking study, investigating the effects of indentation and commenting formats on novices’ perception of code and cognitive load. Eye-tacking technology helps visualize the eye movements of beginners and detect their cognitive load. 
+This thesis presents an eye-tracking study, investigating the effects of indentation and commenting formats on novices’ perception of code. Eye-tacking technology helps to visualize the eye movements of beginners and make suggestions about their cognitive load. 
 
 
 \section{Research question}
@@ -290,7 +290,7 @@ If the source code is not understood correctly, it cannot be applied properly an
   \node[draw, circle, minimum size=4cm, align=center, xshift=3.5cm] (comprehension) {Comprehension}; % 91% overlap
 
   % Code Quality in a circle, same size, below the overlap area
-  \node[draw, circle, minimum size=4cm, align=center, below=3cm of $(readability.south)!0.5!(comprehension.south)$] (quality) {Code Quality};
+  \node[draw, circle, minimum size=4cm, align=center, below=3cm of $(readability.south)!0.5!(comprehension.south)$] (quality) {Code quality};
 
   % Arrow from overlap area to Code Quality
   \draw[->, thick] ($(readability.south)!0.5!(comprehension.south)$) -- (quality.north);
@@ -487,7 +487,7 @@ To measure cognitive load, both subjective and objective measures are used in re
 In subjective measures, the  learner reports on the perceived mental effort, while objective measures use physiological data sources, such as heart rate or eye-tracking technology \cite{duran2022cognitive}. Moreover, objective methods present real-time data.
 
 
-\section{Theory of Program Comprehension}
+\section{Theory of Program comprehension}
 
 The process of program comprehension consists of three elements: knowledge-based, external representations, and the assimilation process \cite{kadar2021program}. It explains how a programmer understands a program and is illustrated in Figure 2.11.
 
@@ -643,7 +643,7 @@ This study presents the role of meaningful variable naming conventions in code a
 \subsubsection{Code transformations and their impact on comprehension}
 The eye-tracking study by \citet{silva2023evaluating} investigates how different code transformations affect novice programmers’ code comprehension. It focuses on Atoms of Confusion, Refactorings, and ifdef Annotations. 
 
-The findings show that confusing code snippets lead to difficulties in code comprehension and in increased fixations. Figure 2.17 presents the eye-gaze patterns for an obfuscated code snippet using the Conditional Expression atom, while Figure 2.18 illustrates the clarified version of the same snippet \cite{silva2023evaluating}. 
+The findings show that confusing code snippets lead to difficulties in code comprehension and in increased fixations. Figure 2.16 presents the eye-gaze patterns for an obfuscated code snippet using the Conditional Expression atom, while Figure 2.17 illustrates the clarified version of the same snippet \cite{silva2023evaluating}. 
  
 
 \begin{figure} [H]
@@ -716,7 +716,7 @@ Previous research has also used both methods to gather data for a deeper code co
 
 \tikzstyle{box} = [draw, minimum height=3cm, minimum width=4cm, text width=3.5cm, inner sep=5pt]
 
-\node (eyeTracking) [box] {Eye-Tracking  data \\[5mm] $\rightarrow$ Measures gaze \\ $\rightarrow$ Measures cognitive load};
+\node (eyeTracking) [box] {Eye-tracking  data \\[5mm] $\rightarrow$ Measures gaze};
 \node (questionnaire) [box, right=of eyeTracking] {Questionnaire data \\[5mm] $\rightarrow$ Subjective data  };
 
 \node (study) [box, below=2cm of $(eyeTracking)!0.5!(questionnaire)$, text width=7cm, align=center] {The study \\[5mm] $\rightarrow$ Both data give a complete view}; 
@@ -743,7 +743,7 @@ The study consists of two formats: an eye-tracking study (offline study) and an 
 
 \begin{tikzpicture}[node distance=1.5cm, font=\footnotesize, align=center]
 
-\node (eyeTracking) [draw, minimum height=2.2cm, minimum width=3.5cm, text width=3cm, align=center] {Eye-Tracking};
+\node (eyeTracking) [draw, minimum height=2.2cm, minimum width=3.5cm, text width=3cm, align=center] {Eye-tracking};
 \node (questionnaire) [draw, minimum height=2.2cm, minimum width=3.5cm, text width=3cm, align=center, right=1.8cm of eyeTracking] {Questionnaire};
 \node (questionnaire2) [draw, minimum height=2.2cm, minimum width=3.5cm, text width=3cm, align=center, right=1.8cm of questionnaire] {Questionnaire};
 
@@ -792,7 +792,7 @@ The programming language used for the code snippets is Java, since it is a widel
     \end{itemize}
 \end{enumerate}
 
-Figure 3.3  presents an example for one code snippet with minimal comments . All code snippets used in the study are provided in Appendix A.
+Figure 3.3  presents an example for one code snippet with minimal comments. All code snippets used in the study are provided in Appendix A.
 
 
 \begin{figure} [H]
@@ -977,13 +977,13 @@ Before conducting the eye-tracking study, a pilot study with one participant was
 \begin{enumerate}
     \item \textbf{Introduction:} At the beginning, participants answered several warm-up questions: “How are you feeling today? Do you have any experience with reading source code? Do you have any experience with eye-tracking studies?”  Then, participants are informed about the purpose of the study, data collection methods, and their right to withdraw from the study at any time.
 
-    \item \textbf{Calibration of the Eye-Tracking System:} 
+    \item \textbf{Calibration of the eye-tracking system:} 
     Eye-tracker calibration is essential to ensure that the eye-tracking device correctly detects participants’ eyes and eye movements. Before calibration, participants put on the eye-tracking device and adjust three cameras: one for the screen, one for the right eye, and one for the left eye. It is essential to ensure that both eyes are correctly detected. After the adjustment is performed, participants are asked to focus on several specific points on the screen. The system records their gaze. In some cases, calibration errors occurred and recalibration was required. After the calibration is completed, the eye-tracking system started recording participants’ gaze. Participants read all relevant information themselves and then they proceeded to the questionnaire.
     
     \item \textbf{First part of questionnaire:}  
-    Participants answered several questions providing demographic, background, and programming experience information. When the students filled out these questions, they proceeded to the main part of the questionnaire - Code comprehension task.
+    Participants answered several questions providing demographic, background, and programming experience information. When the students filled out these questions, they proceeded to the main part of the questionnaire - code comprehension task.
 
-    \item \textbf{Main part of questionnaire - Code Comprehension Task:}  Each participant is shown seven different code snippets. The order of the code snippets was randomized in order to avoid bias. The participants read each code snippet, while the eye-tracking device recorded their gaze movements, saccades, fixations, and pupil dilation. After reading each code snippet, students answered five questions. These questions are related to the corresponding code snippet. Moreover, their answers and response times were recorded.
+    \item \textbf{Main part of questionnaire - code comprehension task:}  Each participant is shown seven different code snippets. The order of the code snippets was randomized in order to avoid bias. The participants read each code snippet, while the eye-tracking device recorded their gaze movements, saccades, fixations, and pupil dilation. After reading each code snippet, students answered five questions. These questions are related to the corresponding code snippet. Moreover, their answers and response times were recorded.
 
     \item \textbf{Final part of the questionnaire:} 
     The participants answered several questions providing information about their opinions on commenting and indentation in code.
@@ -1012,9 +1012,9 @@ Before conducting the eye-tracking study, a pilot study with one participant was
     \item \textbf{Introduction} Participants are informed about the purpose of the study, data collection methods, and their right to withdraw from the study at any time. Participants read all relevant information themselves and then they proceeded to the questionnaire.
     
     \item \textbf{First part of questionnaire:}
-    Participants answered several questions providing demographic, background, and programming experience information. When the students filled out these questions, they proceeded to the main part of the questionnaire - Code comprehension task.
+    Participants answered several questions providing demographic, background, and programming experience information. When the students filled out these questions, they proceeded to the main part of the questionnaire - code comprehension task.
 
-    \item \textbf{Main part of questionnaire - Code Comprehension Task:} Each participant is shown seven different code snippets. The order of the code snippets was randomized in order to avoid bias. The participants read each code snippet. After reading each code snippet, students answered five questions. These questions are related to the corresponding code snippet. Since there was no eye-tracking device, only their answers and response times were recorded.
+    \item \textbf{Main part of questionnaire - code comprehension task:} Each participant is shown seven different code snippets. The order of the code snippets was randomized in order to avoid bias. The participants read each code snippet. After reading each code snippet, students answered five questions. These questions are related to the corresponding code snippet. Since there was no eye-tracking device, only their answers and response times were recorded.
 
     \item \textbf{Final part of the questionnaire:}
     The participants answered several questions providing information about their opinions on commenting and indentation in code.
