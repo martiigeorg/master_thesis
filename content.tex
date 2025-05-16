@@ -91,7 +91,7 @@ Quality assurance is a key part of software engineering. Standards help to impro
 
 \subsection{Quality model ISO 9126-1}
 
-ISO/IEC 9126-1 is among the widely used standards, which considers quality in software quality \cite{losavio2004iso}. It defines quality as a set of attributes of a product that impact its ability to fulfil its requirements \cite{losavio2004iso}. The model categorizes quality into six characteristics: functionality, reliability, usability, efficiency, maintainability, and portability. These factors are crucial for the quality of software. Table 2.1 presents these characteristics.
+ISO/IEC 9126-1 is among the widely used standards, which considers quality in software quality: it defines quality as a set of features that help meet product requirements. The model categorizes quality into six characteristics: functionality, reliability, usability, efficiency, maintainability, and portability. These factors are crucial for the quality of software. Table 2.1 presents these characteristics.
 
 
 \begin{longtable}{p{0.3\textwidth} | p{0.65\textwidth}}
@@ -268,7 +268,7 @@ In this thesis, the ISO 25010 model is adopted since it is the recent quality st
 \section{Code readability}
 
 Readability defines how easily a text can be understood. Code readability defines how easily source code can be interpreted by a programmer \cite{bakhuizen2019comments}.  Recently, there have been studies aiming to investigate which factors influence code readability and how to achieve best results. 
-To measure code readability, researchers measure how much time it takes for a test subject to complete a task related to reading source snippet  \cite{bakhuizen2019comments}.   Different factors can affect the readability of code source: for instance, how the code is structured and which code formatting is used  \cite{bakhuizen2019comments}.  One example of code formatting is applying indentation \cite{buse2009learning}. In research, the term readability can be associated with the term understandability \cite{winkler2024investigating}.
+To measure code readability, researchers measure how much time it takes for a test subject to complete a task related to reading source snippet  \cite{bakhuizen2019comments}.   Different factors can affect the readability of code source: for instance, how the code is structured and which code formatting is used  \cite{bakhuizen2019comments}.  One example of code formatting is applying indentation \cite{buse2009learning}. In research, the term readability can be associated with the term understandability \cite{winkler2024investigating}. In this thesis, readability and understandability are used synonymously: readability refers to the structure of the code, and understandability to the comprehensibility of the code.
 
 
 \section{Code comprehension}
@@ -278,7 +278,6 @@ It is considered, that program comprehension is a time-consuming task in the mai
 
 Readability and comprehensibility are key parts of making code maintainable. 
 If the source code is not understood correctly, it cannot be applied properly and cannot be modified correctly \cite{izu2025introducing}. Therefore, code readability and code comprehension affect the code quality. The relationship between these terms is displayed in Figure 2.1
-
 
 
 
@@ -292,12 +291,16 @@ If the source code is not understood correctly, it cannot be applied properly an
   % Code Quality in a circle, same size, below the overlap area
   \node[draw, circle, minimum size=4cm, align=center, below=3cm of $(readability.south)!0.5!(comprehension.south)$] (quality) {Code quality};
 
-  % Arrow from overlap area to Code Quality
-  \draw[->, thick] ($(readability.south)!0.5!(comprehension.south)$) -- (quality.north);
+  % Arrow from overlap area to Code Quality with label
+  \draw[->, thick] 
+    ($(readability.south)!0.5!(comprehension.south)$) 
+    -- node[right] {affect} 
+    (quality.north);
 \end{tikzpicture}
-\caption{Code readability, comprehension, and code quality}
+\caption{Code readability and  comprehension affect code quality}
 \label{fig:readability-comprehension-quality}
 \end{figure}
+
 
 
 
@@ -684,7 +687,7 @@ Another study by \citet{yorimoto2024quantitative} investigates how indentation a
 The study by  \citet{bakhuizen2019comments}. investigates how incorrect code comments affect programmers' code comprehension. The study is relevant to this thesis, as one of the research questions is how code with different  commenting formats impacts comprehension and cognitive load.  Participants in the study by  \citet{bakhuizen2019comments} analyzed code containing missing, incorrect, or correct comments.
 The researchers used eye-tracking technology to measure how often participants read code comments. The results indicate that participants read code comments as frequently as the code \cite{bakhuizen2019comments}. Furthermore, incorrect comments can negatively affect code comprehension, leading to misinterpretations of the code. Moreover, accurate and correct comments are useful when they provide correct information for unknown functions. 
 
-The reviewed key studies present that eye-tracking technologies effectively investigate code comprehension.  Eye-tracking data provide insights into how expert and novice programmers perceive different code structures and styles. There has been made significant progress in investigating the comprehension and readability of code by programmers.  However, there is a lack of deeper researcher on how indentation and comments influence the comprehension.  Previous research investigates indentation and comments separately, but in this thesis, they are inspected together. Moreover, the use of both eye-tracking data and subjective data offers more comprehensive insights. Many studies focus on experienced programmers, while this thesis focuses on CS1 students. 
+The reviewed key studies present that different code formats and structures can affect code comprehension. Moreover, they highlight the use of eye-tracking technologies to investigate comprehension processes.  Eye-tracking data provide insights into how expert and novice programmers perceive different code structures and styles. There has been made significant progress in investigating the comprehension and readability of code by programmers.  However, there is a lack of deeper researcher on how indentation and comments influence the comprehension.  Previous research investigates indentation and comments separately, but in this thesis, they are inspected together. Moreover, the use of both eye-tracking data and subjective data offers more comprehensive insights. Many studies focus on experienced programmers, while this thesis focuses on CS1 students. 
 
 
 
@@ -728,7 +731,7 @@ This chapter presents the study design, its approach, and technical setup.  It a
  
 
 Eye-tracking technology gives objective data. Using this type of data, it can be tracked which parts of the code are seen and for how long. On the other hand, questionnaire can give quantitative data (using Likert scale questions). Moreover, questionnaire can give subjective data about the participants (using open-ended questions). The participants report their perceived code comprehension.  
-Previous research has also used both methods to gather data for a deeper code comprehension. (see Chapter Literature review). 
+Previous research has also used both methods to gather data for a deeper code comprehension. (see Chapter 2: Literature review). 
 
 
 The study is conducted in German. It is used a within-subjects design, ensuring that each participant is exposed to all conditions.
@@ -787,7 +790,7 @@ The programming language used for the code snippets is Java, since it is a widel
     \begin{itemize}
         \item \textbf{0-spaces indentation (no indentation):} Code snippet without indentation.
         \item \textbf{4 spaces indentation:} Code snippet with 4-spaces indentation.
-        \item \textbf{Random indentation:} Code snippet with inconsistent indentation.
+        \item \textbf{Random indentation:} Code snippet with random indentation.
     \end{itemize}
 \end{enumerate}
 
@@ -805,7 +808,7 @@ Figure 3.3  presents an example for one code snippet with minimal comments. All 
 
 \subsection{Justification of code snippets selection }
 The code snippets are collected from programming lectures conducted at LMU University and adapted from the computer science exercises \cite{lmu_programming_lectures}. The main reason why the snippets were selected from lectures is that they provide widely used examples. 
-The selection of the code snippets formats is based on the findings from previous research. It is defined that indentation levels and comment styles influence code readability and comprehension.  (e.g., Chapter Literature review). Therefore, the snippets in this study are designed to investigate how different levels of indentations and different commenting formats affect code comprehension.  Moreover, the code snippets are simple enough, and no additional knowledge is required. Furthermore, the usage of loops and conditionals in the snippets requires different levels of cognitive processing.  An overview of the code snippets formats is presented in Table 3.1.   
+The selection of the code snippets formats is based on the findings from previous research. Previous studies have concluded that indentation levels and comment styles influence code readability and comprehension.  (see Chapter 2: Literature review). Therefore, the snippets in this study are designed to investigate how different levels of indentations and different commenting formats affect code comprehension.  Moreover, the code snippets are simple enough and no additional knowledge is required. Furthermore, the usage of loops and conditionals in the snippets can require different levels of cognitive processing.  An overview of the code snippets formats is presented in Table 3.1.   
 
 \begin{table}[ht]
 \centering
@@ -856,7 +859,7 @@ For the commenting formats snippets, the snippets have 4-space indentations. Thi
 For the indentation code snippets, the snippets consist of no comments. This ensures that the focus is only on the indentation. Here the no comment format is also defined as a "control variable", which allows deeper comparison across the different indentation levels. 
 
 \subsection{Research variables}
-To evaluate the study, two types of variables are used - independent variables and dependent variables. The independent variables in the study are variables that are manipulated. In the study there are used two independent variables - Commenting format and Indentation level.
+To evaluate the results from the study, two types of variables are used - independent variables and dependent variables. The independent variables in the study are variables that are manipulated. In the study there are used two independent variables - Commenting format and Indentation level.
 
 \begin{enumerate}
      \item Commenting format: The key role of this independent variable is to investigate how commenting format influences code comprehension. This variable consists of four different types: None (no comments are included in the code), Minimal (these comments include only essential information), Helpful (these comments provide meaningful explanations), Redundant (these comments explain obvious parts of the code). 
@@ -865,7 +868,7 @@ To evaluate the study, two types of variables are used - independent variables a
 \end{enumerate}
 
 
-The independent variables influence the dependent variables. The dependent variables are measured and the outcomes help to investigate how the independent variables influence code comprehension, commenting format, and indentation level.
+The independent variables influence the dependent variables. The dependent variables are measured and the outcomes help to investigate how the independent variables influence code comprehension.
 
 
 In this thesis are defined the following dependent variables: Comprehension score, Comment quality score, Indentation quality score, Confidence rating and  Response time per code snippet. An overview is presented in Table 3.2.
@@ -911,7 +914,7 @@ In this thesis are defined the following dependent variables: Comprehension scor
 \subsection{Technical setup}
 
 
-The eye-tracking study (offline study) was conducted at LMU, Munich. As eye-tracking device was used a Pupil Labs Core. This device contains glasses with three cameras. The glasses were connected to a laptop, running Pupil Capture software v.3.5.1. This software ensures calibration and recording of eye movements. The laptop was placed on a desk. During the study, participants read the snippets and answered the questionnaire on the same laptop. This setup ensured minimal distractions. The technical setup is presented in Figure 3.4. 
+The eye-tracking study (offline study) was conducted at LMU, Munich. As eye-tracking device was used a Pupil Labs Core. This device contains glasses with three cameras. The glasses were connected to a laptop, running Pupil Capture software v.3.5.1. This software ensures calibration and recording of eye movements. The glasses were individually calibrated for each participant. The laptop was placed on a desk. During the study, participants read the snippets and answered the questionnaire on the same laptop. This setup ensured minimal distractions. The technical setup is presented in Figure 3.4. 
 
 \begin{figure} [H]
   \centering
@@ -920,7 +923,9 @@ The eye-tracking study (offline study) was conducted at LMU, Munich. As eye-trac
   \label{fig:AnhangsChor}
 \end{figure}
 
+\subsection{Recruitment of participants}
 
+Participants were recruited from computer science courses at LMU. The study focused on novice programmers, particularly CS1 students. Participation was voluntary.
 
 \section{Questionnaire design}
 
@@ -934,7 +939,7 @@ Figure 3.5 shows the design of the first part of questionnaire. The first part o
 Participants provide details about their field of study, as well as information about their academic background: their programming experience level and experience in Java. 
 \begin{figure} [H]
   \centering
-  \includegraphics[scale=0.40]{figures/allgemein.png}
+  \includegraphics[scale=0.45]{figures/allgemein.png}
   \caption{First part of questionnaire}
   \label{fig:AnhangsChor}
 \end{figure}
@@ -948,7 +953,7 @@ Participants answer five questions corresponding to each code snippet. These que
 
 \begin{figure} [H]
   \centering
-  \includegraphics[scale=0.40]{figures/main_p.png}
+  \includegraphics[scale=0.45]{figures/main_p.png}
   \caption{Main part of questionnaire}
   \label{fig:AnhangsChor}
 \end{figure}
@@ -961,7 +966,7 @@ In the last part of the questionnaire, participants give their opinions on code 
 
 \begin{figure}  [H]
   \centering
-  \includegraphics[scale=0.40]{figures/last_part.png}
+  \includegraphics[scale=0.45]{figures/last_part.png}
   \caption{Final part of the questionnaire}
   \label{fig:AnhangsChor}
 \end{figure}
@@ -1030,12 +1035,20 @@ Before conducting the eye-tracking study, a pilot study with one participant was
 \section{Ethical considerations}
 
 \begin{enumerate}
-    \item \textbf{Informed Consent: }All participants receive clear information about the purpose of the study. The participants have the right to withdraw at any time.
+    \item \textbf{Informed Consent: }All participants receive clear information about the purpose of the study. The participants have the right to withdraw at any time. All information is displayed on the welcome page of the questionnaire (Figure 3.9)
+
+\begin{figure} [H]
+  \centering
+  \includegraphics[scale=0.45]{figures/welcome_page.png}
+  \caption{Welcome page of the questionnaire }
+  \label{fig:AnhangsChor}
+\end{figure}
+
     
     \item \textbf{Data Protection}
     \begin{itemize}
         \item Demographic information, such as gender and age, is collected. If participants choose to receive compensation from the university, they provide their university email address. The rest of the data is anonymized and is stored for a maximum of three years. Non-anonymized data is stored for a maximum of three years.
-        \item All collected data is encrypted. For eye-tracking participants, video recordings and gaze data are stored. For all participants, their questionnaire responses are stored. At any time, participants can request deletion of their data. No personal data is shared with third parties.
+        \item  For eye-tracking participants, video recordings and gaze data are stored. For all participants, their questionnaire responses are stored. At any time, participants can request deletion of their data. No personal data is shared with third parties.
     \end{itemize}
 \end{enumerate}
 
