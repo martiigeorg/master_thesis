@@ -1146,7 +1146,7 @@ Another  U test was performed to investigate whether random indentation improves
 Figure 4.7 visualizes the medians for both levels of indentation. 
 The test presented a p-value of  p = .021, which is less than the significance level \(\alpha \). Therefore, the H0 was rejected. The result reveals that the Indentation quality score for the randomly indented code was significantly higher than that of the unindented code.
 
-Figure 4.8 shows the median scores for each indentation level with respect to the Indentation quality score. The highest median score has the 4-space indentation, followed by random indentation and no indentation.
+Figure 4.8 shows an overview of the median scores for each indentation level with respect to the Indentation quality score. The highest median score has the 4-space indentation, followed by random indentation and no indentation.
 
 \begin{figure} [H]
   \centering
@@ -1353,7 +1353,7 @@ The test produced a p-value of  p = .011, which is below the significance level 
 \subsection{Quality of comments}
 
 
-When participants were asked what characterizes well-commented code for them, their responses indicated common opinions. They think comments should explain what the code does. Participant E thought that code snippet, which has "direct and clearly written comments", is well-commented. Understandable, Participants generally agree on what makes code badly commented. They think it is problematic when comments are missing. Another issue is over-commenting, where every single line is explained. Participant A thought that comments, which are "unclear, repeat the program code, and no longer reflect the current state of the code" are bad. When participants were asked how often they follow their own guidelines when writing code comments, most participants answered that they do so sometimes. Figure 4.16 shows the results.
+When participants were asked what characterizes well-commented code for them, their responses indicated common opinions. They think comments should explain what the code does. Participant E thought that code snippet, which has "direct and clearly written comments", is well-commented. Participants generally agree on what makes code badly commented. They think it is problematic when comments are missing. Another issue is over-commenting, where every single line is explained. Participant A thought that comments, which are "unclear, repeat the program code, and no longer reflect the current state of the code" are bad. When participants were asked how often they follow their own guidelines when writing code comments, most participants answered that they do so sometimes. Figure 4.16 shows the results.
 
 \begin{figure} [H]
   \centering
@@ -1450,7 +1450,7 @@ In the code snippet with redundant comments, three participants often tended not
 
 
 \chapter{Discussion}
-
+This section discusses the findings of the study. It also presents the limitations and suggestions for improvements.
 
 
 \section{Effects of indentation} 
@@ -1462,7 +1462,9 @@ In terms of readability, the random indentation snippet was rated significantly 
 When participants were asked how they handle code indentation, most answered that they use Tab key, which often inserts four spaces by default.  This aligns with the results showing that 4-space indentation enhances code readability and comprehension. 
 
 \section{Effects of comments} 
-The results present that comments significantly affect code comprehension. The statistical analysis showed a consistent outcome: helpful comments significantly improved code comprehension, code commenting, code quality and code confidence level. This is likely because helpful comments provided clear and sufficient information about the purpose of the code, guiding participants. The absence of comments led to worse code comprehension. This is likely because participants struggled to understand the code, which is challenging for unfamiliar code. Although there was not a significant difference between minimal and redundant comments in terms of comment quality, minimal comments did not lead to better code confidence and code comprehension. This could be because minimal comments highlight only some parts of the code,  which can result in incomplete understanding. In contrast, redundant comments often give more information about the code.   
+The results present that comments significantly affect code comprehension. The statistical analysis showed a consistent outcome: helpful comments significantly improved code comprehension, code commenting, code quality and code confidence level. This is likely because helpful comments provided clear and sufficient information about the purpose of the code, guiding participants. 
+
+The absence of comments led to worse code comprehension. This is likely because participants struggled to understand the code, which is challenging for unfamiliar code. Although there was not a significant difference between minimal and redundant comments in terms of comment quality, minimal comments did not lead to better code confidence and code comprehension. This could be because minimal comments highlight only some parts of the code,  which can result in incomplete understanding. In contrast, redundant comments often give more information about the code.   
  
 
 When asked about bad and good commenting practices, most defined missing comments or redundant comments as bad, which aligns with the thesis results, where helpful comments significantly improved code comprehension. However, most participants follow these practices "rarely" or "sometimes". This suggests that while participants understand what well-commented code is, they do not always apply it. This indicates a need for awareness of the role of comments and further teaching to improve their commenting practices.  
@@ -1480,25 +1482,32 @@ In the random indented snippet, gaze movements were also defined as chaotic with
 \subsection{Comments} 
 The snippet with helpful comments showed that the participants paid attention to comments first. The participants did not need to guess the purpose of the code. This behaviour may have led to lower cognitive load.  The results also indicated a smoother reading order, where the participants followed a top-down approach.
 The snippet without comments showed longer fixations and a less clear reading order.  Participants spent more time on the code itself, maybe carefully processing each line using a bottom-up approach. This lack of guidance, especially for unfamiliar code, can lead to an increased cognitive load required to understand it.  The snippet without comments further highlights the importance of including comments in the code. The snippet with minimal comments showed a clearer reading order compared to the snippet without comments. However, the participants did not spend much time on these comments, indicating that they could be not informative enough about the purpose of the code, and the participants could not needed to focus on them longer. 
+
 The snippet with redundant comments showed mixed gaze behaviour.  Some participants ignored these comments, likely because they gave no new information. If participants read these comments, they might be forced to process unnecessary information, potentially leading to increased extraneous cognitive load.  However, some participants still followed a clear reading order. This indicates that redundant comments can affect code comprehension both positively and negatively.  
 
 
 
-\section{Limitations} 
-Both formats of the study have several limitations that may have an impact on the results.
-In the eye-tracking study only 11 computer science students participated.  This small number of participants limited the generalization of the findings.  Moreover, some participants moved their heads too much.  These movements caused an inaccuracy in gaze patterns and calibration errors. Furthermore, several technical issues with eye-tracking device were reported. Sometimes the changes of ambient and screen lighting led to inaccuracy of the records.
+\section{Threats to Validity} 
+Both formats of the study have several limitations that may have an impact on the results. These limitations can be categorized into internal, external, construct, and statistical validity.
+
+\subsection{Eye-tracking study} 
+
+In the eye-tracking study only 11 computer science students participated. This small number of participants limits the generalization of the findings, which is a threat to external validity. The small number of participants also threatens statistical validity. Some participants moved their heads too much. These movements caused an inaccuracy in gaze patterns, which affects the internal validity. Several technical issues with eye-tracking device were reported. Sometimes the changes of ambient and screen lighting led to inaccuracy of the records, which affects construct validity.
 
 
-The online study without eye-tracking also has several limitations that may have an impact on the results. 
-Only 20 computer science students participated in the study. The small number of participants limited the generalization of the results. 
-Moreover, some participants did not answer all questions. Therefore, only part of their answers were recorded, which led to missing data. 
-Furthermore, the online study was not conducted in a controlled environment. Participants filled out the questionnaire in different environments, which may have an influence on their answers.  
-These limitations highlight that improved technical setup and future research is needed. 
+\subsection{Online study} 
+
+Similar to the eye-tracking study, only 20 computer science students participated. The small number of participants is a threat to external validity. This also threatens statistical validity. The online study was not conducted in a controlled environment. Participants filled out the questionnaire in different environments, which is a threat to internal validity.
+Some participants did not answer all questions. Therefore, only part of their answers were recorded, which led to missing data. This is a threat to construct validity.
+These limitations highlight that improved technical setup and future research is needed.
+
 
 
 \section{Improvements}
 
 Several improvements can be considered. First, a larger number of participants would provide more clear generalization of the findings. Additionally, the use of chin supports in the eye-tracking study may minimize participants’ head movements. It is also important to ensure consistent lighting conditions while conduction the eye-tracking study. Another suggestion is to select a laptop device that is less sensitive to ambient and screen lighting. This suggestion may reduce records errors. By implementing these improvements, future research can enhance clear generalization of the findings. 
+
+
 
 
 
