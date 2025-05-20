@@ -404,7 +404,7 @@ Regarding their purpose and placement in code, comments can be categorized into 
 \node[base, below=of inline] (section) {Section Comments};
 \node[base, below=of section] (code) {Code Comments};
 \node[base, below=of code] (task) {Task Comments};
-
+ 
 % Central node (manually placed to center vertically)
 \node[base, left=4cm of inline] (main) {Comment Classification};
 
@@ -561,7 +561,7 @@ An eye-tracking device collects the eye movements of a participant while the par
 
 The main terms in eye-tracking technology are fixation and saccade. 
 Fixation is a state of stable eye movement for a period of time between 200 to 300 ms \cite{sharafi2015systematic}. This data is encoded with a timestamp and x- and y-coordinates. 
-In research, the number of fixations and their duration is usually measured. Saccade is a rapid movement of the eyes, jumping form one point to another \cite{andrzejewska2020development}.
+In research, the number of fixations and their duration is usually measured. Saccade is a rapid movement of the eyes, jumping from one point to another \cite{andrzejewska2020development}.
 This movement lasts from 30ms to 50ms \cite{obaidellah2018survey}. A scan-path is a set of fixations (of areas of interest), which are in chronological order. Figure 2.13  presents a scanpath with A, B, C, and D as areas of interest  \cite{sharafi2015systematic}.
 
 \begin{figure} [H]
@@ -623,29 +623,28 @@ To indicate the intensity of fixation, colors such as red (highest intensity), o
 \section{Studies using eye-tracking}
 
 
-Eye-tracking technology helps to identify the visual patterns of information processing. 
+Eye-tracking technology dentifies the visual patterns of information processing. 
 The findings from eye-tracking studies can contribute to improving the learning process \cite{andrzejewska2020development}. Several studies analyze programming comprehension using eye-tracking technology. This chapter reviews key studies, categorizing them based on their focus areas and summarizing their findings.
 
 \subsubsection{Eye-tracking methodologies in software engineering}
-The paper by \citet{obaidellah2018survey} investigates the use of eye-tracking technology in computer programming research. A total of 63 relevant studies published between 1990 and June 2017 are analysed \cite{obaidellah2018survey}. The results indicate that eye-tracking technology has been applied to understand programmers' gaze patterns and cognitive processes. The studies reviewed in this paper focus on five main research fields: program comprehension and code understanding, non-code comprehension studies, debugging, requirements traceability, and collaborative programming \cite{obaidellah2018survey}.  The most frequently studied programming language is Java.  
-For eye-tracking systems, Tobii is the most commonly used.  Fixation duration and saccades are identified as primary metrics for analysing gaze patterns. Heatmaps are created for visual representation of the results.
+The paper by \citet{obaidellah2018survey} investigates the use of eye-tracking technology in computer programming research. A total of 63 relevant studies published between 1990 and 2017 are analysed \cite{obaidellah2018survey}. The results indicate that eye-tracking technology has been applied to understand programmers' gaze patterns and cognitive processes. The studies reviewed in this paper focus on five main research fields: program comprehension and code understanding, non-code comprehension studies, debugging, requirements traceability, and collaborative programming \cite{obaidellah2018survey}.  The most frequently studied programming language is Java.  
+For eye-tracking systems, Tobii is the most commonly used.  Fixation duration and saccades are identified as key metrics for analysing gaze patterns. Heatmaps are created for visual representation of the results.
 
 
 \subsubsection{Variable naming conventions and code readability}
 
 The study by \citet{sharif2010eye} investigates whether different variable naming conventions (camel-case and underscore) impact code comprehension and readability.
-Participants recognized different variable names, while their eye movements were tracked and analysed by researches. 
-The findings indicate no significant difference in accuracy between the camel-case and underscore naming conventions \cite{sharif2010eye}. However, underscore identifiers were recognized 20\% faster compared to camel-case identifiers \cite{sharif2010eye}. Moreover, the data from the eye-tracking technology showed that camel-case identifiers led to more fixations and a higher cognitive load.    
-The results indicate that underscore variable naming conventions improve code readability.   
+Participants recognized different variable names, while their eye movements were tracked. 
+The findings indicate no significant difference in accuracy between the camel-case and underscore naming conventions \cite{sharif2010eye}. However, underscore identifiers were recognized faster compared to camel-case identifiers \cite{sharif2010eye}.  
 
 
 The eye-tracking study by \citet{broberg2019using} investigates how different variable naming conventions impact code readability.  
-The test subjects analyzed code snippets containing variables in Single Word, Single Letter, Camel Case, and Snake Case, while  their eye movements were tracked \cite{broberg2019using}. Researchers measured the time participants spent analysing the code. Furthermore, participants provided feedback on which naming conventions they prefer. The results showed no significant differences in readability using different variable naming conventions \cite{broberg2019using}. However, Snake Case and Camel Case were easier to read than Single Letter variable naming conventions \cite{broberg2019using}. The heatmaps presented that test subjects spent more time on single-letter variables, leading to higher cognitive effort. This study presents the role of meaningful variable naming conventions in code and how they improve code readability.   
+The test subjects analyzed code snippets containing variables in Single Word, Single Letter, Camel Case, and Snake Case, while  their eye movements were tracked \cite{broberg2019using}. Researchers measured the time participants spent analysing the code. Furthermore, participants provided feedback on which naming conventions they prefer. The results showed no significant differences in readability using different variable naming conventions \cite{broberg2019using}. However, Snake Case and Camel Case were easier to read than Single Letter \cite{broberg2019using}. The study highlights the need for further investigation. 
 
 \subsubsection{Code transformations and their impact on comprehension}
 The eye-tracking study by \citet{silva2023evaluating} investigates how different code transformations affect novice programmers’ code comprehension. It focuses on Atoms of Confusion, Refactorings, and ifdef Annotations. 
 
-The findings show that confusing code snippets lead to difficulties in code comprehension and increased fixations. Figure 2.16 presents the gaze patterns for an obfuscated code snippet using the Conditional Expression atom. Figure 2.17 illustrates the clarified version of the same snippet \cite{silva2023evaluating}. 
+The findings show that confusing code snippets lead to difficulties in code comprehension. Figure 2.16 presents the gaze patterns for an obfuscated code snippet using the Conditional Expression atom. Figure 2.17 illustrates the clarified version of the same snippet \cite{silva2023evaluating}. 
  
 
 \begin{figure} [H]
@@ -664,29 +663,31 @@ The findings show that confusing code snippets lead to difficulties in code comp
 
 
 \subsubsection{Program comprehension: iteration vs. recursion} 
-The study by \citet{aroobaunderstanding} investigates how students perceive recursive and iterative programs. The study analyzes their cognitive processes and investigated whether they followed a top-down or a bottom-up approach.
-The results present that there was no significant difference between recursive and iterative programs in terms of code comprehension \cite{aroobaunderstanding}. However, visual attention differed between iteration and recursion.
+The study by \citet{aroobaunderstanding} investigates how students perceive recursive and iterative programs. The study analyzes their cognitive processes and whether they followed a top-down or a bottom-up approach.
+The results present that there was no significant difference between recursive and iterative programs in terms of code comprehension \cite{aroobaunderstanding}. However, visual attention differed between student who correctly understands programs with student who do
+not \cite{aroobaunderstanding}.
 
 \subsubsection{Cognitive load and code complexity} 
 
-The eye-tracking paper by \citet{abbad2022estimating} investigates how to identify difficult areas of code.  Participants were given different Java code snippets and mentioned the areas of the code they found difficult \cite{abbad2022estimating}. Researchers compared the eye-tracking data with the parts marked as complicated by the participants. With the data, they trained machine learning models to forecast which parts of the code would challenge code comprehension \cite{abbad2022estimating}. The researchers achieved more than 86\% accuracy in predicting challenging  parts. The study highlights its usage for developing tools to enhance code review.  
+The eye-tracking paper by \citet{abbad2022estimating} investigates how to identify difficult areas of code.  Participants were given different Java code snippets and mentioned the areas of the code they found difficult \cite{abbad2022estimating}. Researchers compared the eye-tracking data with the parts marked as complicated by the participants. With the data, they trained machine learning models to forecast which parts of the code would challenge code comprehension \cite{abbad2022estimating}. The researchers achieved more than 86\% accuracy in predicting challenging  parts. The study highlights future application to large
+source code projects.
 
 
 
 \subsubsection{Code structure and indentation} 
 
 
-The eye-tracking study by \citet{bauer2017indentations} investigates how indentation affects comprehension. Participants analyzed Java code snippets with different levels of indentation: 0, 2, 4, and 8-space. The study is relevant to this thesis, as one of the research questions is how code with different indentation levels impacts comprehension. The results of the study by \citet{bauer2017indentations} did not present a significant relationship between indentation and comprehension. However, the most correct answers were given for the code with 4-space indentation. Furthermore, the results indicated that the 8-space indentation was rated the easiest to read level of indentation, but did not improve the accuracy of correct answers \cite{bauer2017indentations}. In general, the eye-tracking data did not show significant differences in gaze patterns. The study highlights the need for further investigation. 
+The eye-tracking study by \citet{bauer2017indentations} investigates how indentation affects comprehension. Participants analyzed Java code snippets with different levels of indentation: 0, 2, 4, and 8-space. The study is relevant to this thesis, as one of the research questions is how code with different indentation levels impacts comprehension. The results of the study by \citet{bauer2017indentations} did not present a significant relationship between indentation and comprehension. However, the most correct answers were given for the code with 4-space indentation code \cite{bauer2017indentations}. The study highlights the need for further investigation. 
 
 
-Another study by \citet{yorimoto2024quantitative} investigates how indentation affects the comprehension of code. The students were given code tasks with different levels of indentation: 0 character, 4 character, and random indentation \cite{yorimoto2024quantitative}. The researchers measured the eye movements and cognitive load of the participants. The results showed increased confusion and cognitive load when students analyzed code with unstructured indentation \cite{yorimoto2024quantitative}. Furthermore, 4-character indentation resulted in more precise but longer focus on code. The study mentions that indentation had little impact on small source code and highlights that further investigation is needed \cite{yorimoto2024quantitative}.  
+Another study by \citet{yorimoto2024quantitative} investigates how indentation affects the comprehension of code. The students were given code tasks with different levels of indentation: 0 character, 4 character, and random indentation \cite{yorimoto2024quantitative}. The researchers measured the eye movements and cognitive load of the participants using questions related to the cognitive load. The results showed increased cognitive load when students analyzed code with unstructured indentation \cite{yorimoto2024quantitative}. The study mentions that indentation had little impact on small source code and highlights that further investigation is needed \cite{yorimoto2024quantitative}.  
 
 \subsubsection{Code comments} 
 
-The study by  \citet{bakhuizen2019comments} investigates how incorrect code comments affect programmers' code comprehension. The study is relevant to this thesis, as one of the research questions is how code with different  commenting formats impacts comprehension and cognitive load.  Participants in the study by  \citet{bakhuizen2019comments} analyzed code containing missing, incorrect, or correct comments.
+The study by  \citet{bakhuizen2019comments} investigates how incorrect code comments affect programmers' code comprehension. The study is relevant to this thesis, as one of the research questions is how code with different  commenting formats impacts comprehension.  Participants in the study by  \citet{bakhuizen2019comments} analyzed code with missing, incorrect, or correct comments.
 The researchers used eye-tracking to measure how often participants read code comments. The results indicate that participants read code comments as frequently as the code \cite{bakhuizen2019comments}. Furthermore, incorrect comments can negatively affect code comprehension. These comments can lead to misinterpretations of the code. Moreover, accurate comments are useful when they provide correct information for functions. 
 
-The reviewed key studies present that different code formats and structures can affect code comprehension. Moreover, they highlight the use of eye-tracking technologies to investigate comprehension processes.  Eye-tracking data provide insights into how expert and novice programmers perceive different code structures and styles. There has been made significant progress in investigating the comprehension and readability of code by programmers.  However, there is a lack of deeper research on how indentation and comments influence the comprehension.  Previous research investigates indentation and comments separately, but in this thesis, they are inspected together. Moreover, the use of both eye-tracking data and subjective data offers more comprehensive insights. Many studies focus on experienced programmers, while this thesis focuses on CS1 students. 
+The reviewed key studies present that different code formats and structures can affect code comprehension. Moreover, they highlight the use of eye-tracking technologies to investigate comprehension.  Eye-tracking data provide insights into how expert and novice programmers perceive different code structures and styles. There has been made significant progress in investigating the comprehension and readability of code.  However, there is a lack of deeper research on how indentation and comments influence the comprehension.  Previous research investigates indentation and comments separately, but in this thesis, they are inspected together. Moreover, the use of both eye-tracking data and subjective data offers more comprehensive insights. Many studies focus on experienced programmers, while this thesis focuses on CS1 students. 
 
 
 
@@ -729,7 +730,7 @@ This chapter presents the study design, its approach, and the technical setup.  
 
  
 
-Eye-tracking technology gives objective data. Using this type of data, it can be tracked which parts of the code are seen and for how long. Questionnaire can give qualitative and quantitative data (using Likert scale questions). Moreover, a questionnaire can give subjective data about the participants (using open-ended questions). The participants report their perceived code comprehension.  
+Eye-tracking technology gives objective data. Using this type of data, it can be tracked which parts of the code are seen and for how long. Questionnaire can give qualitative and quantitative data (using Likert scale questions). Moreover, a questionnaire can give subjective data (using open-ended questions). The participants report their perceived code comprehension.  
 Previous research has also used both methods to gather data for a deeper code comprehension (see Chapter 2: Literature review). 
 
 
@@ -765,7 +766,7 @@ The study consists of two formats: an eye-tracking study (offline study) and an 
 \end{figure}
 
 
-Both the offline and online study use the same questionnaire. The eye-tracking study (offline study) gathers data using eye-tracking technology and a questionnaire. The eye-tracking device gives objective qualitative data as output. The questionnaire gives both objective and subjective data, as well as quantitative and qualitative data.  By combining both methods, the findings indicate whether the questionnaire data aligns with the eye-tracking data.
+Both the offline and online study use the same questionnaire. The eye-tracking study (offline study) gathers data using eye-tracking technology and a questionnaire. The eye-tracking device gives objective qualitative data. The questionnaire gives both objective and subjective data, as well as quantitative and qualitative data.  By combining both methods, the findings indicate whether the questionnaire data aligns with the eye-tracking data.
 The online study without eye-tracking gathers data using only a questionnaire.  Using both formats, the study provides a more comprehensive overview of code comprehension. 
 
 
@@ -843,14 +844,14 @@ The selection of the code snippets formats is based on the findings from previou
 
 
 
-Each snippet is focused on one dimension at a time (levels of indentation or commenting formats). This enables a simple analysis and comparison across the different formats. The study has seven different code snippets. It combines three levels of indentation and four types of commenting styles. For the commenting formats, four types are selected.  The role of the snippet with no comments is to investigate whether code can be understood without any additional information.  Minimal comments test whether minimal information is better than none and improves comprehension, or makes it difficult for understanding.
+Each snippet is focused on one dimension at a time (levels of indentation or commenting formats). This enables a simple analysis and comparison across the different formats. The study has seven different code snippets. It combines three levels of indentation and four types of commenting formats. For the commenting formats, four types are selected.  The role of the snippet with no comments is to investigate whether code can be understood without any additional information.  Minimal comments test whether minimal information is better than none and improves comprehension.
 Helpful comments investigate whether meaningful information enhances deeper code comprehension. The helpful comments were designed based on the theoretical findings discussed in the Chapter Literature Review: these comments explain the purpose of the code snippets without adding unnecessary information. Redundant comments aim to explore whether unnecessary comments
-(when every line is commented) make the code difficult to understand, potentially causing cognitive overload.
+(when every line is commented) make the code difficult to understand.
 
 
 For the indentation, three levels were selected. 
 The role of the snippet with no indentation is to investigate how the absence of indentation influences code readability.
-The 4-space indentation is defined as the standard indentation in research. It is used to explore whether it enhances deeper code readability.  
+The 4-space indentation is defined as the standard indentation in research. It explores whether it enhances deeper code readability.  
 Random indentation tests whether using different indentation across the code makes the snippet difficult to read.
 
 
@@ -936,7 +937,7 @@ Participants were recruited from computer science courses at LMU. The study focu
 
 The questionnaire was implemented as a website using Python 3.12.3. The design uses a green color, which is the official color of LMU, Munich. 
 Figure 3.5 shows the design of the first part of the questionnaire. The first part of the questionnaire gives general information about the participants. 
-Participants provide details about their field of study, as well as information about their academic background: their programming experience level and experience in Java. 
+Participants provide details about their field of study, as well as information about their academic background: their programming level and experience in Java. 
 \begin{figure} [H]
   \centering
   \includegraphics[scale=0.45]{figures/allgemein.png}
@@ -1157,7 +1158,7 @@ Figure 4.8 shows an overview of the median scores for each indentation level wit
 
 
 \subsection{Comprehension score}
-Another Mann-Whitney U test was conducted to investigate whether random indentation enhance the comprehension  of code compared to code with no indentation. The analysis was based on the Comprehension score. The hypotheses were defined as: H0 (Null Hypothesis): The Comprehension score for the code snippet with no indentation is equal to that of the randomly indented code snippet. H1 (Alternative Hypothesis): The Comprehension score for the code snippet with no indentation is not equal to that of the randomly indented code snippet. Figure 4.9 displays the medians for both levels of indentation.
+Another Mann-Whitney U test was conducted to investigate whether random indentation enhances the comprehension  of code compared to code with no indentation. The analysis was based on the Comprehension score. The hypotheses were defined as: H0 (Null Hypothesis): The Comprehension score for the code snippet with no indentation is equal to that of the randomly indented code snippet. H1 (Alternative Hypothesis): The Comprehension score for the code snippet with no indentation is not equal to that of the randomly indented code snippet. Figure 4.9 displays the medians for both levels of indentation.
 
 
 
@@ -1173,7 +1174,7 @@ The test produced a p-value of p = .129, which is greater than the significance 
 
 \subsection{Confidence rating}
 
-Another Mann-Whitney U test was conducted to investigate whether random indentation improves the code confidence rating compared to code with no indentation. The analysis was based on the Confidence rating, a dependent variable derived from participant responses. The hypotheses were defined as: H0 (Null Hypothesis): The Confidence rating for the code snippet with no indentation is equal to that of the randomly indented code snippet. H1 (Alternative Hypothesis): The Confidence rating for the code snippet with no indentation is not equal to that of the randomly indented code snippet.
+Another Mann-Whitney U test was conducted to investigate whether random indentation improves the code confidence rating compared to code with no indentation. The analysis was based on the Confidence rating. The hypotheses were defined as: H0 (Null Hypothesis): The Confidence rating for the code snippet with no indentation is equal to that of the randomly indented code snippet. H1 (Alternative Hypothesis): The Confidence rating for the code snippet with no indentation is not equal to that of the randomly indented code snippet.
 The test produced a p-value of p = .609, which is greater than the significance level \(\alpha\). Therefore, H0 cannot be rejected. This result reveals that the difference in Confidence rating between the randomly indented and unindented code snippets was not statistically significant.  
 
 
@@ -1203,7 +1204,7 @@ Table 4.1 presents an overview of all hypotheses related to the different levels
 
 
 \subsection{Indentation methods}
-When participants were asked how they handle code indentation, several answers were selected. Figure 4.9 shows that most participants use the Tab key. Only five students use automatic tools.  
+When participants were asked how they handle code indentation, several answers were selected. Figure 4.10 shows that most participants use the Tab key. Only five students use automatic tools.  
 
 \begin{figure} [H]
   \centering
@@ -1305,7 +1306,7 @@ A U test was performed to investigate whether code snippet with helpful comments
 
 
 
-A test was conducted to investigate whether code snippet with helpful comments improves code confidence compared to code with minimal comments. The analysis was based on the Confidence rating. The hypotheses were defined as:  H0 (Null Hypothesis): The Confidence rating for the code snippet with helpful comments is less than or equal to that of the code with minimal comments.  H1 (Alternative Hypothesis): The Confidence rating for the code snippet with helpful comments is greater than that of the code with minimal comments. The test produced a p-value of   p < .001, which is below the significance level $\alpha$. Therefore, H0 was rejected.  This result reveals that the Confidence rating  for the code with helpful comments was significantly higher than that for the code with minimal comments.  
+A U test was conducted to investigate whether code snippet with helpful comments improves code confidence compared to code with minimal comments. The analysis was based on the Confidence rating. The hypotheses were defined as:  H0 (Null Hypothesis): The Confidence rating for the code snippet with helpful comments is less than or equal to that of the code with minimal comments.  H1 (Alternative Hypothesis): The Confidence rating for the code snippet with helpful comments is greater than that of the code with minimal comments. The test produced a p-value of   p < .001, which is below the significance level $\alpha$. Therefore, H0 was rejected.  This result reveals that the Confidence rating  for the code with helpful comments was significantly higher than that for the code with minimal comments.  
 
 
 To investigate whether code snippet with redundant comments improves code confidence compared to code with minimal comments, a U test was performed. The analysis was based on the Confidence rating. The hypotheses were defined as:  H0 (Null Hypothesis): The Confidence rating for the code snippet with redundant comments is less than or equal to that of the code with minimal comments.  H1 (Alternative Hypothesis): The Confidence rating for the code snippet with redundant comments is greater than that of the code with minimal comments.      
@@ -1353,7 +1354,7 @@ The test produced a p-value of  p = .011, which is below the significance level 
 \subsection{Quality of comments}
 
 
-When participants were asked what characterizes well-commented code for them, their responses indicated common opinions. They think comments should explain what the code does. Participant E thought that the code snippet that has "direct and clearly written comments", is well-commented. Participants generally agree on what makes code badly commented. They think it is problematic when comments are missing. Another issue is over-commenting, where every single line is explained. Participant A thought that comments which are "unclear, repeat the program code, and no longer reflect the current state of the code" are bad. When participants were asked how often they follow their own guidelines when writing code comments, most participants answered that they do so sometimes. Figure 4.16 shows the results.
+When participants were asked what characterizes well-commented code for them, their responses indicated common opinions. They think comments should explain what the code does. Participant E thought that the code snippet that has "direct and clearly written comments", is well-commented. Participants generally agree on what makes code poorly commented. They think it is problematic when comments are missing. Another issue is over-commenting, where every single line is explained. Participant A thought that comments which are "unclear, repeat the program code, and no longer reflect the current state of the code" are bad. When participants were asked how often they follow their own guidelines when writing code comments, most participants answered that they do so sometimes. Figure 4.16 shows the results.
 
 \begin{figure} [H]
   \centering
@@ -1387,7 +1388,7 @@ In all three code snippets with different levels of indentation, a single AOI ca
   \label{fig:AnhangsChor}
 \end{figure}
 
-In the code snippet with 4-space indentation, three participants tended to follow a clear reading path. Moreover, fixation durations on keywords were notably shorter. Figure 4.18 presents a scanpath for participant B, who looked at the code lines from top to bottom without returning to previous lines.  
+In the code snippet with 4-space indentation, three participants tended to follow a clear reading path. Moreover, fixation durations on keywords were shorter. Figure 4.18 presents a scanpath for participant B, who looked at the code lines from top to bottom without returning to previous lines.  
 
 
 In the code snippet with random indentation, three participants often had long fixation durations on the keywords. Moreover, they often read the code with many jumps between lines and with inconsistent gaze directions. For instance, Figure 4.19 presents a scanpath for participant C who followed a “zig-zag” pattern — shifting his eyes inconsistently from left to right and back again.  
@@ -1414,7 +1415,7 @@ In all four code snippets with different commenting formats, a single AOI catego
 In the code snippet with helpful comments, three participants often looked at the comments before reading the code itself.  Figure 4.20 presents a scanpath from participant D whose attention at the beginning was more on the comments. In the code snippet with minimal comments, three participants tended to follow a clear reading path.  Furthermore, they did not spend much time on the comments. Figure 4.21  presents a gaze plot of participant B, indicating a short fixation duration on comments. 
 
 
-In the code snippet with redundant comments, three participants tended not to spend much time on the comments or even ignored them. Figure 4.22  shows a gaze plot of participant D, whose attention was more on the code itself and not on the comments. Regarding the order of reading, some participants followed a clear reading path while others read the code in a more inconsistent order.  In the code snippet with no comments, the comment AOI was absent and participants spent more time on code lines. Figure 4.23 presents a gaze plot of participant C, indicating a long fixation duration on code lines.    Regarding the order of reading, the majority of participants followed an unclear reading path.
+In the code snippet with redundant comments, three participants did not spend much time on the comments or even ignored them. Figure 4.22  shows a gaze plot of participant D, whose attention was more on the code itself and not on the comments. Regarding the order of reading, some participants followed a clear reading path while others read the code in a more inconsistent order.  In the code snippet with no comments, the comment AOI was absent and participants spent more time on code lines. Figure 4.23 presents a gaze plot of participant C, indicating a long fixation duration on code lines.    Regarding the order of reading, the majority of participants followed an unclear reading path.
 
 \begin{figure} [H]
   \centering
